@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BVB KOREA | ㈜BVB원예자재 - 농가의 성공을 함께 만드는 가장 든든한 동반자</title>
+    <meta name="description" content="120년 전통 네덜란드 BVB Substrates(유럽 RHP 인증)와 스위스 SWISSGROW 비료. 대한민국 최고 수준의 딸기 재배 기술력으로 농가의 결실을 함께 만듭니다.">
+    
+    <!-- Google Fonts (Noto Serif KR for Luxury Editorial + Pretendard for Clean Sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Noto+Serif+KR:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Pretendard', '-apple-system', 'BlinkMacSystemFont', 'system-ui', 'sans-serif'],
+                        serif: ['"Noto Serif KR"', '"Cormorant Garamond"', 'Georgia', 'serif'],
+                        display: ['"Cormorant Garamond"', '"Noto Serif KR"', 'serif'],
+                    },
+                    colors: {
+                        stone: {
+                            50: '#FAF9F6',   // Oishii & Kinfolk Warm Linen Canvas
+                            100: '#F5F3EF',
+                            200: '#E8E5DF',  // Delicate 1px Hairline Border
+                            300: '#D5D0C7',
+                            400: '#A8A29E',
+                            500: '#78716C',  // Warm Stone Grey
+                            600: '#57534E',
+                            700: '#44403C',  // Elegant Subtitle Charcoal
+                            800: '#292524',
+                            900: '#1C1917',  // Deep Warm Charcoal (No Harsh Black)
+                            950: '#0F0E0D'
+                        },
+                        ruby: {
+                            50: '#FFF1F2',
+                            100: '#FFE4E6',
+                            600: '#E11D48',
+                            700: '#BE123C',
+                            800: '#9F1239',  // Restrained Muted Strawberry Accent
+                            900: '#881337',
+                        },
+                        amber: {
+                            50: '#FFFBEB',
+                            100: '#FEF3C7',
+                            700: '#B45309',
+                            800: '#92400E',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        body { 
+            font-family: 'Pretendard', sans-serif; 
+            background-color: #FAF9F6; 
+            color: #292524; 
+            -webkit-font-smoothing: antialiased; 
+        }
+        
+        .font-editorial {
+            font-family: 'Noto Serif KR', 'Cormorant Garamond', Georgia, serif;
+            letter-spacing: -0.02em;
+        }
+
+        /* Frosted Warm Linen Glass Nav */
+        .glass-nav {
+            background: rgba(250, 249, 246, 0.94);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(232, 229, 223, 0.85);
+        }
+        
+        /* Oishii & Kinfolk Editorial Minimal Card */
+        .card-editorial {
+            background: #FFFFFF;
+            border: 1px solid #E8E5DF;
+            box-shadow: 0 4px 20px -2px rgba(28, 25, 23, 0.025);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .card-editorial:hover {
+            transform: translateY(-3px);
+            border-color: #D5D0C7;
+            box-shadow: 0 20px 35px -10px rgba(28, 25, 23, 0.06);
+        }
+
+        /* Subtle Pill Tag */
+        .tag-subtle {
+            display: inline-flex;
+            align-items: center;
+            padding: 5px 14px;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.03em;
+            border-radius: 9999px;
+            background: #F5F3EF;
+            color: #57534E;
+            border: 1px solid #E8E5DF;
+        }
+
+        /* RHP Quality Stamp Circle */
+        .rhp-stamp {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            border: 1.5px dashed #A8A29E;
+            color: #44403C;
+            text-align: center;
+            line-height: 1.1;
+        }
+
+        /* Custom Refined Scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #FAF9F6; }
+        ::-webkit-scrollbar-thumb { background: #D5D0C7; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: #A8A29E; }
+    </style>
+</head>
+<body class="antialiased selection:bg-stone-200 selection:text-stone-900 pb-24 md:pb-0">
+
+    <!-- Top Quiet Utility Bar -->
+    <div class="bg-stone-100/80 border-b border-stone-200/60 text-stone-600 text-[12px] py-2.5 px-6 tracking-tight">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <span class="font-bold text-stone-900">BVB KOREA</span>
+                <span class="text-stone-300">|</span>
+                <span class="text-stone-600">네덜란드 120년 BVB Substrates × 스위스 SWISSGROW 공식 한국 공급원</span>
+                <span class="hidden md:inline-block text-stone-300">|</span>
+                <span class="hidden md:inline-block text-stone-500">유럽 최고 권위 RHP 100% 공인 인증</span>
+            </div>
+            <div class="flex items-center space-x-6 text-stone-600">
+                <span class="hidden sm:inline-block text-stone-500">경남 사천 본사 및 물류센터</span>
+                <a href="tel:1660-2301" class="text-stone-900 hover:text-ruby-800 font-bold flex items-center group transition">
+                    <svg class="w-3.5 h-3.5 mr-1.5 text-stone-500 group-hover:text-ruby-800 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                    전화 상담 1660-2301
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Navigation (Clean Warm Linen Glass) -->
+    <header class="glass-nav sticky top-0 z-40 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Brand Identity -->
+                <a href="#" class="flex items-center space-x-3 group">
+                    <div class="flex items-baseline">
+                        <span class="font-editorial text-2xl font-black tracking-tight text-stone-900">BVB</span>
+                        <span class="text-xs font-semibold tracking-widest text-stone-400 ml-1.5 uppercase">KOREA</span>
+                    </div>
+                    <span class="hidden sm:inline-block text-[11px] font-medium text-stone-400 border-l border-stone-200 pl-3">㈜BVB원예자재</span>
+                </a>
+
+                <!-- 5 Core Navigation Menus -->
+                <nav class="hidden md:flex items-center space-x-9 text-[13px] font-medium text-stone-700 tracking-tight">
+                    <a href="#about" class="hover:text-stone-950 transition py-2">회사 소개</a>
+                    <a href="#products" class="hover:text-stone-950 transition py-2">제품 소개</a>
+                    <a href="#technology" class="hover:text-stone-950 transition py-2">기술 자료</a>
+                    <a href="#quality" class="hover:text-stone-950 transition py-2">품질 인증</a>
+                    <a href="#contact" class="hover:text-stone-950 transition py-2">상담 안내</a>
+                </nav>
+
+                <!-- Phone CTA (Understated Warm Charcoal Pill Button) -->
+                <div class="flex items-center space-x-3">
+                    <a href="tel:1660-2301" class="hidden sm:flex items-center bg-stone-900 hover:bg-stone-800 text-stone-50 text-xs font-semibold px-5 py-2.5 rounded-full transition shadow-sm border border-stone-800">
+                        <svg class="w-3.5 h-3.5 mr-2 text-stone-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                        1660-2301 전화상담
+                    </a>
+                    
+                    <!-- Mobile Hamburger -->
+                    <button onclick="toggleMobileMenu()" class="md:hidden p-2 text-stone-800 focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-stone-50 border-b border-stone-200 px-6 py-6 space-y-4">
+            <a href="#about" onclick="toggleMobileMenu()" class="block text-base font-semibold text-stone-900">회사 소개</a>
+            <a href="#products" onclick="toggleMobileMenu()" class="block text-base font-semibold text-stone-900">제품 소개</a>
+            <a href="#technology" onclick="toggleMobileMenu()" class="block text-base font-semibold text-stone-900">기술 자료</a>
+            <a href="#quality" onclick="toggleMobileMenu()" class="block text-base font-semibold text-stone-900">품질 인증</a>
+            <a href="#contact" onclick="toggleMobileMenu()" class="block text-base font-semibold text-stone-900">상담 안내</a>
+            <div class="pt-4 border-t border-stone-200 flex flex-col gap-2">
+                <a href="tel:1660-2301" class="w-full py-3.5 bg-stone-900 text-stone-50 font-bold rounded-xl text-sm text-center flex items-center justify-center">
+                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                    고객센터 전화걸기 (1660-2301)
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECTION 1: HERO (Oishii Editorial Luxury Style) -->
+    <section class="pt-20 pb-24 md:pt-32 md:pb-36 bg-stone-50 border-b border-stone-200/80 relative overflow-hidden">
+        <div class="max-w-6xl mx-auto px-6 sm:px-8">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                <!-- Left Text Column -->
+                <div class="lg:col-span-7 text-left">
+                    <!-- Subtle Minimal Badge -->
+                    <div class="inline-flex items-center space-x-2 border border-stone-300/80 px-3.5 py-1 rounded-full text-[11px] font-semibold text-stone-600 mb-8 bg-white/70">
+                        <span class="w-1.5 h-1.5 rounded-full bg-stone-700"></span>
+                        <span class="tracking-wide">THE STANDARD OF STRAWBERRY · 대한민국 최고 수준의 딸기 재배 과학</span>
+                    </div>
+
+                    <!-- Grand Editorial Headline (Noto Serif KR) -->
+                    <h1 class="font-editorial text-4xl sm:text-5xl lg:text-6xl font-black text-stone-900 leading-[1.2] tracking-tight">
+                        농가의 성공이 곧<br>
+                        <span class="text-stone-500 font-normal italic">우리의 성공</span>입니다
+                    </h1>
+
+                    <!-- Exact Sub-copy -->
+                    <p class="mt-8 text-base sm:text-lg text-stone-600 font-normal leading-relaxed max-w-xl">
+                        ㈜BVB원예자재는 타협 없는 세계 최고 품질의 상토와 비료로,<br class="hidden sm:inline">
+                        대한민국 최고 수준의 딸기 재배 기술력으로 농가의 풍성한 결실을 끝까지 함께 만듭니다.
+                    </p>
+
+                    <!-- CTAs -->
+                    <div class="mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+                        <a href="tel:1660-2301" class="bg-stone-900 hover:bg-stone-800 text-stone-50 font-bold px-8 py-3.5 rounded-full text-xs transition flex items-center justify-center shadow-sm">
+                            <svg class="w-3.5 h-3.5 mr-2 text-stone-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                            전화 상담 연결 (1660-2301)
+                        </a>
+                        <a href="#products" class="bg-white hover:bg-stone-100 text-stone-800 border border-stone-300 font-semibold px-8 py-3.5 rounded-full text-xs transition text-center">
+                            딸기 전용 제품 라인업 보기
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Visual: Scientific Root Architecture & RHP Stamp -->
+                <div class="lg:col-span-5 relative flex justify-center">
+                    <div class="card-editorial p-8 rounded-3xl w-full max-w-md relative bg-white">
+                        <div class="flex justify-between items-start mb-6">
+                            <div>
+                                <span class="text-[10px] font-mono uppercase tracking-widest text-stone-400">Root Architecture</span>
+                                <h3 class="font-editorial text-lg font-bold text-stone-900 mt-0.5">근권부 공극과 뿌리 과학</h3>
+                            </div>
+                            <!-- RHP Stamp Circle -->
+                            <div class="rhp-stamp">
+                                <span class="text-[9px] font-bold text-stone-400">EUROPEAN</span>
+                                <span class="text-xs font-black text-stone-800 tracking-tight">RHP</span>
+                                <span class="text-[8px] text-stone-400">CERTIFIED</span>
+                            </div>
+                        </div>
+
+                        <!-- Minimalist Plant & Porous Media Illustration -->
+                        <div class="my-4 py-8 px-4 bg-stone-50/80 rounded-2xl border border-stone-200/60 text-center">
+                            <svg class="w-32 h-32 mx-auto text-stone-700" viewBox="0 0 100 100" fill="none" stroke="currentColor">
+                                <!-- Strawberry leaves -->
+                                <path d="M50 35 C40 25 35 15 50 10 C65 15 60 25 50 35 Z" fill="#F5F3EF" stroke-width="1.5"/>
+                                <path d="M50 35 C35 32 20 28 25 18 C35 18 45 28 50 35 Z" fill="#F5F3EF" stroke-width="1.5"/>
+                                <path d="M50 35 C65 32 80 28 75 18 C65 18 55 28 50 35 Z" fill="#F5F3EF" stroke-width="1.5"/>
+                                <!-- Berries -->
+                                <circle cx="35" cy="36" r="5" fill="#BE123C" stroke="#BE123C" stroke-width="1"/>
+                                <circle cx="65" cy="38" r="4.5" fill="#BE123C" stroke="#BE123C" stroke-width="1"/>
+                                <!-- Stem and Soil line -->
+                                <line x1="50" y1="35" x2="50" y2="50" stroke-width="1.5"/>
+                                <line x1="20" y1="50" x2="80" y2="50" stroke-dasharray="3 3" stroke-width="1" stroke="#A8A29E"/>
+                                <!-- Root Network in BVB Substrate -->
+                                <path d="M50 50 Q45 65 35 78 M50 50 Q55 68 62 82 M50 50 Q48 75 48 90 M40 60 Q30 68 25 76 M58 62 Q70 70 75 80" stroke-width="1.5" stroke="#78716C" stroke-linecap="round"/>
+                            </svg>
+                            <div class="mt-4 text-xs font-semibold text-stone-700">120년 BVB 명품 상토 기상률 30% 이상 유지</div>
+                            <div class="text-[11px] text-stone-500 mt-0.5">과습 없는 산소 공급으로 잔뿌리(모세근) 발달 극대화</div>
+                        </div>
+
+                        <div class="flex justify-between items-center pt-2 text-[11px] text-stone-500 font-mono">
+                            <span>BC2 · COCO GOLD · BT</span>
+                            <span class="text-stone-800 font-bold">100% RHP PASS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4 Clean Trust Metrics Grid -->
+            <div class="mt-20 pt-16 border-t border-stone-200/80 grid grid-cols-2 md:grid-cols-4 gap-8 text-left">
+                <div class="border-l border-stone-300 pl-4">
+                    <div class="text-[11px] font-bold text-stone-400 uppercase tracking-widest">Heritage</div>
+                    <div class="font-editorial text-2xl sm:text-3xl font-black text-stone-900 mt-1">120년</div>
+                    <div class="text-xs text-stone-500 mt-1">네덜란드 BVB Substrates</div>
+                </div>
+                <div class="border-l border-stone-300 pl-4">
+                    <div class="text-[11px] font-bold text-stone-400 uppercase tracking-widest">Certification</div>
+                    <div class="font-editorial text-2xl sm:text-3xl font-black text-stone-900 mt-1">RHP 인증</div>
+                    <div class="text-xs text-stone-500 mt-1">유럽 최고 권위 무균 보증</div>
+                </div>
+                <div class="border-l border-stone-300 pl-4">
+                    <div class="text-[11px] font-bold text-stone-400 uppercase tracking-widest">Nutrition</div>
+                    <div class="font-editorial text-2xl sm:text-3xl font-black text-stone-900 mt-1">SWISSGROW</div>
+                    <div class="text-xs text-stone-500 mt-1">스위스 정밀 농업 고순도 비료</div>
+                </div>
+                <div class="border-l border-stone-300 pl-4">
+                    <div class="text-[11px] font-bold text-stone-400 uppercase tracking-widest">Partnership</div>
+                    <div class="font-editorial text-2xl sm:text-3xl font-black text-stone-900 mt-1">대한민국 농가</div>
+                    <div class="text-xs text-stone-500 mt-1">1등 딸기 농가의 신뢰의 선택</div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 2: ABOUT US (우리의 철학 & 브랜드 스토리) -->
+    <section id="about" class="py-24 md:py-32 bg-white border-b border-stone-200/80">
+        <div class="max-w-6xl mx-auto px-6 sm:px-8">
+            
+            <div class="max-w-3xl mb-16">
+                <div class="tag-subtle mb-4">Our Philosophy</div>
+                <h2 class="font-editorial text-3xl sm:text-4xl font-black tracking-tight text-stone-900 leading-tight">
+                    데이터와 과학에 기반한<br>
+                    <span class="italic font-normal text-stone-600">대한민국에서 가장 신뢰받는 농가의 동반자</span>
+                </h2>
+                <p class="mt-6 text-base sm:text-lg text-stone-600 leading-relaxed">
+                    우리가 진정 바라는 것은 농가가 성공하는 것입니다. 
+                    농가가 좋은 농산물을 생산할 수 있도록 온 힘을 다해 돕고, 언제나 농가의 곁을 지키겠습니다. 
+                    농가가 잘 되어야 BVB Korea도 함께 성장할 수 있습니다.
+                </p>
+            </div>
+
+            <!-- 3 Core Principles in Fine Editorial Layout -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Principle 1 -->
+                <div class="card-editorial p-8 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="text-[10px] font-mono font-bold text-stone-400 tracking-widest uppercase mb-4">PRINCIPLE 01</div>
+                        <h3 class="font-editorial text-xl font-bold text-stone-900 mb-3">타협 없는 세계 최고 품질</h3>
+                        <p class="text-xs sm:text-sm text-stone-600 leading-relaxed">
+                            120년 전통 네덜란드 BVB Substrates(유럽 RHP 인증)와 스위스 정밀 농업 SWISSGROW. 농가에 최상의 결과를 안겨줄 수 있는 완벽히 검증된 원료만을 고집합니다.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-stone-100 text-[11px] font-mono text-stone-400">UNCOMPROMISING QUALITY</div>
+                </div>
+
+                <!-- Principle 2 -->
+                <div class="card-editorial p-8 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="text-[10px] font-mono font-bold text-stone-400 tracking-widest uppercase mb-4">PRINCIPLE 02</div>
+                        <h3 class="font-editorial text-xl font-bold text-stone-900 mb-3">독보적인 딸기 재배 과학</h3>
+                        <p class="text-xs sm:text-sm text-stone-600 leading-relaxed">
+                            단순한 자재 공급을 넘어 뿌리 생육 메커니즘, 근권부 공극률 제어, 생육 단계별 영양 처방 등 대한민국에서 가장 전문적인 수경재배 기술력을 보유하고 있습니다.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-stone-100 text-[11px] font-mono text-stone-400">ADVANCED CROP SCIENCE</div>
+                </div>
+
+                <!-- Principle 3 -->
+                <div class="card-editorial p-8 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="text-[10px] font-mono font-bold text-stone-400 tracking-widest uppercase mb-4">PRINCIPLE 03</div>
+                        <h3 class="font-editorial text-xl font-bold text-stone-900 mb-3">농가와 함께하는 동반 성장</h3>
+                        <p class="text-xs sm:text-sm text-stone-600 leading-relaxed">
+                            농가가 겪는 현장의 어려움을 함께 해결하고, 첫 정식부터 마지막 수확까지 곁에서 소통하며 농가의 성공을 끝까지 돕는 진정한 파트너가 됩니다.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-stone-100 text-[11px] font-mono text-stone-400">GROWER-FIRST PARTNERSHIP</div>
+                </div>
+            </div>
+
+            <!-- 사천 본사 및 인프라 요약 -->
+            <div class="mt-12 p-8 bg-stone-50 border border-stone-200/80 rounded-2xl flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+                <div>
+                    <h4 class="font-editorial text-base font-bold text-stone-900">경남 사천 본사 및 대형 물류 인프라</h4>
+                    <p class="text-xs sm:text-sm text-stone-500 mt-1">경상남도 사천시 곤명면 금성로 6 · 전국 신속 배송 및 현장 기술 컨설팅 지원</p>
+                </div>
+                <a href="#contact" class="text-xs font-semibold text-stone-800 bg-white hover:bg-stone-100 border border-stone-300 px-6 py-3 rounded-full transition whitespace-nowrap">
+                    오시는 길 및 본사 안내 &rarr;
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: PRODUCTS (제품 소개 - 딸기 100% 집중 + 영양제) -->
+    <section id="products" class="py-24 md:py-32 bg-stone-50 border-b border-stone-200/80">
+        <div class="max-w-6xl mx-auto px-6 sm:px-8">
+            
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+                <div>
+                    <div class="tag-subtle mb-4">Products Lineup</div>
+                    <h2 class="font-editorial text-3xl sm:text-4xl font-black tracking-tight text-stone-900">
+                        최고의 농가를 위한 프리미엄 솔루션
+                    </h2>
+                    <p class="mt-3 text-sm sm:text-base text-stone-600">
+                        대한민국 딸기 수경재배 1등 상토부터 스위스 정밀 영양제까지, 최상의 작물 생육을 완성합니다.
+                    </p>
+                </div>
+                
+                <!-- Refined Filter Tabs (Linen Pill Style) -->
+                <div class="flex space-x-1.5 bg-stone-200/60 p-1.5 rounded-full border border-stone-200">
+                    <button onclick="filterProduct('strawberry')" id="tab-strawberry" class="px-5 py-2 text-xs font-semibold text-stone-900 bg-white rounded-full shadow-sm transition">🍓 딸기 전용 상토 (BVB)</button>
+                    <button onclick="filterProduct('nutrition')" id="tab-nutrition" class="px-5 py-2 text-xs font-semibold text-stone-600 hover:text-stone-900 rounded-full transition">스위스그로우 비료·영양제</button>
+                    <button onclick="filterProduct('others')" id="tab-others" class="px-5 py-2 text-xs font-semibold text-stone-600 hover:text-stone-900 rounded-full transition">기타 과채류 배지</button>
+                </div>
+            </div>
+
+            <!-- PRODUCT CATEGORY 1: STRAWBERRY SUBSTRATES -->
+            <div id="cat-strawberry" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Product 1: BC2 -->
+                <div class="card-editorial p-8 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="tag-subtle">딸기 본포용 대표 배지</span>
+                            <span class="text-[11px] font-mono font-bold text-stone-500">RHP 100%</span>
+                        </div>
+                        <h3 class="font-editorial text-2xl font-bold text-stone-900 mb-1">BC2</h3>
+                        <div class="text-xs font-mono text-stone-400 mb-4">BVB Substrates Strawberry Elite</div>
+                        <p class="text-xs sm:text-sm text-stone-600 leading-relaxed mb-6">
+                            대한민국 대표 딸기 농가가 가장 많이 선택하는 독보적 본포 상토. 최적의 기상률과 수분 보유력을 유지하여 과습을 원천 차단하고 다년간 안정적인 재사용이 가능합니다.
+                        </p>
+                        <ul class="text-xs text-stone-500 space-y-2 border-t border-stone-100 pt-4 mb-6">
+                            <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-stone-400 mr-2"></span>우수한 공극률로 뿌리 호흡 극대화</li>
+                            <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-stone-400 mr-2"></span>염류 집적 없는 엄격한 RHP 기준 통과</li>
+                            <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-stone-400 mr-2"></span>정식 초기 빠른 활착 및 후기 수세 유지</li>
+                        </ul>
+                    </div>
+                    <a href="tel:1660-2301" class="w-full py-3 bg-stone-100 hover:bg-stone-900 hover:text-stone-50 text-stone-800 font-semibold text-xs rounded-xl text-center transition border border-stone-200">
+                        BC2 제품 및 주문 문의 (1660-2301)
+                    </a>
+                </div>
+
+                <!-- Product 2: Coco Gold -->
+                <div class="card-editorial p-8 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="tag-subtle">프리미엄 코코피트 배지</span>
+                            <span class="text-[11px] font-mono font-bold text-stone-500">완벽 버퍼링</span>
+                        </div>
+                        <h3 class="font-editorial text-2xl font-bold text-stone-900 mb-1">코코골드</h3>
+                        <div class="text-xs font-mono text-stone-400 mb-4">Coco Gold Premium Substrate</div>
+                        <p class="text-xs sm:text-sm text-stone-600 leading-relaxed mb-6">
+                            완벽한 정밀 세척과 칼슘 버퍼링을 거쳐 나트륨(Na)과 염소(Cl) 피해를 완벽히 제거한 최고 등급 코코 배지. 균일한 물리성으로 뿌리 썩음을 방지합니다.
+                        </p>
+                        <ul class="text-xs text-stone-500 space-y-2 border-t border-stone-100 pt-4 mb-6">
+                            <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-stone-400 mr-2"></span>EC 편차 없는 엄격한 품질 관리</li>
+                            <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-stone-400 mr-2"></span>탁월한 배수성과 산소 공급 능력</li>
+                            <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-stone-400 mr-2"></span>딸기 고설 재배 맞춤형 입자 배합</li>
+                        </ul>
+                    </div>
+                    <a href="tel:1660-2301" class="w-full py-3 bg-stone-100 hover:bg-stone-900 hover:text-stone-50 text-stone-800 font-semibold text-xs rounded-xl text-center transition border border-stone-200">
+                        코코골드 제품 문의 (1660-2301)
+                    </a>
+                </div>
+
+                <!-- Product 3: BT (육묘용) -->
+                <div class="card-editorial p-8 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="tag-subtle">딸기 육묘 전용 배지</span>
+                            <span class="text-[11px] font-mono font-bold text-stone-500">미세뿌리 유도</span>
+                        </div>
+                        <h3 class="font-editorial text-2xl font-bold text-stone-900 mb-1">BT (육묘용)</h3>
+                        <div class="text-xs font-mono text-stone-400 mb-4">BVB Nursery Substrate BT</div>
+                        <p class="text-xs sm:text-sm text-stone-600 leading-relaxed mb-6">
+                            모종의 성공이 한 해 농사를 결정합니다. 초기 유묘 단계에서 미세 뿌리(모세근) 발달을 극대화하여 튼튼한 우량 묘를 완성하는 육묘 전용 프리미엄 상토입니다.
+                        </p>
+                        <ul class="text-xs text-stone-500 space-y-2 border-t border-stone-100 pt-4 mb-6">
+                            <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-stone-400 mr-2"></span>런너 유인 및 포트 육묘 최적화</li>
+                            <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-stone-400 mr-2"></span>병원균 및 선충 없는 100% 무균 상토</li>
+                            <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-stone-400 mr-2"></span>본포 정식 시 생육 지연 없는 폭발적 활착</li>
+                        </ul>
+                    </div>
+                    <a href="tel:1660-2301" class="w-full py-3 bg-stone-100 hover:bg-stone-900 hover:text-stone-50 text-stone-800 font-semibold text-xs rounded-xl text-center transition border border-stone-200">
+                        BT 육묘 상토 문의 (1660-2301)
+                    </a>
+                </div>
+            </div>
+
+            <!-- PRODUCT CATEGORY 2: SWISSGROW NUTRITION -->
+            <div id="cat-nutrition" class="hidden grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Nutrition 1: Strawberry Focus -->
+                <div class="card-editorial p-8 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="tag-subtle">딸기 특화 고기능성</span>
+                            <span class="text-[11px] font-mono font-bold text-stone-500">SWISSGROW</span>
+                        </div>
+                        <h3 class="font-editorial text-2xl font-bold text-stone-900 mb-1">딸기 전용 영양 솔루션</h3>
+                        <div class="text-xs font-mono text-stone-400 mb-4">스위스 정밀 농업 처방</div>
+                        <p class="text-xs sm:text-sm text-stone-600 leading-relaxed mb-6">
+                            정식 후 초기 뿌리 활착부터 화아 분화 촉진, 1화방·2화방 연속 출뢰, 과실 비대 및 당도·경도 증진까지 생육 단계별로 정밀하게 반응하는 고순도 영양제 라인업입니다.
+                        </p>
+                        <ul class="text-xs text-stone-500 space-y-2 border-t border-stone-100 pt-4 mb-6">
+                            <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-stone-400 mr-2"></span>정식기: 뿌리 발달 및 활착 촉진제</li>
+                            <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-stone-400 mr-2"></span>개화·수정기: 화아 분화 및 착과 안정</li>
+                            <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-stone-400 mr-2"></span>비대·수확기: 특품 당도 및 경도 극대화</li>
+                        </ul>
+                    </div>
+                    <a href="tel:1660-2301" class="w-full py-3 bg-stone-100 hover:bg-stone-900 hover:text-stone-50 text-stone-800 font-semibold text-xs rounded-xl text-center transition border border-stone-200">
+                        딸기 영양제 처방 상담 (1660-2301)
+                    </a>
+                </div>
+
+                <!-- Nutrition 2: Kiwi / 참다래 -->
+                <div class="card-editorial p-8 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="tag-subtle">참다래(키위) 전문 처방</span>
+                            <span class="text-[11px] font-mono font-bold text-stone-500">수세 안정화</span>
+                        </div>
+                        <h3 class="font-editorial text-2xl font-bold text-stone-900 mb-1">참다래(키위) 영양제</h3>
+                        <div class="text-xs font-mono text-stone-400 mb-4">수세 안정 및 고품위 과실</div>
+                        <p class="text-xs sm:text-sm text-stone-600 leading-relaxed mb-6">
+                            수세 안정화와 개화 균일도를 높이고, 과실의 비대율과 저장성을 획기적으로 향상시키는 참다래 전용 고기능성 영양 솔루션입니다.
+                        </p>
+                        <ul class="text-xs text-stone-500 space-y-2 border-t border-stone-100 pt-4 mb-6">
+                            <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-stone-400 mr-2"></span>참다래 전용 재배력 기반 시비 처방</li>
+                            <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-stone-400 mr-2"></span>신초 생장 억제 및 착과율 증진</li>
+                            <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-stone-400 mr-2"></span>당도 향상 및 장기 저장성 확보</li>
+                        </ul>
+                    </div>
+                    <a href="tel:1660-2301" class="w-full py-3 bg-stone-100 hover:bg-stone-900 hover:text-stone-50 text-stone-800 font-semibold text-xs rounded-xl text-center transition border border-stone-200">
+                        참다래 솔루션 문의 (1660-2301)
+                    </a>
+                </div>
+
+                <!-- Nutrition 3: Apple / 사과 -->
+                <div class="card-editorial p-8 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="tag-subtle">사과 고품위 과수 처방</span>
+                            <span class="text-[11px] font-mono font-bold text-stone-500">정품과율 극대화</span>
+                        </div>
+                        <h3 class="font-editorial text-2xl font-bold text-stone-900 mb-1">사과 영양제 솔루션</h3>
+                        <div class="text-xs font-mono text-stone-400 mb-4">정품과 생산율 극대화</div>
+                        <p class="text-xs sm:text-sm text-stone-600 leading-relaxed mb-6">
+                            기후 변화에 따른 일소 피해를 줄이고, 고른 착색과 단단한 육질을 만들어 사과 정품과 출하 비율을 대폭 높여주는 프리미엄 과수 영양제입니다.
+                        </p>
+                        <ul class="text-xs text-stone-500 space-y-2 border-t border-stone-100 pt-4 mb-6">
+                            <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-stone-400 mr-2"></span>고온기 스트레스 및 일소 피해 경감</li>
+                            <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-stone-400 mr-2"></span>자연스러운 색택 발현 및 당도 상승</li>
+                            <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-stone-400 mr-2"></span>과수 전문 재배 가이드 지원</li>
+                        </ul>
+                    </div>
+                    <a href="tel:1660-2301" class="w-full py-3 bg-stone-100 hover:bg-stone-900 hover:text-stone-50 text-stone-800 font-semibold text-xs rounded-xl text-center transition border border-stone-200">
+                        사과 솔루션 문의 (1660-2301)
+                    </a>
+                </div>
+            </div>
+
+            <!-- PRODUCT CATEGORY 3: OTHERS -->
+            <div id="cat-others" class="hidden grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card-editorial p-8 rounded-2xl">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="tag-subtle">토마토·파프리카 배지</span>
+                        <span class="text-[11px] font-mono font-bold text-stone-500">스마트팜 온실</span>
+                    </div>
+                    <h3 class="font-editorial text-2xl font-bold text-stone-900 mb-2">과채류 전용 특화 배지</h3>
+                    <p class="text-xs sm:text-sm text-stone-600 leading-relaxed mb-6">
+                        장기 재배가 필수적인 스마트팜 토마토 및 파프리카 온실에 최적화된 고내구성 배지. 뿌리 통기성을 끝까지 유지하여 장기 다수확을 실현합니다.
+                    </p>
+                    <a href="tel:1660-2301" class="inline-block text-xs font-semibold text-stone-800 bg-white hover:bg-stone-900 hover:text-stone-50 border border-stone-300 px-6 py-3 rounded-full transition">
+                        과채류 배지 상담 (1660-2301)
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 4: TECHNICAL DATA (기술 자료 - 과학적 재배 가이드) -->
+    <section id="technology" class="py-24 md:py-32 bg-white border-b border-stone-200/80">
+        <div class="max-w-6xl mx-auto px-6 sm:px-8">
+            
+            <div class="max-w-3xl mb-16">
+                <div class="tag-subtle mb-4">Grower Knowledge &amp; Data</div>
+                <h2 class="font-editorial text-3xl sm:text-4xl font-black tracking-tight text-stone-900">
+                    BVB의 기술은 <span class="italic font-normal text-stone-600">농가의 성공 데이터</span>로 증명됩니다
+                </h2>
+                <p class="mt-4 text-sm sm:text-base text-stone-600 leading-relaxed">
+                    근권부 환경 관리, 수분 제어, 작물별 생육 주기 시비 기준 등 농가의 시행착오를 줄이고 수확량을 극대화하는 핵심 기술 가이드를 제공합니다.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Guide 1 -->
+                <div class="card-editorial p-8 rounded-2xl bg-stone-50/50 flex flex-col justify-between">
+                    <div>
+                        <div class="text-[10px] font-mono font-bold text-stone-400 mb-2">DATA REPORT 01</div>
+                        <h3 class="font-editorial text-lg font-bold text-stone-900 mb-3">딸기 수경재배 배지 수분(WC) &amp; EC 제어 기술</h3>
+                        <p class="text-xs text-stone-600 leading-relaxed mb-6">
+                            정식기 과습 방지와 개화기 이상적인 근권부 EC 유지 기준. 뿌리 활착 속도를 30% 이상 앞당기는 과학적 수분 관리법.
+                        </p>
+                    </div>
+                    <a href="tel:1660-2301" class="text-xs font-semibold text-stone-800 hover:text-stone-950 flex items-center">
+                        기술 문의 및 가이드 요청 &rarr;
+                    </a>
+                </div>
+
+                <!-- Guide 2 -->
+                <div class="card-editorial p-8 rounded-2xl bg-stone-50/50 flex flex-col justify-between">
+                    <div>
+                        <div class="text-[10px] font-mono font-bold text-stone-400 mb-2">GROWER MANUAL 02</div>
+                        <h3 class="font-editorial text-lg font-bold text-stone-900 mb-3">참다래(키위) 연간 생육 주기별 재배력</h3>
+                        <p class="text-xs text-stone-600 leading-relaxed mb-6">
+                            맹아기, 개화기, 비대기, 수확기별 최적 영양 공급 스케줄. 신초 웃자람 방지 및 고품위 과실 생산을 위한 정밀 시비표.
+                        </p>
+                    </div>
+                    <a href="tel:1660-2301" class="text-xs font-semibold text-stone-800 hover:text-stone-950 flex items-center">
+                        키위 재배력 문의 &rarr;
+                    </a>
+                </div>
+
+                <!-- Guide 3 -->
+                <div class="card-editorial p-8 rounded-2xl bg-stone-50/50 flex flex-col justify-between">
+                    <div>
+                        <div class="text-[10px] font-mono font-bold text-stone-400 mb-2">GROWER MANUAL 03</div>
+                        <h3 class="font-editorial text-lg font-bold text-stone-900 mb-3">사과 고품위 정품과 생산 시비 가이드</h3>
+                        <p class="text-xs text-stone-600 leading-relaxed mb-6">
+                            기후 변화에 따른 고온 장애 예방과 착색 향상 처방. 잎의 광합성 효율 극대화 및 저장성 증진 테크니컬 가이드.
+                        </p>
+                    </div>
+                    <a href="tel:1660-2301" class="text-xs font-semibold text-stone-800 hover:text-stone-950 flex items-center">
+                        사과 재배 가이드 문의 &rarr;
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 5: QUALITY & CERTIFICATIONS (품질 인증) -->
+    <section id="quality" class="py-24 md:py-32 bg-stone-50 border-b border-stone-200/80">
+        <div class="max-w-6xl mx-auto px-6 sm:px-8">
+            
+            <div class="max-w-3xl mb-16">
+                <div class="tag-subtle mb-4">Certified Excellence</div>
+                <h2 class="font-editorial text-3xl sm:text-4xl font-black tracking-tight text-stone-900">
+                    유럽 최고 권위 <span class="italic font-normal text-stone-600">RHP 공인 인증</span>의 절대적 신뢰
+                </h2>
+                <p class="mt-4 text-sm sm:text-base text-stone-600 leading-relaxed">
+                    네덜란드 RHP 인증은 원료 채취부터 가공, 완제품 출하까지 엄격한 검사를 거친 제품에만 부여되는 유럽 공인 친환경·무균 품질 인증 마크입니다.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card-editorial p-8 rounded-2xl bg-white">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-11 h-11 rounded-full border border-stone-300 text-stone-900 font-bold text-xs flex items-center justify-center font-mono">RHP</div>
+                        <div>
+                            <h3 class="font-editorial text-lg font-bold text-stone-900">유럽 RHP 무균·물리성 보증</h3>
+                            <p class="text-xs text-stone-400">Certified Substrates Quality</p>
+                        </div>
+                    </div>
+                    <p class="text-xs sm:text-sm text-stone-600 leading-relaxed mb-5">
+                        선충, 병원균, 잡초 종자가 완벽히 배제된 100% 안전한 상토임을 보증합니다. 매 생산 로트마다 물리성(공극률, 보수력)과 화학성(pH, EC)이 엄격하게 검증됩니다.
+                    </p>
+                    <div class="text-xs font-medium text-stone-600 bg-stone-50 p-4 rounded-xl border border-stone-200/60">
+                        ✓ 병해충 오염 제로 · ✓ 균일한 통기성 · ✓ 작물 뿌리 손상 방지
+                    </div>
+                </div>
+
+                <div class="card-editorial p-8 rounded-2xl bg-white">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-11 h-11 rounded-full border border-stone-300 text-stone-900 font-bold text-xs flex items-center justify-center font-mono">SWISS</div>
+                        <div>
+                            <h3 class="font-editorial text-lg font-bold text-stone-900">스위스 SWISSGROW 정밀 순도 보증</h3>
+                            <p class="text-xs text-stone-400">Swiss Precision Agriculture</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-stone-600 leading-relaxed mb-5">
+                        유럽 최고 수준의 고순도 원료를 사용하여 작물 흡수율을 극대화하고 염류 집적과 가스 장애를 원천 차단하는 스위스 정밀 농업의 기술력입니다.
+                    </p>
+                    <div class="text-xs font-medium text-stone-600 bg-stone-50 p-4 rounded-xl border border-stone-200/60">
+                        ✓ 고순도 흡수율 · ✓ 미량요소 킬레이트화 · ✓ 작물 스트레스 저감
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 6: CONSULTATION & CONTACT (Warm, Reassuring, Prestigious) -->
+    <section id="contact" class="py-24 md:py-32 bg-stone-900 text-stone-100 relative overflow-hidden">
+        <div class="max-w-6xl mx-auto px-6 sm:px-8 relative z-10">
+            
+            <div class="max-w-3xl mb-14 text-left">
+                <div class="inline-flex items-center space-x-2 border border-stone-700 px-3.5 py-1 rounded-full text-[11px] font-semibold text-stone-400 mb-6 bg-stone-800/60">
+                    <span>Grower Hotline</span>
+                </div>
+                <h2 class="font-editorial text-3xl sm:text-5xl font-bold tracking-tight text-stone-50 leading-[1.25]">
+                    "작물 재배에 궁금한 점이나<br>
+                    <span class="italic font-normal text-stone-300">도움이 필요하실 때 언제든 전화주세요.</span>"
+                </h2>
+                <p class="mt-6 text-base sm:text-lg text-stone-400 font-normal leading-relaxed">
+                    ㈜BVB원예자재가 곁에서 함께 고민하겠습니다.<br>
+                    제품 구매 문의뿐만 아니라 배지 관리, 양액 처방 등 재배 현장의 고민을 편하게 나눠주세요.
+                </p>
+            </div>
+
+            <!-- Warm Slate Hotline Card -->
+            <div class="bg-stone-800/80 border border-stone-700/80 p-8 sm:p-12 rounded-3xl backdrop-blur-xl flex flex-col md:flex-row justify-between items-start md:items-center gap-8 mb-16 shadow-2xl">
+                <div>
+                    <div class="text-[11px] font-mono font-bold text-stone-400 uppercase tracking-widest mb-2 flex items-center">
+                        <span class="w-2 h-2 rounded-full bg-stone-400 mr-2"></span>
+                        Direct Call Hotline
+                    </div>
+                    <a href="tel:1660-2301" class="font-editorial text-3xl sm:text-5xl font-black text-stone-50 hover:text-stone-200 transition tracking-tight flex items-center">
+                        <svg class="w-8 h-8 sm:w-11 sm:h-11 mr-3 text-stone-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                        1660-2301
+                    </a>
+                    <p class="text-xs text-stone-400 mt-2 font-medium">평일 09:00 - 18:00 (전국 어디서나 시내전화 요금으로 연결됩니다)</p>
+                </div>
+
+                <a href="tel:1660-2301" class="w-full md:w-auto bg-stone-50 hover:bg-stone-200 text-stone-900 font-bold px-9 py-4 rounded-full text-sm transition text-center whitespace-nowrap shadow-lg">
+                    지금 바로 전화 연결하기 📞
+                </a>
+            </div>
+
+            <!-- Info Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pt-8 border-t border-stone-800 text-stone-400 text-xs leading-relaxed">
+                <div>
+                    <div class="font-bold text-stone-200 mb-2 text-sm">본사 및 물류센터</div>
+                    <p>경상남도 사천시 곤명면 금성로 6</p>
+                    <p class="mt-1 text-stone-500">전국 딸기 및 원예 주산지 직송 물류망 구축</p>
+                </div>
+                <div>
+                    <div class="font-bold text-stone-200 mb-2 text-sm">고객 지원 센터</div>
+                    <p>전화: 1660-2301</p>
+                    <p>팩스: 055-854-4454</p>
+                    <p>이메일: support@bvbkorea.co.kr</p>
+                </div>
+                <div>
+                    <div class="font-bold text-stone-200 mb-2 text-sm">주요 지원 분야</div>
+                    <p>• 딸기 수경재배 상토 (BC2, 코코골드, BT)</p>
+                    <p>• 스위스그로우 비료·영양제 처방 지원</p>
+                    <p>• 농가별 맞춤형 기술 컨설팅 및 재배력 제공</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER (Warm Stone Tone) -->
+    <footer class="bg-stone-950 text-stone-500 text-xs py-12 px-6 sm:px-8 border-t border-stone-800/80">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+            <div>
+                <div class="flex items-baseline space-x-2 text-stone-300 mb-2">
+                    <span class="font-editorial font-bold text-base tracking-tight text-stone-100">BVB KOREA</span>
+                    <span class="font-normal text-xs text-stone-400">㈜BVB원예자재</span>
+                </div>
+                <p>본사: 경상남도 사천시 곤명면 금성로 6 | 대표전화: 1660-2301 | 팩스: 055-854-4454 | 이메일: support@bvbkorea.co.kr</p>
+                <p class="mt-1 text-stone-600">네덜란드 BVB Substrates 공식 한국 지사 및 스위스 SWISSGROW 공급원</p>
+            </div>
+            <div class="text-left md:text-right text-stone-600">
+                <p>&copy; 2026 ㈜BVB원예자재 (BVB KOREA). All Rights Reserved.</p>
+                <p class="mt-1 text-[11px] font-mono text-stone-700">THE STANDARD OF STRAWBERRY SUBSTRATES &amp; NUTRITION</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MOBILE STICKY FLOATING CALL BUTTON (Refined Minimalist Charcoal) -->
+    <div class="fixed bottom-0 left-0 right-0 p-3 bg-stone-50/95 backdrop-blur-md border-t border-stone-200 z-50 md:hidden shadow-2xl">
+        <a href="tel:1660-2301" class="w-full py-4 bg-stone-900 hover:bg-stone-800 text-stone-50 font-bold rounded-full text-sm flex items-center justify-center shadow-xl active:scale-95 transition">
+            <svg class="w-4 h-4 mr-2 text-stone-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            📞 전화 상담 연결 (1660-2301)
+        </a>
+    </div>
+
+    <!-- Interactive Filter & Mobile Script -->
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        function filterProduct(category) {
+            // Hide all
+            document.getElementById('cat-strawberry').classList.add('hidden');
+            document.getElementById('cat-strawberry').classList.remove('grid');
+            document.getElementById('cat-nutrition').classList.add('hidden');
+            document.getElementById('cat-nutrition').classList.remove('grid');
+            document.getElementById('cat-others').classList.add('hidden');
+            document.getElementById('cat-others').classList.remove('grid');
+
+            // Reset tabs
+            const tabs = ['strawberry', 'nutrition', 'others'];
+            tabs.forEach(t => {
+                const el = document.getElementById('tab-' + t);
+                el.classList.remove('text-stone-900', 'bg-white', 'shadow-sm');
+                el.classList.add('text-stone-600');
+            });
+
+            // Show selected
+            const activeTab = document.getElementById('tab-' + category);
+            activeTab.classList.remove('text-stone-600');
+            activeTab.classList.add('text-stone-900', 'bg-white', 'shadow-sm');
+
+            const activeCat = document.getElementById('cat-' + category);
+            activeCat.classList.remove('hidden');
+            activeCat.classList.add('grid');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Temp build scripts
+gen.py
+gen_site.py
+make_site.py
+build_site.py
+write_files.py
+test.txt
