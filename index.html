@@ -157,15 +157,14 @@
                     <span class="hidden sm:inline-block text-[11px] font-medium text-stone-400 border-l border-stone-200 pl-3">㈜BVB원예자재</span>
                 </a>
 
-                <!-- 5 Core Navigation Menus -->
-                <nav class="hidden md:flex items-center space-x-9 text-[13px] font-medium text-stone-700 tracking-tight">
+                <!-- 5 Core Navigation Menus (Integrated) -->
+                <nav class="hidden md:flex items-center space-x-8 text-[13px] font-medium text-stone-700 tracking-tight">
                     <a href="#about" class="hover:text-stone-950 transition py-2">회사 소개</a>
                     <a href="#products" class="hover:text-stone-950 transition py-2">제품 소개</a>
                     <a href="#storyboard" class="hover:text-stone-950 transition py-2 font-bold text-stone-900 flex items-center">
                         <span class="w-1.5 h-1.5 rounded-full bg-ruby-700 mr-1.5"></span>
-                        에디토리얼 허브
+                        에디토리얼 허브 : BVB 이야기들
                     </a>
-                    <a href="#technology" class="hover:text-stone-950 transition py-2">기술 자료</a>
                     <a href="#quality" class="hover:text-stone-950 transition py-2">품질 인증</a>
                     <a href="#contact" class="hover:text-stone-950 transition py-2">상담 안내</a>
                 </nav>
@@ -189,8 +188,7 @@
         <div id="mobileMenu" class="hidden md:hidden bg-stone-50 border-b border-stone-200 px-6 py-6 space-y-4">
             <a href="#about" onclick="toggleMobileMenu()" class="block text-base font-semibold text-stone-900">회사 소개</a>
             <a href="#products" onclick="toggleMobileMenu()" class="block text-base font-semibold text-stone-900">제품 소개</a>
-            <a href="#storyboard" onclick="toggleMobileMenu()" class="block text-base font-semibold text-stone-900">에디토리얼 허브</a>
-            <a href="#technology" onclick="toggleMobileMenu()" class="block text-base font-semibold text-stone-900">기술 자료</a>
+            <a href="#storyboard" onclick="toggleMobileMenu()" class="block text-base font-semibold text-stone-900">에디토리얼 허브 : BVB 이야기들</a>
             <a href="#quality" onclick="toggleMobileMenu()" class="block text-base font-semibold text-stone-900">품질 인증</a>
             <a href="#contact" onclick="toggleMobileMenu()" class="block text-base font-semibold text-stone-900">상담 안내</a>
             <div class="pt-4 border-t border-stone-200 flex flex-col gap-2">
@@ -234,7 +232,7 @@
                             전화 상담 연결 (1660-2301)
                         </a>
                         <a href="#storyboard" class="bg-white hover:bg-stone-100 text-stone-800 border border-stone-300 font-semibold px-8 py-3.5 rounded-full text-xs transition text-center">
-                            에디토리얼 허브 둘러보기 &darr;
+                            에디토리얼 허브 : BVB 이야기들 둘러보기 &darr;
                         </a>
                     </div>
 
@@ -315,20 +313,19 @@
         </div>
     </section>
 
-    <!-- SECTION 1.5: MULTI-FORMAT EDITORIAL HUB (Articles, Card News, Monthly Notices, YouTube) -->
+    <!-- SECTION 2: 에디토리얼 허브 : BVB 이야기들 (기술 자료 통합 & 멀티포맷 아카이브) -->
     <section id="storyboard" class="py-24 md:py-32 bg-white border-b border-stone-200/80">
         <div class="max-w-7xl mx-auto px-6 sm:px-8">
             
             <!-- Section Header & Controls -->
-            <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-10 gap-6">
+            <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-8 gap-6">
                 <div>
-                    <div class="tag-subtle mb-4">BVB Editorial &amp; Multimedia Hub</div>
+                    <div class="tag-subtle mb-3">Knowledge &amp; Field Stories</div>
                     <h2 class="font-editorial text-3xl sm:text-4xl font-black tracking-tight text-stone-900 leading-tight">
-                        데이터와 현장으로 증명하는<br>
-                        <span class="italic font-normal text-stone-600">BVB 에디토리얼 허브</span>
+                        에디토리얼 허브 : <span class="italic font-normal text-stone-600">BVB 이야기들</span>
                     </h2>
-                    <p class="mt-3 text-sm sm:text-base text-stone-600 max-w-2xl">
-                        심층 매거진 기사부터 한눈에 보는 카드뉴스, 이달의 농사 체크포인트, 생생한 유튜브 현장 영상까지 클릭 한 번으로 만나보세요.
+                    <p class="mt-2 text-sm sm:text-base text-stone-600 max-w-2xl">
+                        120년 BVB의 재배 과학과 대한민국 1등 농가들의 생생한 영농 지식, 현장의 결실을 함께 나눕니다.
                     </p>
                 </div>
 
@@ -349,28 +346,46 @@
                     <!-- Admin CMS Trigger -->
                     <button onclick="openEditorModal()" class="flex items-center bg-stone-900 hover:bg-stone-800 text-white font-semibold px-4 py-2 rounded-full text-xs transition border border-stone-800 shadow-xs">
                         <svg class="w-3.5 h-3.5 mr-1.5 text-stone-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
-                        새 콘텐츠 등록 &amp; 관리
+                        새 글 작성 &amp; 에디터
                     </button>
                 </div>
             </div>
 
-            <!-- Format Filter Pills -->
-            <div class="flex flex-wrap gap-2 mb-10 pb-4 border-b border-stone-100">
-                <button onclick="filterContent('all')" id="filter-all" class="px-5 py-2 rounded-full text-xs font-semibold bg-stone-900 text-stone-50 transition shadow-xs">
-                    전체 보기 (All)
-                </button>
-                <button onclick="filterContent('article')" id="filter-article" class="px-5 py-2 rounded-full text-xs font-semibold bg-stone-100 text-stone-600 hover:bg-stone-200 transition">
-                    📰 매거진 기사
-                </button>
-                <button onclick="filterContent('cardnews')" id="filter-cardnews" class="px-5 py-2 rounded-full text-xs font-semibold bg-stone-100 text-stone-600 hover:bg-stone-200 transition">
-                    🎴 슬라이드 카드뉴스
-                </button>
-                <button onclick="filterContent('monthly')" id="filter-monthly" class="px-5 py-2 rounded-full text-xs font-semibold bg-stone-100 text-stone-600 hover:bg-stone-200 transition">
-                    📅 월별 주요사항
-                </button>
-                <button onclick="filterContent('youtube')" id="filter-youtube" class="px-5 py-2 rounded-full text-xs font-semibold bg-stone-100 text-stone-600 hover:bg-stone-200 transition">
-                    🎬 유튜브 영상
-                </button>
+            <!-- Search Bar & Filters Bar -->
+            <div class="flex flex-col md:flex-row justify-between items-stretch md:items-center gap-4 mb-8 pb-4 border-b border-stone-100">
+                <!-- Format Filter Pills -->
+                <div class="flex flex-wrap gap-1.5">
+                    <button onclick="filterContent('all')" id="filter-all" class="px-4 py-1.5 rounded-full text-xs font-semibold bg-stone-900 text-stone-50 transition shadow-xs">
+                        전체 보기
+                    </button>
+                    <button onclick="filterContent('article')" id="filter-article" class="px-4 py-1.5 rounded-full text-xs font-semibold bg-stone-100 text-stone-600 hover:bg-stone-200 transition">
+                        📰 기사·인터뷰
+                    </button>
+                    <button onclick="filterContent('technical')" id="filter-technical" class="px-4 py-1.5 rounded-full text-xs font-semibold bg-stone-100 text-stone-600 hover:bg-stone-200 transition">
+                        🔬 기술 자료 (PDF)
+                    </button>
+                    <button onclick="filterContent('cardnews')" id="filter-cardnews" class="px-4 py-1.5 rounded-full text-xs font-semibold bg-stone-100 text-stone-600 hover:bg-stone-200 transition">
+                        🎴 카드뉴스
+                    </button>
+                    <button onclick="filterContent('monthly')" id="filter-monthly" class="px-4 py-1.5 rounded-full text-xs font-semibold bg-stone-100 text-stone-600 hover:bg-stone-200 transition">
+                        📅 월별 주요사항
+                    </button>
+                    <button onclick="filterContent('youtube')" id="filter-youtube" class="px-4 py-1.5 rounded-full text-xs font-semibold bg-stone-100 text-stone-600 hover:bg-stone-200 transition">
+                        🎬 현장 영상
+                    </button>
+                </div>
+
+                <!-- Real-Time Search Bar -->
+                <div class="relative w-full md:w-72">
+                    <input type="text" id="searchInput" oninput="handleSearch(this.value)" placeholder="제목, 키워드, 작성자 검색..." class="w-full pl-9 pr-4 py-2 rounded-full border border-stone-200 text-xs text-stone-900 focus:outline-none focus:border-stone-700 bg-stone-50/70">
+                    <svg class="w-4 h-4 text-stone-400 absolute left-3 top-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                </div>
+            </div>
+
+            <!-- Content Counter -->
+            <div class="flex justify-between items-center text-xs text-stone-400 mb-6">
+                <div>총 <span id="contentCount" class="font-bold text-stone-800">0</span>개의 이야기</div>
+                <div class="text-[11px]">BVB Korea 공식 영농 지식 아카이브</div>
             </div>
 
             <!-- Content Container (Rendered dynamically as Grid or List) -->
@@ -381,7 +396,7 @@
         </div>
     </section>
 
-    <!-- SECTION 2: ABOUT US (우리의 철학 & 브랜드 스토리) -->
+    <!-- SECTION 3: ABOUT US (우리의 철학 & 브랜드 스토리) -->
     <section id="about" class="py-24 md:py-32 bg-stone-50 border-b border-stone-200/80">
         <div class="max-w-6xl mx-auto px-6 sm:px-8">
             
@@ -450,7 +465,7 @@
         </div>
     </section>
 
-    <!-- SECTION 3: PRODUCTS (제품 소개 - 딸기 100% 집중 + 영양제) -->
+    <!-- SECTION 4: PRODUCTS (제품 소개 - 딸기 100% 집중 + 영양제) -->
     <section id="products" class="py-24 md:py-32 bg-white border-b border-stone-200/80">
         <div class="max-w-6xl mx-auto px-6 sm:px-8">
             
@@ -637,69 +652,8 @@
         </div>
     </section>
 
-    <!-- SECTION 4: TECHNICAL DATA (기술 자료 - 과학적 재배 가이드) -->
-    <section id="technology" class="py-24 md:py-32 bg-stone-50 border-b border-stone-200/80">
-        <div class="max-w-6xl mx-auto px-6 sm:px-8">
-            
-            <div class="max-w-3xl mb-16">
-                <div class="tag-subtle mb-4">Grower Knowledge &amp; Data</div>
-                <h2 class="font-editorial text-3xl sm:text-4xl font-black tracking-tight text-stone-900">
-                    BVB의 기술은 <span class="italic font-normal text-stone-600">농가의 성공 데이터</span>로 증명됩니다
-                </h2>
-                <p class="mt-4 text-sm sm:text-base text-stone-600 leading-relaxed">
-                    근권부 환경 관리, 수분 제어, 작물별 생육 주기 시비 기준 등 농가의 시행착오를 줄이고 수확량을 극대화하는 핵심 기술 가이드를 제공합니다.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Guide 1 -->
-                <div class="card-editorial p-8 rounded-2xl bg-white flex flex-col justify-between">
-                    <div>
-                        <div class="text-[10px] font-mono font-bold text-stone-400 mb-2">DATA REPORT 01</div>
-                        <h3 class="font-editorial text-lg font-bold text-stone-900 mb-3">딸기 수경재배 배지 수분(WC) &amp; EC 제어 기술</h3>
-                        <p class="text-xs text-stone-600 leading-relaxed mb-6">
-                            정식기 과습 방지와 개화기 이상적인 근권부 EC 유지 기준. 뿌리 활착 속도를 30% 이상 앞당기는 과학적 수분 관리법.
-                        </p>
-                    </div>
-                    <a href="tel:1660-2301" class="text-xs font-semibold text-stone-800 hover:text-stone-950 flex items-center">
-                        기술 문의 및 가이드 요청 &rarr;
-                    </a>
-                </div>
-
-                <!-- Guide 2 -->
-                <div class="card-editorial p-8 rounded-2xl bg-white flex flex-col justify-between">
-                    <div>
-                        <div class="text-[10px] font-mono font-bold text-stone-400 mb-2">GROWER MANUAL 02</div>
-                        <h3 class="font-editorial text-lg font-bold text-stone-900 mb-3">참다래(키위) 연간 생육 주기별 재배력</h3>
-                        <p class="text-xs text-stone-600 leading-relaxed mb-6">
-                            맹아기, 개화기, 비대기, 수확기별 최적 영양 공급 스케줄. 신초 웃자람 방지 및 고품위 과실 생산을 위한 정밀 시비표.
-                        </p>
-                    </div>
-                    <a href="tel:1660-2301" class="text-xs font-semibold text-stone-800 hover:text-stone-950 flex items-center">
-                        키위 재배력 문의 &rarr;
-                    </a>
-                </div>
-
-                <!-- Guide 3 -->
-                <div class="card-editorial p-8 rounded-2xl bg-white flex flex-col justify-between">
-                    <div>
-                        <div class="text-[10px] font-mono font-bold text-stone-400 mb-2">GROWER MANUAL 03</div>
-                        <h3 class="font-editorial text-lg font-bold text-stone-900 mb-3">사과 고품위 정품과 생산 시비 가이드</h3>
-                        <p class="text-xs text-stone-600 leading-relaxed mb-6">
-                            기후 변화에 따른 고온 장애 예방과 착색 향상 처방. 잎의 광합성 효율 극대화 및 저장성 증진 테크니컬 가이드.
-                        </p>
-                    </div>
-                    <a href="tel:1660-2301" class="text-xs font-semibold text-stone-800 hover:text-stone-950 flex items-center">
-                        사과 재배 가이드 문의 &rarr;
-                    </a>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
     <!-- SECTION 5: QUALITY & CERTIFICATIONS (품질 인증) -->
-    <section id="quality" class="py-24 md:py-32 bg-white border-b border-stone-200/80">
+    <section id="quality" class="py-24 md:py-32 bg-stone-50 border-b border-stone-200/80">
         <div class="max-w-6xl mx-auto px-6 sm:px-8">
             
             <div class="max-w-3xl mb-16">
@@ -713,7 +667,7 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="card-editorial p-8 rounded-2xl bg-stone-50/50">
+                <div class="card-editorial p-8 rounded-2xl bg-white">
                     <div class="flex items-center space-x-3 mb-6">
                         <div class="w-11 h-11 rounded-full border border-stone-300 text-stone-900 font-bold text-xs flex items-center justify-center font-mono">RHP</div>
                         <div>
@@ -724,12 +678,12 @@
                     <p class="text-xs sm:text-sm text-stone-600 leading-relaxed mb-5">
                         선충, 병원균, 잡초 종자가 완벽히 배제된 100% 안전한 상토임을 보증합니다. 매 생산 로트마다 물리성(공극률, 보수력)과 화학성(pH, EC)이 엄격하게 검증됩니다.
                     </p>
-                    <div class="text-xs font-medium text-stone-600 bg-white p-4 rounded-xl border border-stone-200/60">
+                    <div class="text-xs font-medium text-stone-600 bg-stone-50 p-4 rounded-xl border border-stone-200/60">
                         ✓ 병해충 오염 제로 · ✓ 균일한 통기성 · ✓ 작물 뿌리 손상 방지
                     </div>
                 </div>
 
-                <div class="card-editorial p-8 rounded-2xl bg-stone-50/50">
+                <div class="card-editorial p-8 rounded-2xl bg-white">
                     <div class="flex items-center space-x-3 mb-6">
                         <div class="w-11 h-11 rounded-full border border-stone-300 text-stone-900 font-bold text-xs flex items-center justify-center font-mono">SWISS</div>
                         <div>
@@ -740,7 +694,7 @@
                     <p class="text-sm text-stone-600 leading-relaxed mb-5">
                         유럽 최고 수준의 고순도 원료를 사용하여 작물 흡수율을 극대화하고 염류 집적과 가스 장애를 원천 차단하는 스위스 정밀 농업의 기술력입니다.
                     </p>
-                    <div class="text-xs font-medium text-stone-600 bg-white p-4 rounded-xl border border-stone-200/60">
+                    <div class="text-xs font-medium text-stone-600 bg-stone-50 p-4 rounded-xl border border-stone-200/60">
                         ✓ 고순도 흡수율 · ✓ 미량요소 킬레이트화 · ✓ 작물 스트레스 저감
                     </div>
                 </div>
@@ -875,13 +829,16 @@
     </div>
 
     <!-- ========================================== -->
-    <!-- CONTENT MANAGEMENT & EDITOR MODAL (CMS)    -->
+    <!-- RICH CONTENT EDITOR & CMS MODAL            -->
     <!-- ========================================== -->
     <div id="editorModal" class="fixed inset-0 z-50 hidden overflow-y-auto bg-stone-950/80 backdrop-blur-md flex items-center justify-center p-3 sm:p-6">
-        <div class="bg-white w-full max-w-2xl rounded-3xl overflow-hidden shadow-2xl border border-stone-200 max-h-[92vh] flex flex-col">
+        <div class="bg-white w-full max-w-3xl rounded-3xl overflow-hidden shadow-2xl border border-stone-200 max-h-[92vh] flex flex-col">
             
             <div class="px-6 py-4 border-b border-stone-100 flex justify-between items-center bg-stone-50">
-                <h3 class="font-editorial text-lg font-bold text-stone-900">에디토리얼 콘텐츠 등록 &amp; 관리</h3>
+                <div>
+                    <h3 class="font-editorial text-lg font-bold text-stone-900">에디토리얼 허브 : BVB 이야기들 편집기</h3>
+                    <p class="text-[11px] text-stone-400">서식 도구, 이미지 직접 선택, PDF 첨부파일 지원</p>
+                </div>
                 <button onclick="closeEditorModal()" class="text-stone-400 hover:text-stone-800">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
                 </button>
@@ -893,22 +850,26 @@
                 <!-- Format Selection -->
                 <div>
                     <label class="block text-xs font-bold text-stone-700 mb-2">1. 콘텐츠 포맷 선택</label>
-                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
-                        <label class="cursor-pointer border border-stone-200 rounded-xl p-3 text-center text-xs font-semibold hover:border-stone-400 has-[:checked]:bg-stone-900 has-[:checked]:text-white transition">
+                    <div class="grid grid-cols-2 sm:grid-cols-5 gap-2">
+                        <label class="cursor-pointer border border-stone-200 rounded-xl p-2.5 text-center text-xs font-semibold hover:border-stone-400 has-[:checked]:bg-stone-900 has-[:checked]:text-white transition">
                             <input type="radio" name="contentType" value="article" checked onchange="toggleEditorFields()" class="hidden">
-                            📰 매거진 기사
+                            📰 기사·인터뷰
                         </label>
-                        <label class="cursor-pointer border border-stone-200 rounded-xl p-3 text-center text-xs font-semibold hover:border-stone-400 has-[:checked]:bg-stone-900 has-[:checked]:text-white transition">
+                        <label class="cursor-pointer border border-stone-200 rounded-xl p-2.5 text-center text-xs font-semibold hover:border-stone-400 has-[:checked]:bg-stone-900 has-[:checked]:text-white transition">
+                            <input type="radio" name="contentType" value="technical" onchange="toggleEditorFields()" class="hidden">
+                            🔬 기술자료 (PDF)
+                        </label>
+                        <label class="cursor-pointer border border-stone-200 rounded-xl p-2.5 text-center text-xs font-semibold hover:border-stone-400 has-[:checked]:bg-stone-900 has-[:checked]:text-white transition">
                             <input type="radio" name="contentType" value="cardnews" onchange="toggleEditorFields()" class="hidden">
                             🎴 카드뉴스
                         </label>
-                        <label class="cursor-pointer border border-stone-200 rounded-xl p-3 text-center text-xs font-semibold hover:border-stone-400 has-[:checked]:bg-stone-900 has-[:checked]:text-white transition">
+                        <label class="cursor-pointer border border-stone-200 rounded-xl p-2.5 text-center text-xs font-semibold hover:border-stone-400 has-[:checked]:bg-stone-900 has-[:checked]:text-white transition">
                             <input type="radio" name="contentType" value="monthly" onchange="toggleEditorFields()" class="hidden">
                             📅 월별 주요사항
                         </label>
-                        <label class="cursor-pointer border border-stone-200 rounded-xl p-3 text-center text-xs font-semibold hover:border-stone-400 has-[:checked]:bg-stone-900 has-[:checked]:text-white transition">
+                        <label class="cursor-pointer border border-stone-200 rounded-xl p-2.5 text-center text-xs font-semibold hover:border-stone-400 has-[:checked]:bg-stone-900 has-[:checked]:text-white transition">
                             <input type="radio" name="contentType" value="youtube" onchange="toggleEditorFields()" class="hidden">
-                            🎬 유튜브 영상
+                            🎬 현장 영상
                         </label>
                     </div>
                 </div>
@@ -927,33 +888,70 @@
                 <div class="grid grid-cols-2 gap-4">
                     <div>
                         <label class="block text-xs font-bold text-stone-700 mb-1">카테고리 / 태그</label>
-                        <input type="text" id="editCategory" class="w-full p-3 rounded-xl border border-stone-200 text-xs text-stone-900" placeholder="예: 농가 인터뷰 / 정식기 지침">
+                        <input type="text" id="editCategory" class="w-full p-3 rounded-xl border border-stone-200 text-xs text-stone-900" placeholder="예: 농가 인터뷰 / 정식기 지침 / 기술 백서">
                     </div>
                     <div>
                         <label class="block text-xs font-bold text-stone-700 mb-1">작성자 / 농가 위치</label>
-                        <input type="text" id="editAuthor" class="w-full p-3 rounded-xl border border-stone-200 text-xs text-stone-900" placeholder="예: 충남 논산 1,800평 온실">
+                        <input type="text" id="editAuthor" class="w-full p-3 rounded-xl border border-stone-200 text-xs text-stone-900" placeholder="예: 충남 논산 1,800평 온실 / BVB 기술연구소">
                     </div>
                 </div>
 
-                <div>
-                    <label class="block text-xs font-bold text-stone-700 mb-1">대표 커버 이미지 (선택)</label>
-                    <select id="editCoverImage" class="w-full p-3 rounded-xl border border-stone-200 text-xs text-stone-900 bg-white">
-                        <option value="assets/images/strawberry_greenhouse.jpg">온실 전경 (strawberry_greenhouse.jpg)</option>
-                        <option value="assets/images/bvb_root_ball.jpg">뿌리 볼 (bvb_root_ball.jpg)</option>
-                        <option value="assets/images/premium_strawberries.jpg">특품 딸기 (premium_strawberries.jpg)</option>
-                        <option value="assets/images/pristine_root_system.jpg">수염뿌리 (pristine_root_system.jpg)</option>
-                    </select>
+                <!-- Image Selector & Custom Upload -->
+                <div class="p-4 bg-stone-50 rounded-2xl border border-stone-200 space-y-3">
+                    <label class="block text-xs font-bold text-stone-800">대표 이미지 선택 / 직접 업로드</label>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div>
+                            <span class="text-[11px] text-stone-500 block mb-1">① 기본 추천 갤러리에서 선택:</span>
+                            <select id="editCoverImageSelect" onchange="updateCoverPreview(this.value)" class="w-full p-2.5 rounded-xl border border-stone-200 text-xs text-stone-900 bg-white">
+                                <option value="assets/images/strawberry_greenhouse.jpg">스마트 온실 전경 (strawberry_greenhouse.jpg)</option>
+                                <option value="assets/images/bvb_root_ball.jpg">배지 속 뿌리 볼 (bvb_root_ball.jpg)</option>
+                                <option value="assets/images/premium_strawberries.jpg">보석 같은 특품 딸기 (premium_strawberries.jpg)</option>
+                                <option value="assets/images/pristine_root_system.jpg">압도적 백색 수염뿌리 (pristine_root_system.jpg)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <span class="text-[11px] text-stone-500 block mb-1">② 내 컴퓨터에서 직접 사진 파일 선택:</span>
+                            <input type="file" id="editCoverImageFile" accept="image/*" onchange="handleFileUpload(event)" class="w-full p-1.5 text-xs text-stone-600 bg-white border border-stone-200 rounded-xl">
+                        </div>
+                    </div>
+                    <input type="hidden" id="editCoverImageValue" value="assets/images/strawberry_greenhouse.jpg">
                 </div>
 
-                <!-- Field 1: Article Specific (Text & Quote) -->
+                <!-- PDF & File Attachment Input -->
+                <div class="p-4 bg-stone-50 rounded-2xl border border-stone-200 space-y-3">
+                    <label class="block text-xs font-bold text-stone-800">📄 기술 자료 PDF / 첨부파일 등록 (선택)</label>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div>
+                            <span class="text-[11px] text-stone-500 block mb-1">첨부 파일명:</span>
+                            <input type="text" id="editAttachmentName" placeholder="예: 2026_딸기_수분관리_기술가이드.pdf" class="w-full p-2.5 rounded-xl border border-stone-200 text-xs text-stone-900 bg-white">
+                        </div>
+                        <div>
+                            <span class="text-[11px] text-stone-500 block mb-1">파일 링크 또는 안내문:</span>
+                            <input type="text" id="editAttachmentUrl" placeholder="예: support@bvbkorea.co.kr 요청 시 발송" class="w-full p-2.5 rounded-xl border border-stone-200 text-xs text-stone-900 bg-white">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rich Text Tools for Article / Technical -->
                 <div id="field-article" class="space-y-4">
                     <div>
                         <label class="block text-xs font-bold text-stone-700 mb-1">인터뷰 인용구 / 핵심 메시지 (Quote)</label>
                         <input type="text" id="editArticleQuote" class="w-full p-3 rounded-xl border border-stone-200 text-xs text-stone-900" placeholder="예: 'BVB 상토를 쓰고 4년간 단 한 번도 뿌리 썩음이 없었습니다.'">
                     </div>
+
                     <div>
-                        <label class="block text-xs font-bold text-stone-700 mb-1">기사 본문 내용 (단락별 줄바꿈 가능)</label>
-                        <textarea id="editArticleContent" rows="6" class="w-full p-3 rounded-xl border border-stone-200 text-xs text-stone-900" placeholder="기사의 상세 내용을 작성해주세요. 줄바꿈으로 문단이 나뉩니다."></textarea>
+                        <div class="flex justify-between items-center mb-1">
+                            <label class="block text-xs font-bold text-stone-700">기사 본문 내용</label>
+                            <!-- Rich Formatting Buttons -->
+                            <div class="flex space-x-1">
+                                <button type="button" onclick="insertFormat('bold')" class="px-2 py-1 bg-stone-100 hover:bg-stone-200 text-stone-800 text-[11px] font-bold rounded border border-stone-300">B</button>
+                                <button type="button" onclick="insertFormat('heading')" class="px-2 py-1 bg-stone-100 hover:bg-stone-200 text-stone-800 text-[11px] font-bold rounded border border-stone-300">H (소제목)</button>
+                                <button type="button" onclick="insertFormat('quote')" class="px-2 py-1 bg-stone-100 hover:bg-stone-200 text-stone-800 text-[11px] rounded border border-stone-300">“ 인용</button>
+                                <button type="button" onclick="insertFormat('bullet')" class="px-2 py-1 bg-stone-100 hover:bg-stone-200 text-stone-800 text-[11px] rounded border border-stone-300">• 목록</button>
+                                <button type="button" onclick="insertFormat('divider')" class="px-2 py-1 bg-stone-100 hover:bg-stone-200 text-stone-800 text-[11px] rounded border border-stone-300">─ 구분선</button>
+                            </div>
+                        </div>
+                        <textarea id="editArticleContent" rows="7" class="w-full p-3 rounded-xl border border-stone-200 text-xs text-stone-900 font-sans" placeholder="기사의 상세 내용을 작성해주세요. 위의 서식 도구를 사용해 강조할 수 있습니다."></textarea>
                     </div>
                 </div>
 
@@ -1016,7 +1014,7 @@
     <!-- EDITORIAL HUB JAVASCRIPT LOGIC             -->
     <!-- ========================================== -->
     <script>
-        // Initial Curated Dataset (4 Formats)
+        // Initial Curated Dataset (7 Full Items - Integrated Technical Reports)
         const DEFAULT_EDITORIAL_DATA = [
             {
                 id: 1,
@@ -1044,10 +1042,72 @@
                         "정식 후 일주일 만에 모종을 뽑아봤는데, 하얀 모세근이 배지 전체를 빈틈없이 감싸고 있더군요. BVB 상토는 공극률(기상률)이 30% 이상 일정하게 유지되기 때문에, 물을 넉넉히 주어도 뿌리가 숨을 쉴 산소가 풍부합니다. 덕분에 화아 분화가 고르게 일어나고 1화방부터 4화방까지 연속 출뢰가 한 번도 끊기지 않았습니다."
                     </p>
                 `,
-                productBadge: 'BVB BC2 본포용 상토'
+                attachmentName: '논산스마트팜_생육데이터_분석표.pdf',
+                attachmentUrl: 'support@bvbkorea.co.kr 요청 시 발송'
             },
             {
                 id: 2,
+                type: 'technical',
+                tag: 'TECH REPORT',
+                category: '딸기 수경재배',
+                date: '2026.09',
+                author: 'BVB 수경재배연구소',
+                title: '딸기 수경재배 배지 수분(WC) & EC 제어 기술 백서',
+                summary: '정식기 과습 방지와 개화기 이상적인 근권부 EC 유지 기준. 뿌리 활착 속도를 30% 이상 앞당기는 과학적 수분 관리 가이드입니다.',
+                coverImage: 'assets/images/bvb_root_ball.jpg',
+                quote: '“수경재배의 성패는 배지 속 산소와 수분의 밸런스에 달려 있습니다.”',
+                contentHtml: `
+                    <p class="text-stone-700 leading-relaxed text-sm sm:text-base">
+                        본 기술 보고서는 네덜란드 BVB Substrates 연구소의 데이터와 국내 딸기 주산지 실증 실험을 바탕으로 작성되었습니다. 정식기부터 수확기까지 배지 함수율(WC)을 60~70%로 정밀하게 제어하는 핵심 공식과 야간 근권부 산소 공급 전략을 수록하고 있습니다.
+                    </p>
+                    <h4 class="font-editorial text-lg font-bold text-stone-900 mt-6 mb-2">핵심 제어 가이드라인</h4>
+                    <p class="text-stone-700 leading-relaxed text-sm sm:text-base">
+                        1. 정식 초기 급액 EC: 0.8~1.0 mS/cm로 저농도 관리하여 염류 장해 예방<br>
+                        2. 1회 급액량: 1주당 30~50cc로 소량 다회 공급<br>
+                        3. 일몰 2시간 전 급액 마감으로 야간 과습 원천 차단
+                    </p>
+                `,
+                attachmentName: '딸기_배지_수분_EC_제어_기술백서.pdf',
+                attachmentUrl: '고객센터(1660-2301) 문의 시 즉시 PDF 발송'
+            },
+            {
+                id: 3,
+                type: 'technical',
+                tag: 'GROWER MANUAL',
+                category: '참다래(키위)',
+                date: '2026.09',
+                author: '스위스그로우 과수연구팀',
+                title: '참다래(키위) 연간 생육 주기별 재배력 및 정밀 시비 기준표',
+                summary: '맹아기, 개화기, 비대기, 수확기별 최적 영양 공급 스케줄. 신초 웃자람 방지 및 고품위 과실 생산을 위한 기술 가이드입니다.',
+                coverImage: 'assets/images/strawberry_greenhouse.jpg',
+                contentHtml: `
+                    <p class="text-stone-700 leading-relaxed text-sm sm:text-base">
+                        참다래의 상품성을 결정하는 핵심은 신초 웃자람을 억제하고 엽내 광합성 산물이 과실로 집중되도록 하는 정밀 시비 관리입니다. 스위스 SWISSGROW의 고순도 킬레이트 영양 처방을 적용한 연간 영농 재배력입니다.
+                    </p>
+                `,
+                attachmentName: '2026_참다래_연간재배력_시비기준표.pdf',
+                attachmentUrl: '고객센터(1660-2301) 문의 시 즉시 PDF 발송'
+            },
+            {
+                id: 4,
+                type: 'technical',
+                tag: 'GROWER MANUAL',
+                category: '사과 과수',
+                date: '2026.09',
+                author: '스위스그로우 과수연구팀',
+                title: '사과 고품위 정품과 생산 및 고온기 일소 방지 가이드',
+                summary: '기후 변화에 따른 고온 장애 예방과 착색 향상 처방. 잎의 광합성 효율 극대화 및 저장성 증진 테크니컬 가이드입니다.',
+                coverImage: 'assets/images/premium_strawberries.jpg',
+                contentHtml: `
+                    <p class="text-stone-700 leading-relaxed text-sm sm:text-base">
+                        기후 온난화로 인한 사과 일소 피해와 착색 불량을 방지하기 위한 스위스그로우 정밀 영양 처방 솔루션입니다.
+                    </p>
+                `,
+                attachmentName: '사과_고품위_정품과_생산_테크니컬가이드.pdf',
+                attachmentUrl: '고객센터(1660-2301) 문의 시 즉시 PDF 발송'
+            },
+            {
+                id: 5,
                 type: 'cardnews',
                 tag: 'CARD NEWS',
                 category: '정식기 재배 수칙',
@@ -1064,7 +1124,7 @@
                 ]
             },
             {
-                id: 3,
+                id: 6,
                 type: 'monthly',
                 tag: 'CHECKLIST',
                 category: '9월 주요 농사 지침',
@@ -1084,7 +1144,7 @@
                 ]
             },
             {
-                id: 4,
+                id: 7,
                 type: 'youtube',
                 tag: 'VIDEO',
                 category: '현장 영상 르포',
@@ -1104,9 +1164,10 @@
         ];
 
         // Storage Key
-        const STORAGE_KEY = 'bvb_editorial_content_v1';
+        const STORAGE_KEY = 'bvb_editorial_content_v2';
         let currentFilter = 'all';
         let currentViewMode = 'grid'; // 'grid' or 'list'
+        let currentSearchQuery = '';
 
         function getEditorialData() {
             const saved = localStorage.getItem(STORAGE_KEY);
@@ -1140,34 +1201,60 @@
         // Filter Function
         function filterContent(type) {
             currentFilter = type;
-            const buttons = ['all', 'article', 'cardnews', 'monthly', 'youtube'];
+            const buttons = ['all', 'article', 'technical', 'cardnews', 'monthly', 'youtube'];
             buttons.forEach(b => {
                 const el = document.getElementById('filter-' + b);
                 if (el) {
                     if (b === type) {
-                        el.className = "px-5 py-2 rounded-full text-xs font-semibold bg-stone-900 text-stone-50 transition shadow-xs";
+                        el.className = "px-4 py-1.5 rounded-full text-xs font-semibold bg-stone-900 text-stone-50 transition shadow-xs";
                     } else {
-                        el.className = "px-5 py-2 rounded-full text-xs font-semibold bg-stone-100 text-stone-600 hover:bg-stone-200 transition";
+                        el.className = "px-4 py-1.5 rounded-full text-xs font-semibold bg-stone-100 text-stone-600 hover:bg-stone-200 transition";
                     }
                 }
             });
             renderContent();
         }
 
+        // Search Function
+        function handleSearch(query) {
+            currentSearchQuery = query.trim().toLowerCase();
+            renderContent();
+        }
+
         // Render Content (Grid or List)
         function renderContent() {
             const container = document.getElementById('contentGrid');
+            const counter = document.getElementById('contentCount');
             if (!container) return;
 
             const data = getEditorialData();
-            const filtered = currentFilter === 'all' ? data : data.filter(item => item.type === currentFilter);
+            
+            // Filter by Type
+            let filtered = currentFilter === 'all' ? data : data.filter(item => item.type === currentFilter);
+
+            // Filter by Search Query
+            if (currentSearchQuery) {
+                filtered = filtered.filter(item => {
+                    const text = `${item.title} ${item.summary} ${item.category} ${item.author} ${item.quote || ''}`.toLowerCase();
+                    return text.includes(currentSearchQuery);
+                });
+            }
+
+            if (counter) counter.innerText = filtered.length;
 
             if (currentViewMode === 'grid') {
                 // GRID VIEW
                 container.className = "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-7";
+                
+                if (filtered.length === 0) {
+                    container.innerHTML = `<div class="col-span-full py-16 text-center text-xs text-stone-400 bg-stone-50 rounded-3xl border border-stone-200">검색 결과에 해당하는 이야기가 없습니다.</div>`;
+                    return;
+                }
+
                 container.innerHTML = filtered.map(item => {
                     let badgeClass = "bg-stone-900 text-stone-50";
                     let icon = "📰";
+                    if (item.type === 'technical') { badgeClass = "bg-blue-900 text-blue-50"; icon = "🔬"; }
                     if (item.type === 'cardnews') { badgeClass = "bg-amber-800 text-amber-50"; icon = "🎴"; }
                     if (item.type === 'monthly') { badgeClass = "bg-emerald-900 text-emerald-50"; icon = "📅"; }
                     if (item.type === 'youtube') { badgeClass = "bg-ruby-900 text-ruby-50"; icon = "🎬"; }
@@ -1186,6 +1273,11 @@
                                                 <svg class="w-5 h-5 text-ruby-800" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
                                             </div>
                                         </div>
+                                    ` : ''}
+                                    ${item.attachmentName ? `
+                                        <span class="absolute bottom-2 right-2 text-[9px] font-bold px-2.5 py-0.5 rounded-md bg-stone-900/80 text-stone-200 backdrop-blur-xs flex items-center">
+                                            📄 PDF 첨부
+                                        </span>
                                     ` : ''}
                                 </div>
                                 <div class="p-6">
@@ -1215,13 +1307,14 @@
                 container.className = "w-full border border-stone-200 rounded-3xl bg-white overflow-hidden shadow-xs divide-y divide-stone-100";
                 
                 if (filtered.length === 0) {
-                    container.innerHTML = `<div class="p-12 text-center text-xs text-stone-400">해당 카테고리의 게시글이 없습니다.</div>`;
+                    container.innerHTML = `<div class="p-12 text-center text-xs text-stone-400">검색 결과에 해당하는 이야기가 없습니다.</div>`;
                     return;
                 }
 
                 container.innerHTML = filtered.map((item, idx) => {
                     let badgeClass = "bg-stone-100 text-stone-800 border-stone-200";
                     let icon = "📰";
+                    if (item.type === 'technical') { badgeClass = "bg-blue-50 text-blue-900 border-blue-200"; icon = "🔬"; }
                     if (item.type === 'cardnews') { badgeClass = "bg-amber-50 text-amber-900 border-amber-200"; icon = "🎴"; }
                     if (item.type === 'monthly') { badgeClass = "bg-emerald-50 text-emerald-900 border-emerald-200"; icon = "📅"; }
                     if (item.type === 'youtube') { badgeClass = "bg-ruby-50 text-ruby-900 border-ruby-200"; icon = "🎬"; }
@@ -1238,6 +1331,7 @@
                                         <span>${item.category}</span>
                                         <span>·</span>
                                         <span>${item.date}</span>
+                                        ${item.attachmentName ? `<span class="text-blue-700 font-bold bg-blue-50 px-1.5 rounded">📄 PDF</span>` : ''}
                                     </div>
                                     <h3 class="font-editorial text-base font-bold text-stone-900 group-hover:text-stone-700 transition leading-snug">
                                         ${item.title}
@@ -1270,7 +1364,7 @@
 
             badge.innerHTML = `<span>${item.tag}</span> <span class="mx-1 text-stone-300">|</span> <span class="text-stone-400">${item.category}</span>`;
 
-            if (item.type === 'article') {
+            if (item.type === 'article' || item.type === 'technical') {
                 body.innerHTML = `
                     <div class="max-w-2xl mx-auto text-left">
                         <div class="text-xs font-mono text-stone-400 mb-3">${item.date} · ${item.author}</div>
@@ -1288,9 +1382,24 @@
                             </blockquote>
                         ` : ''}
 
-                        <div class="prose prose-stone max-w-none space-y-4 text-stone-700">
+                        <div class="prose prose-stone max-w-none space-y-4 text-stone-700 leading-relaxed">
                             ${item.contentHtml || `<p>${item.summary}</p>`}
                         </div>
+
+                        ${item.attachmentName ? `
+                            <div class="mt-8 p-5 bg-stone-50 border border-stone-200 rounded-2xl flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-10 h-10 rounded-xl bg-white border border-stone-300 flex items-center justify-center text-lg">📄</div>
+                                    <div>
+                                        <div class="text-xs font-bold text-stone-900">${item.attachmentName}</div>
+                                        <div class="text-[11px] text-stone-500">${item.attachmentUrl || '고객센터(1660-2301) 문의 시 즉시 PDF 발송'}</div>
+                                    </div>
+                                </div>
+                                <a href="tel:1660-2301" class="px-5 py-2.5 bg-stone-900 text-white rounded-full text-xs font-semibold hover:bg-stone-800 transition whitespace-nowrap">
+                                    자료 신청하기 &rarr;
+                                </a>
+                            </div>
+                        ` : ''}
                     </div>
                 `;
             } else if (item.type === 'cardnews') {
@@ -1424,6 +1533,41 @@
             }
         }
 
+        // Rich Formatting Helpers
+        function insertFormat(type) {
+            const textarea = document.getElementById('editArticleContent');
+            const start = textarea.selectionStart;
+            const end = textarea.selectionEnd;
+            const text = textarea.value;
+            const selected = text.substring(start, end) || '텍스트';
+
+            let replacement = selected;
+            if (type === 'bold') replacement = `<b>${selected}</b>`;
+            if (type === 'heading') replacement = `\n<h4 class="font-editorial text-lg font-bold text-stone-900 mt-6 mb-2">${selected}</h4>\n`;
+            if (type === 'quote') replacement = `\n<blockquote class="p-4 bg-stone-100 border-l-4 border-stone-800 my-4 italic">${selected}</blockquote>\n`;
+            if (type === 'bullet') replacement = `\n• ${selected}\n`;
+            if (type === 'divider') replacement = `\n<hr class="my-6 border-stone-200">\n`;
+
+            textarea.value = text.substring(0, start) + replacement + text.substring(end);
+            textarea.focus();
+        }
+
+        // Cover Image Preview & File Upload Handlers
+        function updateCoverPreview(val) {
+            document.getElementById('editCoverImageValue').value = val;
+        }
+
+        function handleFileUpload(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById('editCoverImageValue').value = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
         // Editor CMS Controls
         function openEditorModal() {
             document.getElementById('editorModal').classList.remove('hidden');
@@ -1443,7 +1587,7 @@
             fields.forEach(f => {
                 const el = document.getElementById('field-' + f);
                 if (el) {
-                    if (f === type) el.classList.remove('hidden');
+                    if (f === type || (f === 'article' && type === 'technical')) el.classList.remove('hidden');
                     else el.classList.add('hidden');
                 }
             });
@@ -1456,9 +1600,12 @@
             const summary = document.getElementById('editSummary').value;
             const category = document.getElementById('editCategory').value || '기타 자료';
             const author = document.getElementById('editAuthor').value || 'BVB KOREA';
-            const coverImage = document.getElementById('editCoverImage').value;
+            const coverImage = document.getElementById('editCoverImageValue').value || 'assets/images/strawberry_greenhouse.jpg';
+            const attachmentName = document.getElementById('editAttachmentName').value;
+            const attachmentUrl = document.getElementById('editAttachmentUrl').value;
 
             let tag = 'ARTICLE';
+            if (type === 'technical') tag = 'TECH REPORT';
             if (type === 'cardnews') tag = 'CARD NEWS';
             if (type === 'monthly') tag = 'CHECKLIST';
             if (type === 'youtube') tag = 'VIDEO';
@@ -1472,13 +1619,20 @@
                 author,
                 title,
                 summary,
-                coverImage
+                coverImage,
+                attachmentName,
+                attachmentUrl
             };
 
-            if (type === 'article') {
+            if (type === 'article' || type === 'technical') {
                 newItem.quote = document.getElementById('editArticleQuote').value;
                 const content = document.getElementById('editArticleContent').value;
-                newItem.contentHtml = content.split('\n\n').map(p => `<p class="leading-relaxed text-sm">${p.trim()}</p>`).join('');
+                newItem.contentHtml = content.split('\n\n').map(p => {
+                    if (p.trim().startsWith('<h4') || p.trim().startsWith('<blockquote') || p.trim().startsWith('<hr')) {
+                        return p.trim();
+                    }
+                    return `<p class="leading-relaxed text-sm sm:text-base">${p.trim()}</p>`;
+                }).join('');
             } else if (type === 'cardnews') {
                 const raw = document.getElementById('editCardNewsSlides').value;
                 newItem.slides = raw.split('\n').filter(l => l.trim()).map(l => {
@@ -1492,7 +1646,6 @@
                 newItem.checklist = raw.split('\n').filter(l => l.trim());
             } else if (type === 'youtube') {
                 const rawUrl = document.getElementById('editYoutubeUrl').value;
-                // Extract video ID
                 let yId = '2Vv-BfVoq4g';
                 const match = rawUrl.match(/(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))([\w-]{11})/);
                 if (match) yId = match[1];
@@ -1505,7 +1658,7 @@
             current.unshift(newItem);
             saveEditorialData(current);
             closeEditorModal();
-            alert('새 콘텐츠가 에디토리얼 허브에 성공적으로 등록되었습니다!');
+            alert('새 콘텐츠가 에디토리얼 허브 : BVB 이야기들에 성공적으로 등록되었습니다!');
         }
 
         function resetToInitialData() {
