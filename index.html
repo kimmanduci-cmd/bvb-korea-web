@@ -329,7 +329,7 @@
                     </p>
                 </div>
 
-                <!-- Admin Action & View Switcher -->
+                <!-- View Switcher & Admin Action -->
                 <div class="flex flex-wrap items-center gap-3">
                     <!-- Grid / List View Mode Toggle -->
                     <div class="flex bg-stone-100 p-1 rounded-full border border-stone-200">
@@ -343,11 +343,20 @@
                         </button>
                     </div>
 
-                    <!-- Admin CMS Trigger -->
-                    <button onclick="openEditorModal()" class="flex items-center bg-stone-900 hover:bg-stone-800 text-white font-semibold px-4 py-2 rounded-full text-xs transition border border-stone-800 shadow-xs">
-                        <svg class="w-3.5 h-3.5 mr-1.5 text-stone-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
-                        새 글 작성 &amp; 에디터
-                    </button>
+                    <!-- Admin Only Controls (Visible only when logged in) -->
+                    <div id="adminHubControls" class="hidden items-center gap-2">
+                        <span class="inline-flex items-center px-3 py-1 rounded-full text-[11px] font-bold bg-amber-100 text-amber-900 border border-amber-300">
+                            <span class="w-1.5 h-1.5 rounded-full bg-amber-600 mr-1.5 animate-pulse"></span>
+                            관리자 모드
+                        </span>
+                        <button onclick="openEditorModal()" class="flex items-center bg-stone-900 hover:bg-stone-800 text-white font-semibold px-4 py-2 rounded-full text-xs transition border border-stone-800 shadow-xs">
+                            <svg class="w-3.5 h-3.5 mr-1.5 text-stone-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+                            새 글 작성 &amp; 에디터
+                        </button>
+                        <button onclick="handleAdminLogout()" title="관리자 로그아웃" class="p-2 rounded-full bg-stone-100 hover:bg-stone-200 text-stone-600 text-xs transition">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"/></svg>
+                        </button>
+                    </div>
                 </div>
             </div>
 
@@ -775,9 +784,15 @@
                 <p>본사: 경상남도 사천시 곤명면 금성로 6 | 대표전화: 1660-2301 | 팩스: 055-854-4454 | 이메일: support@bvbkorea.co.kr</p>
                 <p class="mt-1 text-stone-600">네덜란드 BVB Substrates 공식 한국 지사 및 스위스 SWISSGROW 공급원</p>
             </div>
-            <div class="text-left md:text-right text-stone-600">
+            <div class="text-left md:text-right text-stone-600 flex flex-col items-start md:items-end">
                 <p>&copy; 2026 ㈜BVB원예자재 (BVB KOREA). All Rights Reserved.</p>
-                <p class="mt-1 text-[11px] font-mono text-stone-700">THE STANDARD OF STRAWBERRY SUBSTRATES &amp; NUTRITION</p>
+                <div class="flex items-center space-x-3 mt-1.5">
+                    <p class="text-[11px] font-mono text-stone-700">THE STANDARD OF STRAWBERRY SUBSTRATES &amp; NUTRITION</p>
+                    <span class="text-stone-800">·</span>
+                    <button id="footerAdminBtn" onclick="toggleAdminAuth()" class="text-[11px] font-medium text-stone-600 hover:text-stone-300 transition flex items-center cursor-pointer">
+                        <span id="footerAdminIcon">🔒</span> <span id="footerAdminText" class="ml-1">관리자</span>
+                    </button>
+                </div>
             </div>
         </div>
     </footer>
@@ -807,13 +822,13 @@
                         <svg class="w-3.5 h-3.5 sm:mr-1 text-stone-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
                         <span class="hidden sm:inline">링크 복사</span>
                     </button>
-                    <!-- Edit Button -->
-                    <button onclick="editCurrentPost()" title="글 수정" class="flex items-center px-3 py-1.5 rounded-full bg-white hover:bg-stone-100 border border-stone-200 text-stone-700 text-xs font-semibold transition shadow-2xs">
+                    <!-- Edit Button (Admin Only) -->
+                    <button id="adminEditBtn" onclick="editCurrentPost()" title="글 수정" class="hidden items-center px-3 py-1.5 rounded-full bg-white hover:bg-stone-100 border border-stone-200 text-stone-700 text-xs font-semibold transition shadow-2xs">
                         <svg class="w-3.5 h-3.5 sm:mr-1 text-stone-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
                         <span class="hidden sm:inline">수정</span>
                     </button>
-                    <!-- Delete Button -->
-                    <button onclick="deleteCurrentPost()" title="글 삭제" class="flex items-center px-3 py-1.5 rounded-full bg-white hover:bg-red-50 border border-stone-200 hover:border-red-200 text-stone-500 hover:text-red-700 text-xs font-semibold transition shadow-2xs">
+                    <!-- Delete Button (Admin Only) -->
+                    <button id="adminDeleteBtn" onclick="deleteCurrentPost()" title="글 삭제" class="hidden items-center px-3 py-1.5 rounded-full bg-white hover:bg-red-50 border border-stone-200 hover:border-red-200 text-stone-500 hover:text-red-700 text-xs font-semibold transition shadow-2xs">
                         <svg class="w-3.5 h-3.5 sm:mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
                         <span class="hidden sm:inline">삭제</span>
                     </button>
@@ -1835,9 +1850,144 @@
             }
         }
 
+    <!-- ========================================== -->
+    <!-- ADMIN AUTH LOGIN MODAL                     -->
+    <!-- ========================================== -->
+    <div id="adminLoginModal" class="fixed inset-0 z-50 hidden overflow-y-auto bg-stone-950/80 backdrop-blur-md flex items-center justify-center p-4">
+        <div class="bg-white w-full max-w-sm rounded-3xl overflow-hidden shadow-2xl border border-stone-200 p-6 sm:p-8 text-center animate-in fade-in zoom-in duration-200">
+            <div class="w-12 h-12 rounded-2xl bg-stone-100 border border-stone-200 flex items-center justify-center text-xl mx-auto mb-4 shadow-2xs">
+                🔒
+            </div>
+            <h3 class="font-editorial text-xl font-bold text-stone-900">BVB KOREA 관리자 인증</h3>
+            <p class="text-xs text-stone-500 mt-1 mb-6">글 작성, 수정 및 삭제 권한을 활성화합니다.</p>
+            
+            <form onsubmit="handleAdminLogin(event)" class="space-y-4">
+                <div>
+                    <input type="password" id="adminPasswordInput" required placeholder="비밀번호 입력 (4자리)" class="w-full p-3.5 bg-stone-50 rounded-xl border border-stone-200 text-sm text-center font-mono tracking-widest text-stone-900 focus:outline-none focus:border-stone-900">
+                    <p id="adminLoginError" class="text-[11px] text-red-600 font-semibold mt-2 hidden">비밀번호가 일치하지 않습니다. 다시 입력해주세요.</p>
+                </div>
+                <div class="grid grid-cols-2 gap-2.5 pt-1">
+                    <button type="button" onclick="closeAdminLoginModal()" class="w-full py-3 rounded-xl border border-stone-200 text-xs font-semibold text-stone-600 hover:bg-stone-50 transition">
+                        취소
+                    </button>
+                    <button type="submit" class="w-full py-3 rounded-xl bg-stone-900 hover:bg-stone-800 text-white text-xs font-bold transition shadow-sm">
+                        로그인 &rarr;
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // ==========================================
+        // ADMIN AUTHENTICATION (PIN: 2301)
+        // ==========================================
+        const ADMIN_PIN = '2301';
+
+        function isAdmin() {
+            return sessionStorage.getItem('bvb_admin_logged_in') === 'true';
+        }
+
+        function updateAdminUI() {
+            const loggedIn = isAdmin();
+
+            // Hub section admin controls
+            const adminHub = document.getElementById('adminHubControls');
+            if (adminHub) {
+                if (loggedIn) {
+                    adminHub.classList.remove('hidden');
+                    adminHub.classList.add('flex');
+                } else {
+                    adminHub.classList.add('hidden');
+                    adminHub.classList.remove('flex');
+                }
+            }
+
+            // Modal reader edit & delete buttons
+            const editBtn = document.getElementById('adminEditBtn');
+            const delBtn = document.getElementById('adminDeleteBtn');
+            if (editBtn) {
+                if (loggedIn) {
+                    editBtn.classList.remove('hidden');
+                    editBtn.classList.add('flex');
+                } else {
+                    editBtn.classList.add('hidden');
+                    editBtn.classList.remove('flex');
+                }
+            }
+            if (delBtn) {
+                if (loggedIn) {
+                    delBtn.classList.remove('hidden');
+                    delBtn.classList.add('flex');
+                } else {
+                    delBtn.classList.add('hidden');
+                    delBtn.classList.remove('flex');
+                }
+            }
+
+            // Footer button text
+            const footerIcon = document.getElementById('footerAdminIcon');
+            const footerText = document.getElementById('footerAdminText');
+            if (footerIcon && footerText) {
+                if (loggedIn) {
+                    footerIcon.innerText = '🔓';
+                    footerText.innerText = '관리자 모드 (로그아웃)';
+                } else {
+                    footerIcon.innerText = '🔒';
+                    footerText.innerText = '관리자';
+                }
+            }
+        }
+
+        function openAdminLoginModal() {
+            document.getElementById('adminLoginModal').classList.remove('hidden');
+            document.getElementById('adminPasswordInput').value = '';
+            document.getElementById('adminLoginError').classList.add('hidden');
+            setTimeout(() => document.getElementById('adminPasswordInput').focus(), 50);
+        }
+
+        function closeAdminLoginModal() {
+            document.getElementById('adminLoginModal').classList.add('hidden');
+        }
+
+        function toggleAdminAuth() {
+            if (isAdmin()) {
+                if (confirm('관리자 모드를 로그아웃 하시겠습니까?')) {
+                    handleAdminLogout();
+                }
+            } else {
+                openAdminLoginModal();
+            }
+        }
+
+        function handleAdminLogin(e) {
+            e.preventDefault();
+            const input = document.getElementById('adminPasswordInput').value.trim();
+            if (input === ADMIN_PIN) {
+                sessionStorage.setItem('bvb_admin_logged_in', 'true');
+                closeAdminLoginModal();
+                updateAdminUI();
+                alert('관리자 모드가 활성화되었습니다.\n이제 새 글 작성, 수정, 삭제가 가능합니다.');
+            } else {
+                document.getElementById('adminLoginError').classList.remove('hidden');
+            }
+        }
+
+        function handleAdminLogout() {
+            sessionStorage.removeItem('bvb_admin_logged_in');
+            updateAdminUI();
+            alert('관리자 모드에서 안전하게 로그아웃되었습니다.');
+        }
+
         // Initialize on load
         window.addEventListener('DOMContentLoaded', () => {
             renderContent();
+            updateAdminUI();
+
+            // Check if URL has admin param
+            if (window.location.search.includes('admin') || window.location.hash.includes('admin')) {
+                if (!isAdmin()) openAdminLoginModal();
+            }
         });
 
         // ESC Key to close modal
@@ -1845,6 +1995,7 @@
             if (e.key === 'Escape') {
                 closeContentModal();
                 closeEditorModal();
+                closeAdminLoginModal();
             }
         });
 
