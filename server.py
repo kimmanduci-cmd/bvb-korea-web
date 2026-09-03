@@ -1,8 +1,7 @@
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
-import socketserver
+import threading
 import os
 
-PORT = 8088
 DIRECTORY = os.path.dirname(os.path.abspath(__file__))
 
 class NoCacheHandler(SimpleHTTPRequestHandler):
@@ -18,8 +17,20 @@ class NoCacheHandler(SimpleHTTPRequestHandler):
 class CustomThreadingServer(ThreadingHTTPServer):
     allow_reuse_address = True
 
+def serve_on_port(port):
+    try:
+        server_address = ('127.0.0.1', port)
+        httpd = CustomThreadingServer(server_address, NoCacheHandler)
+        print(f"BVB Server running at http://localhost:{port}/", flush=True)
+        httpd.serve_forever()
+    except Exception as e:
+        print(f"Port {port} error: {e}", flush=True)
+
 if __name__ == '__main__':
-    server_address = ('127.0.0.1', PORT)
-    httpd = CustomThreadingServer(server_address, NoCacheHandler)
-    print(f"BVB Server running at http://localhost:{PORT}/", flush=True)
-    httpd.serve_forever()
+    threads = []
+    for port in [8080, 8088]:
+        t = threading.Thread(target=serve_on_port, args=(port,), daemon=False)
+        t.start()
+        threads.append(t)
+    for t in threads:
+        t.join()
