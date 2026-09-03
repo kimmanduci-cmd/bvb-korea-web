@@ -170,13 +170,20 @@
         .oishii-nav.nav-scrolled .nav-mobile-btn { color: #1C1917; }
 
         /* Ken Burns Cinematic Smooth Slow-Zoom for Hero Images */
+        @keyframes kenBurnsZoom {
+            0% {
+                transform: scale(1.0);
+            }
+            100% {
+                transform: scale(1.08);
+            }
+        }
         .hero-slide img {
             transform: scale(1.0);
-            transition: transform 6.5s cubic-bezier(0.16, 1, 0.3, 1);
             will-change: transform;
         }
         .hero-slide.opacity-100 img {
-            transform: scale(1.07);
+            animation: kenBurnsZoom 6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
     </style>
 </head>
@@ -1997,12 +2004,21 @@
             
             currentHeroSlide = (index + totalHeroSlides) % totalHeroSlides;
             slides.forEach((slide, idx) => {
+                const img = slide.querySelector('img');
                 if (idx === currentHeroSlide) {
                     slide.classList.remove('opacity-0', 'pointer-events-none');
                     slide.classList.add('opacity-100');
+                    if (img) {
+                        img.style.animation = 'none';
+                        void img.offsetHeight; // Trigger reflow to restart animation from 0
+                        img.style.animation = '';
+                    }
                 } else {
                     slide.classList.remove('opacity-100');
                     slide.classList.add('opacity-0', 'pointer-events-none');
+                    if (img) {
+                        img.style.animation = 'none';
+                    }
                 }
             });
 
@@ -2055,6 +2071,7 @@
         window.addEventListener('DOMContentLoaded', () => {
             renderContent();
             updateAdminUI();
+            showHeroSlide(0); // Immediately start Ken Burns animation on the very first photo!
             resetHeroSliderTimer();
 
             const sliderContainer = document.getElementById('heroSliderContainer');
