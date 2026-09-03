@@ -120,52 +120,89 @@
         ::-webkit-scrollbar-track { background: #FFFFFF; }
         ::-webkit-scrollbar-thumb { background: #D1D5DB; border-radius: 3px; }
         ::-webkit-scrollbar-thumb:hover { background: #9CA3AF; }
+
+        /* Oishii Floating Transparent Nav & Scrolled State */
+        .oishii-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 50;
+            transition: all 0.4s ease;
+        }
+        .oishii-nav.nav-transparent {
+            background: linear-gradient(180deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.2) 60%, transparent 100%);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+        }
+        .oishii-nav.nav-transparent .nav-brand-main { color: #FFFFFF; }
+        .oishii-nav.nav-transparent .nav-brand-sub { color: rgba(255, 255, 255, 0.7); }
+        .oishii-nav.nav-transparent .nav-link { color: rgba(255, 255, 255, 0.85); }
+        .oishii-nav.nav-transparent .nav-link:hover { color: #FFFFFF; }
+        .oishii-nav.nav-transparent .nav-btn {
+            background: rgba(255, 255, 255, 0.12);
+            color: #FFFFFF;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(8px);
+        }
+        .oishii-nav.nav-transparent .nav-btn:hover {
+            background: rgba(255, 255, 255, 0.25);
+        }
+        .oishii-nav.nav-transparent .nav-mobile-btn { color: #FFFFFF; }
+
+        .oishii-nav.nav-scrolled {
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(229, 231, 235, 0.8);
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+        }
+        .oishii-nav.nav-scrolled .nav-brand-main { color: #1C1917; }
+        .oishii-nav.nav-scrolled .nav-brand-sub { color: #78716C; }
+        .oishii-nav.nav-scrolled .nav-link { color: #44403C; }
+        .oishii-nav.nav-scrolled .nav-link:hover { color: #0C0A09; }
+        .oishii-nav.nav-scrolled .nav-btn {
+            background: #1C1917;
+            color: #FAFAF9;
+            border: 1px solid #292524;
+        }
+        .oishii-nav.nav-scrolled .nav-btn:hover {
+            background: #292524;
+        }
+        .oishii-nav.nav-scrolled .nav-mobile-btn { color: #1C1917; }
     </style>
 </head>
 <body class="antialiased selection:bg-stone-200 selection:text-stone-900 pb-24 md:pb-0">
 
-    <!-- Top Quiet Utility Bar (Duplication-Free, Clean Corporate Identity) -->
-    <div class="bg-stone-50 border-b border-stone-200/80 text-stone-600 text-[11px] py-1.5 px-6 tracking-tight">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <div class="flex items-center space-x-3">
-                <span class="font-bold text-stone-900">BVB KOREA</span>
-                <span class="text-stone-300">|</span>
-                <span class="text-stone-600">네덜란드 BVB Substrates &amp; 스위스 SWISSGROW 한국 공식 공급원</span>
-            </div>
-        </div>
-    </div>
-
-    <!-- Header Navigation (Clean White Glass - Only 1 Phone CTA Stays Here) -->
-    <header class="glass-nav sticky top-0 z-40 transition-all duration-300">
+    <!-- Header Navigation (Oishii-Style Floating Transparent Nav) -->
+    <header id="mainHeader" class="oishii-nav nav-transparent">
         <div class="max-w-7xl mx-auto px-6 sm:px-8">
-            <div class="flex justify-between items-center h-16">
+            <div class="flex justify-between items-center h-20">
                 <!-- Brand Identity -->
                 <a href="#" class="flex items-center space-x-3 group">
                     <div class="flex items-baseline">
-                        <span class="font-editorial text-2xl font-black tracking-tight text-stone-900">BVB</span>
-                        <span class="text-xs font-semibold tracking-widest text-stone-400 ml-1.5 uppercase">KOREA</span>
+                        <span class="font-editorial text-2xl sm:text-3xl font-black tracking-tight nav-brand-main transition-colors">BVB</span>
+                        <span class="text-xs font-semibold tracking-widest nav-brand-sub ml-1.5 uppercase transition-colors">KOREA</span>
                     </div>
-                    <span class="hidden sm:inline-block text-[11px] font-medium text-stone-400 border-l border-stone-200 pl-3">㈜BVB원예자재</span>
+                    <span class="hidden sm:inline-block text-[11px] font-medium nav-brand-sub border-l border-white/20 pl-3 transition-colors">㈜BVB원예자재</span>
                 </a>
 
-                <!-- 5 Core Navigation Menus (Integrated & Perfectly Balanced) -->
-                <nav class="hidden md:flex items-center space-x-7 text-[13px] font-medium text-stone-700 tracking-tight">
-                    <a href="#about" class="hover:text-stone-950 transition py-2">회사 소개</a>
-                    <a href="#products" class="hover:text-stone-950 transition py-2">제품 소개</a>
-                    <a href="#storyboard" class="hover:text-stone-950 transition py-2">에디토리얼 허브 : BVB 이야기들</a>
-                    <a href="#quality" class="hover:text-stone-950 transition py-2">품질 인증</a>
-                    <a href="#contact" class="hover:text-stone-950 transition py-2">상담 안내</a>
+                <!-- 5 Core Navigation Menus (Integrated & Balanced) -->
+                <nav class="hidden md:flex items-center space-x-8 text-[13px] font-medium tracking-tight">
+                    <a href="#about" class="nav-link transition py-2">회사 소개</a>
+                    <a href="#products" class="nav-link transition py-2">제품 소개</a>
+                    <a href="#storyboard" class="nav-link transition py-2">에디토리얼 허브 : BVB 이야기들</a>
+                    <a href="#quality" class="nav-link transition py-2">품질 인증</a>
+                    <a href="#contact" class="nav-link transition py-2">상담 안내</a>
                 </nav>
 
-                <!-- Phone CTA (Understated Warm Charcoal Pill Button) -->
+                <!-- Phone CTA (Clean Glass Pill Button) -->
                 <div class="flex items-center space-x-3">
-                    <a href="tel:1660-2301" class="hidden sm:flex items-center bg-stone-900 hover:bg-stone-800 text-stone-50 text-xs font-semibold px-4 py-2 rounded-full transition shadow-sm border border-stone-800">
-                        <svg class="w-3.5 h-3.5 mr-1.5 text-stone-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                    <a href="tel:1660-2301" class="hidden sm:flex items-center nav-btn text-xs font-semibold px-5 py-2.5 rounded-full transition shadow-sm">
+                        <svg class="w-3.5 h-3.5 mr-1.5 opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
                         1660-2301 전화상담
                     </a>
                     
                     <!-- Mobile Hamburger -->
-                    <button onclick="toggleMobileMenu()" class="md:hidden p-2 text-stone-800 focus:outline-none">
+                    <button onclick="toggleMobileMenu()" class="md:hidden p-2 nav-mobile-btn focus:outline-none transition-colors">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
                     </button>
                 </div>
@@ -173,14 +210,14 @@
         </div>
 
         <!-- Mobile Drawer Menu -->
-        <div id="mobileMenu" class="hidden md:hidden bg-stone-50 border-b border-stone-200 px-6 py-6 space-y-4">
-            <a href="#about" onclick="toggleMobileMenu()" class="block text-base font-semibold text-stone-900">회사 소개</a>
-            <a href="#products" onclick="toggleMobileMenu()" class="block text-base font-semibold text-stone-900">제품 소개</a>
-            <a href="#storyboard" onclick="toggleMobileMenu()" class="block text-base font-semibold text-stone-900">에디토리얼 허브 : BVB 이야기들</a>
-            <a href="#quality" onclick="toggleMobileMenu()" class="block text-base font-semibold text-stone-900">품질 인증</a>
-            <a href="#contact" onclick="toggleMobileMenu()" class="block text-base font-semibold text-stone-900">상담 안내</a>
-            <div class="pt-4 border-t border-stone-200 flex flex-col gap-2">
-                <a href="tel:1660-2301" class="w-full py-3.5 bg-stone-900 text-stone-50 font-bold rounded-xl text-sm text-center flex items-center justify-center">
+        <div id="mobileMenu" class="hidden md:hidden bg-stone-900/95 backdrop-blur-xl text-white border-b border-white/10 px-6 py-6 space-y-4">
+            <a href="#about" onclick="toggleMobileMenu()" class="block text-base font-semibold text-white">회사 소개</a>
+            <a href="#products" onclick="toggleMobileMenu()" class="block text-base font-semibold text-white">제품 소개</a>
+            <a href="#storyboard" onclick="toggleMobileMenu()" class="block text-base font-semibold text-white">에디토리얼 허브 : BVB 이야기들</a>
+            <a href="#quality" onclick="toggleMobileMenu()" class="block text-base font-semibold text-white">품질 인증</a>
+            <a href="#contact" onclick="toggleMobileMenu()" class="block text-base font-semibold text-white">상담 안내</a>
+            <div class="pt-4 border-t border-white/10 flex flex-col gap-2">
+                <a href="tel:1660-2301" class="w-full py-3.5 bg-white text-stone-950 font-bold rounded-xl text-sm text-center flex items-center justify-center">
                     <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
                     고객센터 전화걸기 (1660-2301)
                 </a>
@@ -188,121 +225,82 @@
         </div>
     </header>
 
-    <!-- SECTION 1: HERO (Pure Dedication & Clean Visual Immersion) -->
-    <section class="pt-6 pb-12 md:pt-9 md:pb-14 bg-white border-b border-stone-200/80 relative overflow-hidden">
-        <div class="max-w-7xl mx-auto px-6 sm:px-8">
-            
-            <!-- 1. Center Aligned Headline & Subcopy (Zero Clutter, Zero Duplication) -->
-            <div class="max-w-4xl mx-auto text-center">
-                <!-- Grand Clean Headline -->
-                <h1 class="font-editorial text-2xl sm:text-3xl lg:text-4xl font-black text-stone-900 leading-[1.25] tracking-tight">
-                    농가의 성공을 진심으로 바라는 기업입니다
-                </h1>
-
-                <!-- Sub-copy (No redundant 'BVB원예자재는') -->
-                <p class="mt-3 text-sm sm:text-base text-stone-600 font-normal leading-relaxed max-w-2xl mx-auto">
-                    농가의 풍성한 결실을 바라는 마음으로,<br class="hidden sm:inline">
-                    세계 최고 품질의 상토와 비료, 대한민국 최고 수준의 딸기 재배 기술력으로 돕겠습니다.
-                </p>
+    <!-- SECTION 1: HERO (Oishii-Style Full-Bleed 100vh Cinematic Experience) -->
+    <section class="relative h-screen min-h-[640px] w-full overflow-hidden flex flex-col justify-between pt-24 pb-8 sm:pb-12 text-white select-none">
+        
+        <!-- 4 Full-Screen Cross-Fade Backgrounds using User's Real Photos -->
+        <div id="heroSliderContainer" class="absolute inset-0 w-full h-full">
+            <!-- Slide 0: Greenhouse Smart Farm -->
+            <div class="hero-slide absolute inset-0 transition-opacity duration-1200 ease-in-out opacity-100" data-index="0">
+                <img src="assets/images/strawberry_greenhouse.jpg" alt="대한민국 최고 수준의 스마트팜 딸기 온실" class="w-full h-full object-cover object-center">
+                <div class="absolute inset-0 bg-gradient-to-t from-stone-950/90 via-stone-950/30 to-stone-950/60 pointer-events-none"></div>
             </div>
 
-            <!-- 2. Wide Cinematic Photo Slider (Cross-Fade 4-Slide Carousel) -->
-            <div class="mt-6 sm:mt-8 max-w-6xl mx-auto relative group" id="heroSliderContainer">
-                <div class="relative rounded-3xl overflow-hidden shadow-xl border border-stone-200 bg-stone-900 h-64 sm:h-80 md:h-[350px] lg:h-[380px]">
-                    
-                    <!-- Slide 1: Greenhouse Smart Farm -->
-                    <div class="hero-slide absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-100" data-index="0">
-                        <img src="assets/images/strawberry_greenhouse.jpg" alt="대한민국 최고 수준의 스마트팜 딸기 수경재배 온실" class="w-full h-full object-cover object-center">
-                        <div class="absolute inset-0 bg-gradient-to-t from-stone-950/85 via-stone-950/20 to-transparent pointer-events-none"></div>
-                        <div class="absolute bottom-0 left-0 right-0 p-5 sm:p-7 flex flex-col sm:flex-row justify-between items-start sm:items-end gap-3 text-white">
-                            <div>
-                                <span class="inline-block px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-white/20 backdrop-blur-md text-stone-100 border border-white/30 mb-1.5">
-                                    SMART GREENHOUSE · 스마트팜 1등 현장
-                                </span>
-                                <h3 class="font-editorial text-base sm:text-xl font-bold text-white leading-snug">
-                                    대한민국 최고 수준의 스마트팜 딸기 수경재배 온실
-                                </h3>
-                                <p class="text-[11px] sm:text-xs text-stone-300 mt-0.5">
-                                    네덜란드 120년 BVB 배지와 스위스 정밀 영양 처방으로 완성된 고품질 딸기
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+            <!-- Slide 1: Root Science -->
+            <div class="hero-slide absolute inset-0 transition-opacity duration-1200 ease-in-out opacity-0 pointer-events-none" data-index="1">
+                <img src="assets/images/pristine_root_system.jpg" alt="BVB 상토 속 폭발적 모세근 발달" class="w-full h-full object-cover object-center">
+                <div class="absolute inset-0 bg-gradient-to-t from-stone-950/90 via-stone-950/30 to-stone-950/60 pointer-events-none"></div>
+            </div>
 
-                    <!-- Slide 2: Root Science -->
-                    <div class="hero-slide absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0 pointer-events-none" data-index="1">
-                        <img src="assets/images/pristine_root_system.jpg" alt="BVB 상토 속 폭발적 모세근 발달" class="w-full h-full object-cover object-center">
-                        <div class="absolute inset-0 bg-gradient-to-t from-stone-950/85 via-stone-950/20 to-transparent pointer-events-none"></div>
-                        <div class="absolute bottom-0 left-0 right-0 p-5 sm:p-7 flex flex-col sm:flex-row justify-between items-start sm:items-end gap-3 text-white">
-                            <div>
-                                <span class="inline-block px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-white/20 backdrop-blur-md text-stone-100 border border-white/30 mb-1.5">
-                                    ROOT SCIENCE · 모세근 발달 과학
-                                </span>
-                                <h3 class="font-editorial text-base sm:text-xl font-bold text-white leading-snug">
-                                    배지 속 꽉 찬 황금빛 모세근과 과습 없는 30% 기상률
-                                </h3>
-                                <p class="text-[11px] sm:text-xs text-stone-300 mt-0.5">
-                                    4년 연속 사용에도 배지 침하 없이 풍부한 산소 공급을 유지하는 BVB BC2
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+            <!-- Slide 2: Premium Strawberries -->
+            <div class="hero-slide absolute inset-0 transition-opacity duration-1200 ease-in-out opacity-0 pointer-events-none" data-index="2">
+                <img src="assets/images/premium_strawberries.jpg" alt="특상품 프리미엄 딸기 다수확 결실" class="w-full h-full object-cover object-center">
+                <div class="absolute inset-0 bg-gradient-to-t from-stone-950/90 via-stone-950/30 to-stone-950/60 pointer-events-none"></div>
+            </div>
 
-                    <!-- Slide 3: Premium Strawberries -->
-                    <div class="hero-slide absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0 pointer-events-none" data-index="2">
-                        <img src="assets/images/premium_strawberries.jpg" alt="특상품 프리미엄 딸기 다수확 결실" class="w-full h-full object-cover object-center">
-                        <div class="absolute inset-0 bg-gradient-to-t from-stone-950/85 via-stone-950/20 to-transparent pointer-events-none"></div>
-                        <div class="absolute bottom-0 left-0 right-0 p-5 sm:p-7 flex flex-col sm:flex-row justify-between items-start sm:items-end gap-3 text-white">
-                            <div>
-                                <span class="inline-block px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-white/20 backdrop-blur-md text-stone-100 border border-white/30 mb-1.5">
-                                    HARVEST QUALITY · 다수확 결실
-                                </span>
-                                <h3 class="font-editorial text-base sm:text-xl font-bold text-white leading-snug">
-                                    1화방부터 4화방 끝까지 흔들림 없는 다수확의 결실
-                                </h3>
-                                <p class="text-[11px] sm:text-xs text-stone-300 mt-0.5">
-                                    고당도·고경도 특품 딸기 연속 출하로 농가의 실질적인 소득 증대를 실현합니다
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+            <!-- Slide 3: RHP European Certification -->
+            <div class="hero-slide absolute inset-0 transition-opacity duration-1200 ease-in-out opacity-0 pointer-events-none" data-index="3">
+                <img src="assets/images/bvb_root_ball.jpg" alt="유럽 최고 권위 RHP 100% 무균 인증" class="w-full h-full object-cover object-center">
+                <div class="absolute inset-0 bg-gradient-to-t from-stone-950/90 via-stone-950/30 to-stone-950/60 pointer-events-none"></div>
+            </div>
+        </div>
 
-                    <!-- Slide 4: RHP European Certification -->
-                    <div class="hero-slide absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0 pointer-events-none" data-index="3">
-                        <img src="assets/images/bvb_root_ball.jpg" alt="유럽 최고 권위 RHP 100% 무균 인증" class="w-full h-full object-cover object-center">
-                        <div class="absolute inset-0 bg-gradient-to-t from-stone-950/85 via-stone-950/20 to-transparent pointer-events-none"></div>
-                        <div class="absolute bottom-0 left-0 right-0 p-5 sm:p-7 flex flex-col sm:flex-row justify-between items-start sm:items-end gap-3 text-white">
-                            <div>
-                                <span class="inline-block px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-white/20 backdrop-blur-md text-stone-100 border border-white/30 mb-1.5">
-                                    EUROPEAN STANDARD · 100% 무균 보증
-                                </span>
-                                <h3 class="font-editorial text-base sm:text-xl font-bold text-white leading-snug">
-                                    유럽 최고 권위 RHP 공인 100% 무균·안전 보증
-                                </h3>
-                                <p class="text-[11px] sm:text-xs text-stone-300 mt-0.5">
-                                    잡초 씨앗, 병원균, 중금속을 완벽 차단하여 4년 이상 안심하고 쓰는 프리미엄 원자재
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+        <!-- Spacer for top nav clearance -->
+        <div></div>
 
-                    <!-- Slider Controls (Bottom Right Floating Pill) -->
-                    <div class="absolute bottom-5 right-5 sm:bottom-7 sm:right-7 flex items-center space-x-2 bg-stone-950/70 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/20 z-10">
-                        <button onclick="prevHeroSlide()" title="이전 사진" class="text-stone-300 hover:text-white transition p-1 cursor-pointer">
-                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
-                        </button>
-                        <span id="heroSlideCounter" class="text-[11px] font-mono font-bold text-white px-1 tracking-widest">
-                            01 / 04
-                        </span>
-                        <button onclick="nextHeroSlide()" title="다음 사진" class="text-stone-300 hover:text-white transition p-1 cursor-pointer">
-                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
-                        </button>
-                    </div>
+        <!-- Center Editorial Headline & Subcopy (Overlaid directly on visual) -->
+        <div class="relative z-10 max-w-5xl mx-auto px-6 text-center">
+            <h1 class="font-editorial text-3xl sm:text-5xl lg:text-6xl font-black text-white leading-[1.2] tracking-tight drop-shadow-lg">
+                농가의 성공을 진심으로<br class="hidden sm:inline"> 바라는 기업입니다
+            </h1>
+            <p class="mt-4 sm:mt-6 text-base sm:text-lg lg:text-xl text-stone-100 font-normal leading-relaxed max-w-2xl mx-auto drop-shadow-md opacity-95">
+                BVB원예자재는 농가의 풍성한 결실을 바라는 마음으로,<br class="hidden sm:inline">
+                세계 최고 품질의 상토와 비료, 대한민국 최고 수준의 기술력으로 돕겠습니다.
+            </p>
+        </div>
 
+        <!-- Bottom Row: Dynamic Slide Info, Scroll Indicator, Slider Controls -->
+        <div class="relative z-10 max-w-7xl w-full mx-auto px-6 sm:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <!-- Dynamic Slide Caption -->
+            <div class="text-center sm:text-left">
+                <span id="heroSlideTag" class="inline-block px-3 py-1 rounded-full text-[10px] font-mono font-bold bg-white/15 backdrop-blur-md text-stone-200 border border-white/20 mb-1">
+                    SMART GREENHOUSE · 스마트팜 1등 현장
+                </span>
+                <div id="heroSlideTitle" class="text-xs sm:text-sm font-medium text-white/90 drop-shadow-sm">
+                    대한민국 최고 수준의 스마트팜 딸기 수경재배 온실
                 </div>
             </div>
 
+            <!-- Scroll Indicator -->
+            <a href="#storyboard" class="hidden md:flex flex-col items-center text-white/75 hover:text-white transition group text-[10px] tracking-widest uppercase">
+                <span>Explore Stories</span>
+                <svg class="w-3.5 h-3.5 mt-1 animate-bounce text-white/90" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+            </a>
+
+            <!-- Slider Controls (Bottom Right Floating Pill) -->
+            <div class="flex items-center space-x-2 bg-stone-950/60 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/20">
+                <button onclick="prevHeroSlide()" title="이전 사진" class="text-stone-300 hover:text-white transition p-1 cursor-pointer">
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
+                </button>
+                <span id="heroSlideCounter" class="text-[11px] font-mono font-bold text-white px-1 tracking-widest">
+                    01 / 04
+                </span>
+                <button onclick="nextHeroSlide()" title="다음 사진" class="text-stone-300 hover:text-white transition p-1 cursor-pointer">
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+                </button>
+            </div>
         </div>
+
     </section>
 
     <!-- SECTION 2: 에디토리얼 허브 : BVB 이야기들 (기술 자료 통합 & 멀티포맷 아카이브) -->
@@ -1971,11 +1969,17 @@
         }
 
         // ==========================================
-        // HERO CROSS-FADE SLIDER (4 SLIDES)
+        // OISHII HERO SLIDER & SCROLLING HEADER
         // ==========================================
         let currentHeroSlide = 0;
         let heroSliderTimer = null;
         const totalHeroSlides = 4;
+        const heroSlideData = [
+            { tag: "SMART GREENHOUSE · 스마트팜 1등 현장", title: "대한민국 최고 수준의 스마트팜 딸기 수경재배 온실" },
+            { tag: "ROOT SCIENCE · 모세근 발달 과학", title: "배지 속 꽉 찬 황금빛 모세근과 과습 없는 30% 기상률" },
+            { tag: "HARVEST QUALITY · 다수확 결실", title: "1화방부터 4화방 끝까지 흔들림 없는 다수확의 결실" },
+            { tag: "EUROPEAN STANDARD · 100% 무균 보증", title: "유럽 최고 권위 RHP 공인 100% 무균·안전 보증" }
+        ];
 
         function showHeroSlide(index) {
             const slides = document.querySelectorAll('.hero-slide');
@@ -1996,6 +2000,15 @@
             if (counter) {
                 counter.innerText = `0${currentHeroSlide + 1} / 0${totalHeroSlides}`;
             }
+
+            const tagEl = document.getElementById('heroSlideTag');
+            const titleEl = document.getElementById('heroSlideTitle');
+            if (tagEl && heroSlideData[currentHeroSlide]) {
+                tagEl.innerText = heroSlideData[currentHeroSlide].tag;
+            }
+            if (titleEl && heroSlideData[currentHeroSlide]) {
+                titleEl.innerText = heroSlideData[currentHeroSlide].title;
+            }
         }
 
         function nextHeroSlide() {
@@ -2014,6 +2027,19 @@
                 showHeroSlide(currentHeroSlide + 1);
             }, 5000);
         }
+
+        // Handle Floating Header on Scroll
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('mainHeader');
+            if (!header) return;
+            if (window.scrollY > 60) {
+                header.classList.remove('nav-transparent');
+                header.classList.add('nav-scrolled');
+            } else {
+                header.classList.remove('nav-scrolled');
+                header.classList.add('nav-transparent');
+            }
+        });
 
         // Initialize on load
         window.addEventListener('DOMContentLoaded', () => {
