@@ -183,7 +183,7 @@
             will-change: transform;
         }
         .hero-slide.opacity-100 img {
-            animation: kenBurnsZoom 6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            animation: kenBurnsZoom 3.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
     </style>
 </head>
@@ -248,25 +248,25 @@
         <!-- 4 Full-Screen Cross-Fade Backgrounds using User's Real Photos -->
         <div id="heroSliderContainer" class="absolute inset-0 w-full h-full">
             <!-- Slide 0: Greenhouse Smart Farm -->
-            <div class="hero-slide absolute inset-0 transition-opacity duration-1200 ease-in-out opacity-100" data-index="0">
+            <div class="hero-slide absolute inset-0 transition-opacity duration-700 ease-in-out opacity-100" data-index="0">
                 <img src="assets/images/strawberry_greenhouse.jpg" alt="대한민국 최고 수준의 스마트팜 딸기 온실" class="w-full h-full object-cover object-center">
                 <div class="absolute inset-0 bg-gradient-to-t from-stone-950/90 via-stone-950/30 to-stone-950/60 pointer-events-none"></div>
             </div>
 
             <!-- Slide 1: Root Science -->
-            <div class="hero-slide absolute inset-0 transition-opacity duration-1200 ease-in-out opacity-0 pointer-events-none" data-index="1">
+            <div class="hero-slide absolute inset-0 transition-opacity duration-700 ease-in-out opacity-0 pointer-events-none" data-index="1">
                 <img src="assets/images/pristine_root_system.jpg" alt="BVB 상토 속 폭발적 모세근 발달" class="w-full h-full object-cover object-center">
                 <div class="absolute inset-0 bg-gradient-to-t from-stone-950/90 via-stone-950/30 to-stone-950/60 pointer-events-none"></div>
             </div>
 
             <!-- Slide 2: Premium Strawberries -->
-            <div class="hero-slide absolute inset-0 transition-opacity duration-1200 ease-in-out opacity-0 pointer-events-none" data-index="2">
+            <div class="hero-slide absolute inset-0 transition-opacity duration-700 ease-in-out opacity-0 pointer-events-none" data-index="2">
                 <img src="assets/images/premium_strawberries.jpg" alt="특상품 프리미엄 딸기 다수확 결실" class="w-full h-full object-cover object-center">
                 <div class="absolute inset-0 bg-gradient-to-t from-stone-950/90 via-stone-950/30 to-stone-950/60 pointer-events-none"></div>
             </div>
 
             <!-- Slide 3: RHP European Certification -->
-            <div class="hero-slide absolute inset-0 transition-opacity duration-1200 ease-in-out opacity-0 pointer-events-none" data-index="3">
+            <div class="hero-slide absolute inset-0 transition-opacity duration-700 ease-in-out opacity-0 pointer-events-none" data-index="3">
                 <img src="assets/images/bvb_root_ball.jpg" alt="유럽 최고 권위 RHP 100% 무균 인증" class="w-full h-full object-cover object-center">
                 <div class="absolute inset-0 bg-gradient-to-t from-stone-950/90 via-stone-950/30 to-stone-950/60 pointer-events-none"></div>
             </div>
@@ -2051,7 +2051,7 @@
             if (heroSliderTimer) clearInterval(heroSliderTimer);
             heroSliderTimer = setInterval(() => {
                 showHeroSlide(currentHeroSlide + 1);
-            }, 5000);
+            }, 3000);
         }
 
         // Handle Floating Header on Scroll
