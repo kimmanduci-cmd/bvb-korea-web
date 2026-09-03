@@ -168,6 +168,16 @@
             background: #292524;
         }
         .oishii-nav.nav-scrolled .nav-mobile-btn { color: #1C1917; }
+
+        /* Ken Burns Cinematic Smooth Slow-Zoom for Hero Images */
+        .hero-slide img {
+            transform: scale(1.0);
+            transition: transform 6.5s cubic-bezier(0.16, 1, 0.3, 1);
+            will-change: transform;
+        }
+        .hero-slide.opacity-100 img {
+            transform: scale(1.07);
+        }
     </style>
 </head>
 <body class="antialiased selection:bg-stone-200 selection:text-stone-900 pb-24 md:pb-0">
@@ -225,8 +235,8 @@
         </div>
     </header>
 
-    <!-- SECTION 1: HERO (Oishii-Style Full-Bleed 100vh Cinematic Experience) -->
-    <section class="relative h-screen min-h-[640px] w-full overflow-hidden flex flex-col justify-between pt-24 pb-8 sm:pb-12 text-white select-none">
+    <!-- SECTION 1: HERO (Oishii.com Exact Ratio & Scale: 84vh / calc(100vh - 80px)) -->
+    <section class="relative w-full h-[84vh] min-h-[580px] max-h-[820px] lg:h-[calc(100vh-80px)] overflow-hidden flex flex-col justify-between pt-24 pb-8 sm:pb-12 text-white select-none">
         
         <!-- 4 Full-Screen Cross-Fade Backgrounds using User's Real Photos -->
         <div id="heroSliderContainer" class="absolute inset-0 w-full h-full">
