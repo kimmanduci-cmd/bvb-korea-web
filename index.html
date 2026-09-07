@@ -868,33 +868,50 @@
                 <button onclick="toggleHqModal(false)" aria-label="닫기" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-stone-900/60 hover:bg-stone-900 text-white flex items-center justify-center transition backdrop-blur-sm">
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
                 </button>
+                <div class="absolute bottom-2 left-3 px-2.5 py-1 rounded-full bg-stone-900/70 text-stone-100 text-[10px] backdrop-blur-sm font-medium">
+                    (주) BVB 원예자재 사천 본사
+                </div>
             </div>
 
             <!-- Content Details -->
             <div class="p-6">
-                <!-- Location & Phone Info -->
-                <div class="space-y-3 text-xs text-stone-700 bg-stone-50 p-4 rounded-2xl border border-stone-100">
-                    <div class="flex items-start">
-                        <span class="font-bold text-stone-900 w-20 flex-shrink-0">📍 위치</span>
-                        <span class="text-stone-800 font-medium leading-relaxed">경상남도 사천시 곤명면 금성로 6</span>
+                <!-- Header Hierarchy: Category, Title, Live Status -->
+                <div class="flex items-center justify-between mb-4">
+                    <div>
+                        <span class="tag-subtle">Headquarters &amp; Logistics</span>
+                        <h3 class="font-editorial text-xl font-black text-stone-900 mt-1">경남 사천 본사</h3>
                     </div>
-                    <div class="flex items-center justify-between pt-2 border-t border-stone-200/70">
-                        <div class="flex items-center">
-                            <span class="font-bold text-stone-900 w-20 flex-shrink-0">📞 문의/상담</span>
-                            <span class="font-mono font-black text-stone-900 text-sm">1660-2301</span>
-                        </div>
-                        <a href="tel:1660-2301" class="px-3.5 py-1.5 rounded-full bg-stone-900 hover:bg-stone-800 text-stone-50 font-bold text-xs flex items-center transition shadow-sm active:scale-95">
-                            <svg class="w-3.5 h-3.5 mr-1 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-                            전화 바로 연결
-                        </a>
+                    <span class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-emerald-50 text-emerald-700 border border-emerald-200 flex items-center">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mr-1.5 animate-pulse"></span>
+                        전국 공급망 정상 운영
+                    </span>
+                </div>
+
+                <!-- Structured 3-row Information Box -->
+                <div class="space-y-3 text-xs text-stone-600 mb-6 bg-stone-50 p-4 rounded-2xl border border-stone-100">
+                    <div class="flex items-start">
+                        <span class="font-bold text-stone-900 w-16 flex-shrink-0">📍 위치</span>
+                        <span class="text-stone-700 font-medium">경상남도 사천시 곤명면 금성로 6</span>
+                    </div>
+                    <div class="flex items-center">
+                        <span class="font-bold text-stone-900 w-16 flex-shrink-0">📞 대표전화</span>
+                        <a href="tel:1660-2301" class="font-mono font-bold text-stone-900 hover:text-amber-700 underline">1660-2301</a>
+                    </div>
+                    <div class="flex items-start">
+                        <span class="font-bold text-stone-900 w-16 flex-shrink-0">📦 주요업무</span>
+                        <span class="text-stone-700">BVB 네덜란드 최고급 상토 전국 공급, 현장 기술 컨설팅</span>
                     </div>
                 </div>
 
-                <!-- Single Naver Map Action Button -->
-                <div class="mt-4">
-                    <a href="https://map.naver.com/p/search/%EA%B2%BD%EC%83%81%EB%82%A8%EB%8F%84%20%EC%82%AC%EC%B2%9C%EC%8B%9C%20%EA%B3%A4%EB%AA%85%EB%A9%B4%20%EA%B8%88%EC%84%B1%EB%A1%9C%206" target="_blank" rel="noopener noreferrer" class="w-full py-3.5 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs sm:text-sm font-bold flex items-center justify-center transition shadow-md hover:shadow-lg active:scale-98">
-                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-                        오시는 길
+                <!-- Balanced 2-Column Action Buttons -->
+                <div class="grid grid-cols-2 gap-3">
+                    <a href="tel:1660-2301" class="py-3 bg-stone-900 hover:bg-stone-800 text-stone-50 font-bold rounded-xl text-xs flex items-center justify-center transition shadow-sm active:scale-95">
+                        <svg class="w-3.5 h-3.5 mr-1.5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                        전화 바로 연결
+                    </a>
+                    <a href="https://map.naver.com/p/search/%EA%B2%BD%EC%83%81%EB%82%A8%EB%8F%84%20%EC%82%AC%EC%B2%9C%EC%8B%9C%20%EA%B3%A4%EB%AA%85%EB%A9%B4%20%EA%B8%88%EC%84%B1%EB%A1%9C%206" target="_blank" rel="noopener noreferrer" class="py-3 bg-emerald-50 hover:bg-emerald-100 text-emerald-900 border border-emerald-200 font-bold rounded-xl text-xs flex items-center justify-center transition shadow-sm active:scale-95 text-center">
+                        <svg class="w-3.5 h-3.5 mr-1.5 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                        오시는 길 (네이버) &rarr;
                     </a>
                 </div>
             </div>
