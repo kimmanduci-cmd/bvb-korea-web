@@ -277,29 +277,26 @@
 
         <!-- Center Editorial Headline & Subcopy (Overlaid directly on visual) -->
         <div class="relative z-10 max-w-5xl mx-auto px-6 text-center">
-            <h1 class="font-editorial text-3xl sm:text-5xl lg:text-6xl font-black text-white leading-[1.2] tracking-tight drop-shadow-lg">
-                농가의 성공을 진심으로<br class="hidden sm:inline"> 바라는 기업입니다
-            </h1>
-            <p class="mt-4 sm:mt-6 text-base sm:text-lg lg:text-xl text-stone-100 font-normal leading-relaxed max-w-2xl mx-auto drop-shadow-md opacity-95">
-                BVB원예자재는 농가의 풍성한 결실을 바라는 마음으로,<br class="hidden sm:inline">
-                세계 최고 품질의 상토와 비료, 대한민국 최고 수준의 기술력으로 돕겠습니다.
-            </p>
+            <div id="heroTextContainer" class="transition-all duration-300 ease-out transform">
+                <h1 id="heroHeadline" class="font-editorial text-3xl sm:text-5xl lg:text-6xl font-black text-white leading-[1.2] tracking-tight drop-shadow-lg">
+                    위대한 결실의 차이는<br class="hidden sm:inline"> 보이지 않는 배지(培地) 속에서 결정됩니다
+                </h1>
+                <p id="heroSubcopy" class="mt-4 sm:mt-6 text-base sm:text-lg lg:text-xl text-stone-100 font-normal leading-relaxed max-w-2xl mx-auto drop-shadow-md opacity-95">
+                    네덜란드 RHP 인증 120년의 과학.<br class="hidden sm:inline"> 유해균 없는 청정한 바탕에서 백색 모세근이 빈틈없이 뻗어 나갑니다.
+                </p>
+            </div>
         </div>
 
         <!-- Bottom Row: Dynamic Slide Info, Scroll Indicator, Slider Controls -->
-        <div class="relative z-10 max-w-7xl w-full mx-auto px-6 sm:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <!-- Dynamic Slide Caption -->
-            <div class="text-center sm:text-left">
-                <span id="heroSlideTag" class="inline-block px-3 py-1 rounded-full text-[10px] font-mono font-bold bg-white/15 backdrop-blur-md text-stone-200 border border-white/20 mb-1">
-                    SMART GREENHOUSE · 스마트팜 1등 현장
-                </span>
-                <div id="heroSlideTitle" class="text-xs sm:text-sm font-medium text-white/90 drop-shadow-sm">
-                    대한민국 최고 수준의 스마트팜 딸기 수경재배 온실
-                </div>
+        <div class="relative z-10 max-w-7xl w-full mx-auto px-6 sm:px-8 flex flex-row items-center justify-between gap-4">
+            <!-- Subtle Brand Philosophy Tag (Minimal & Elegant) -->
+            <div class="hidden sm:flex items-center space-x-2 text-stone-300/80 text-xs font-medium tracking-wider">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                <span class="tracking-widest uppercase font-mono text-[11px]">BVB Substrates · The Root of Excellence</span>
             </div>
 
             <!-- Scroll Indicator -->
-            <a href="#storyboard" class="hidden md:flex flex-col items-center text-white/75 hover:text-white transition group text-[10px] tracking-widest uppercase">
+            <a href="#storyboard" class="flex flex-col items-center text-white/75 hover:text-white transition group text-[10px] tracking-widest uppercase">
                 <span>Explore Stories</span>
                 <svg class="w-3.5 h-3.5 mt-1 animate-bounce text-white/90" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
             </a>
@@ -1992,10 +1989,22 @@
         let heroSliderTimer = null;
         const totalHeroSlides = 4;
         const heroSlideData = [
-            { tag: "STEP 01 · 육묘 (NURSERY)", title: "생명의 시작, 튼튼한 뿌리로부터 — 청정 상토와 건강한 모세근" },
-            { tag: "STEP 02 · 착과 및 비대 (FRUIT SETTING)", title: "폭포수처럼 쏟아지는 압도적 결실 — BVB 배지가 완성한 다수확의 위용" },
-            { tag: "STEP 03 · 수확 (HARVEST)", title: "흔들림 없는 다수확의 결실 — 보석처럼 빛나는 프리미엄 딸기" },
-            { tag: "STEP 04 · 성공 (FARMER'S SMILE)", title: "농가의 환한 미소 — BVB원예자재가 존재하는 단 하나의 이유" }
+            {
+                headline: "위대한 결실의 차이는<br class=\"hidden sm:inline\"> 보이지 않는 배지(培地) 속에서 결정됩니다",
+                subcopy: "네덜란드 RHP 인증 120년의 과학.<br class=\"hidden sm:inline\"> 유해균 없는 청정한 바탕에서 백색 모세근이 빈틈없이 뻗어 나갑니다."
+            },
+            {
+                headline: "지치지 않고 쏟아지는 결실,<br class=\"hidden sm:inline\"> 뿌리가 숨 쉬는 배지의 힘입니다",
+                subcopy: "시즌 끝까지 무너지지 않는 최적의 공극률과 수분 제어.<br class=\"hidden sm:inline\"> 수세 저하 없는 압도적인 연속 다수확을 실현합니다."
+            },
+            {
+                headline: "루비처럼 단단하고 깊은 맛,<br class=\"hidden sm:inline\"> 뿌리가 흡수한 순도(純度)의 차이",
+                subcopy: "정밀한 EC·pH 밸런스로 양분을 남김없이 밀어 올려,<br class=\"hidden sm:inline\"> 시장에서 최고가를 받는 단단한 고당도 특품을 완성합니다."
+            },
+            {
+                headline: "농가의 환한 웃음 뒤에는<br class=\"hidden sm:inline\"> 언제나 든든한 BVB 상토가 있습니다",
+                subcopy: "시작부터 수확의 기쁨까지 실패 없는 한 해 농사.<br class=\"hidden sm:inline\"> BVB원예자재가 대한민국 최고 농가들의 가장 든든한 밑바탕이 되겠습니다."
+            }
         ];
 
         function showHeroSlide(index) {
@@ -2027,13 +2036,17 @@
                 counter.innerText = `0${currentHeroSlide + 1} / 0${totalHeroSlides}`;
             }
 
-            const tagEl = document.getElementById('heroSlideTag');
-            const titleEl = document.getElementById('heroSlideTitle');
-            if (tagEl && heroSlideData[currentHeroSlide]) {
-                tagEl.innerText = heroSlideData[currentHeroSlide].tag;
-            }
-            if (titleEl && heroSlideData[currentHeroSlide]) {
-                titleEl.innerText = heroSlideData[currentHeroSlide].title;
+            // Smooth cross-fade transition for center editorial copy
+            const textContainer = document.getElementById('heroTextContainer');
+            const headlineEl = document.getElementById('heroHeadline');
+            const subcopyEl = document.getElementById('heroSubcopy');
+            if (textContainer && headlineEl && subcopyEl && heroSlideData[currentHeroSlide]) {
+                textContainer.classList.add('opacity-0', 'translate-y-2');
+                setTimeout(() => {
+                    headlineEl.innerHTML = heroSlideData[currentHeroSlide].headline;
+                    subcopyEl.innerHTML = heroSlideData[currentHeroSlide].subcopy;
+                    textContainer.classList.remove('opacity-0', 'translate-y-2');
+                }, 280);
             }
         }
 
@@ -2051,7 +2064,7 @@
             if (heroSliderTimer) clearInterval(heroSliderTimer);
             heroSliderTimer = setInterval(() => {
                 showHeroSlide(currentHeroSlide + 1);
-            }, 3000);
+            }, 5000);
         }
 
         // Handle Floating Header on Scroll
