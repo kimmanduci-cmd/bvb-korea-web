@@ -234,8 +234,8 @@
                 <nav class="hidden md:flex items-center space-x-7 lg:space-x-8 text-[15px] lg:text-base font-semibold tracking-[-0.02em]">
                     <a href="#about" class="nav-link transition py-2 hover:opacity-100">회사 소개</a>
                     <a href="#products" class="nav-link transition py-2 hover:opacity-100">제품 소개</a>
-                    <a href="#storyboard" class="nav-link transition py-2 hover:opacity-100">에디토리얼 허브 : BVB 이야기들</a>
                     <a href="#quality" class="nav-link transition py-2 hover:opacity-100">품질 인증</a>
+                    <a href="#storyboard" class="nav-link transition py-2 hover:opacity-100">에디토리얼 허브 : BVB 이야기들</a>
                     <a href="#contact" class="nav-link transition py-2 hover:opacity-100">상담 안내</a>
                 </nav>
 
@@ -258,8 +258,8 @@
         <div id="mobileMenu" class="hidden md:hidden bg-stone-900/95 backdrop-blur-xl text-white border-b border-white/10 px-6 py-6 space-y-4">
             <a href="#about" onclick="toggleMobileMenu()" class="block text-base font-semibold text-white">회사 소개</a>
             <a href="#products" onclick="toggleMobileMenu()" class="block text-base font-semibold text-white">제품 소개</a>
-            <a href="#storyboard" onclick="toggleMobileMenu()" class="block text-base font-semibold text-white">에디토리얼 허브 : BVB 이야기들</a>
             <a href="#quality" onclick="toggleMobileMenu()" class="block text-base font-semibold text-white">품질 인증</a>
+            <a href="#storyboard" onclick="toggleMobileMenu()" class="block text-base font-semibold text-white">에디토리얼 허브 : BVB 이야기들</a>
             <a href="#contact" onclick="toggleMobileMenu()" class="block text-base font-semibold text-white">상담 안내</a>
             <div class="pt-4 border-t border-white/10 flex flex-col gap-2">
                 <a href="tel:1660-2301" class="w-full py-3.5 bg-white text-stone-950 font-bold rounded-xl text-sm text-center flex items-center justify-center">
@@ -350,99 +350,7 @@
 
     </section>
 
-    <!-- SECTION 2: 에디토리얼 허브 : BVB 이야기들 (기술 자료 통합 & 멀티포맷 아카이브) -->
-    <section id="storyboard" class="py-24 md:py-32 bg-white border-b border-stone-200/80">
-        <div class="max-w-7xl mx-auto px-6 sm:px-8">
-            
-            <!-- Section Header & Controls -->
-            <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-8 gap-6">
-                <div>
-                    <div class="tag-subtle mb-3">Knowledge &amp; Field Stories</div>
-                    <h2 class="font-editorial text-3xl sm:text-4xl font-black tracking-tight text-stone-900 leading-tight">
-                        에디토리얼 허브 : <span class="italic font-normal text-stone-600">BVB 이야기들</span>
-                    </h2>
-                    <p class="mt-2 text-sm sm:text-base text-stone-600 max-w-2xl">
-                        120년 BVB의 재배 과학과 대한민국 1등 농가들의 생생한 영농 지식, 현장의 결실을 함께 나눕니다.
-                    </p>
-                </div>
-
-                <!-- View Switcher & Admin Action -->
-                <div class="flex flex-wrap items-center gap-3">
-                    <!-- Grid / List View Mode Toggle -->
-                    <div class="flex bg-stone-100 p-1 rounded-full border border-stone-200">
-                        <button onclick="setViewMode('grid')" id="viewBtn-grid" class="px-4 py-1.5 rounded-full text-xs font-semibold bg-white text-stone-900 shadow-xs transition flex items-center">
-                            <svg class="w-3.5 h-3.5 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
-                            카드형 (Grid)
-                        </button>
-                        <button onclick="setViewMode('list')" id="viewBtn-list" class="px-4 py-1.5 rounded-full text-xs font-semibold text-stone-600 hover:text-stone-900 transition flex items-center">
-                            <svg class="w-3.5 h-3.5 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-                            목록형 (List)
-                        </button>
-                    </div>
-
-                    <!-- Admin Only Controls (Visible only when logged in) -->
-                    <div id="adminHubControls" class="hidden items-center gap-2">
-                        <span class="inline-flex items-center px-3 py-1 rounded-full text-[11px] font-bold bg-amber-100 text-amber-900 border border-amber-300">
-                            <span class="w-1.5 h-1.5 rounded-full bg-amber-600 mr-1.5 animate-pulse"></span>
-                            관리자 모드
-                        </span>
-                        <button onclick="openEditorModal()" class="flex items-center bg-stone-900 hover:bg-stone-800 text-white font-semibold px-4 py-2 rounded-full text-xs transition border border-stone-800 shadow-xs">
-                            <svg class="w-3.5 h-3.5 mr-1.5 text-stone-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
-                            새 글 작성 &amp; 에디터
-                        </button>
-                        <button onclick="handleAdminLogout()" title="관리자 로그아웃" class="p-2 rounded-full bg-stone-100 hover:bg-stone-200 text-stone-600 text-xs transition">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"/></svg>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Search Bar & Filters Bar -->
-            <div class="flex flex-col md:flex-row justify-between items-stretch md:items-center gap-4 mb-8 pb-4 border-b border-stone-100">
-                <!-- Format Filter Pills -->
-                <div class="flex flex-wrap gap-1.5">
-                    <button onclick="filterContent('all')" id="filter-all" class="px-4 py-1.5 rounded-full text-xs font-semibold bg-stone-900 text-stone-50 transition shadow-xs">
-                        전체 보기
-                    </button>
-                    <button onclick="filterContent('article')" id="filter-article" class="px-4 py-1.5 rounded-full text-xs font-semibold bg-stone-100 text-stone-600 hover:bg-stone-200 transition">
-                        📰 기사·인터뷰
-                    </button>
-                    <button onclick="filterContent('technical')" id="filter-technical" class="px-4 py-1.5 rounded-full text-xs font-semibold bg-stone-100 text-stone-600 hover:bg-stone-200 transition">
-                        🔬 기술 자료 (PDF)
-                    </button>
-                    <button onclick="filterContent('cardnews')" id="filter-cardnews" class="px-4 py-1.5 rounded-full text-xs font-semibold bg-stone-100 text-stone-600 hover:bg-stone-200 transition">
-                        🎴 카드뉴스
-                    </button>
-                    <button onclick="filterContent('monthly')" id="filter-monthly" class="px-4 py-1.5 rounded-full text-xs font-semibold bg-stone-100 text-stone-600 hover:bg-stone-200 transition">
-                        📅 월별 주요사항
-                    </button>
-                    <button onclick="filterContent('youtube')" id="filter-youtube" class="px-4 py-1.5 rounded-full text-xs font-semibold bg-stone-100 text-stone-600 hover:bg-stone-200 transition">
-                        🎬 현장 영상
-                    </button>
-                </div>
-
-                <!-- Real-Time Search Bar -->
-                <div class="relative w-full md:w-72">
-                    <input type="text" id="searchInput" oninput="handleSearch(this.value)" placeholder="제목, 키워드, 작성자 검색..." class="w-full pl-9 pr-4 py-2 rounded-full border border-stone-200 text-xs text-stone-900 focus:outline-none focus:border-stone-700 bg-stone-50/70">
-                    <svg class="w-4 h-4 text-stone-400 absolute left-3 top-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
-                </div>
-            </div>
-
-            <!-- Content Counter -->
-            <div class="flex justify-between items-center text-xs text-stone-400 mb-6">
-                <div>총 <span id="contentCount" class="font-bold text-stone-800">0</span>개의 이야기</div>
-                <div class="text-[11px]">BVB Korea 공식 영농 지식 아카이브</div>
-            </div>
-
-            <!-- Content Container (Rendered dynamically as Grid or List) -->
-            <div id="contentGrid">
-                <!-- Rendered dynamically by JS -->
-            </div>
-
-        </div>
-    </section>
-
-    <!-- SECTION 3: ABOUT US (우리의 철학 & 브랜드 스토리) -->
+    <!-- SECTION 2: ABOUT US (우리의 철학 & 브랜드 스토리) -->
     <section id="about" class="py-24 md:py-32 bg-stone-50 border-b border-stone-200/80">
         <div class="max-w-6xl mx-auto px-6 sm:px-8">
             
@@ -511,7 +419,7 @@
         </div>
     </section>
 
-    <!-- SECTION 4: PRODUCTS (제품 소개 - 딸기 100% 집중 + 영양제) -->
+    <!-- SECTION 3: PRODUCTS (제품 소개 - 딸기 100% 집중 + 영양제) -->
     <section id="products" class="py-24 md:py-32 bg-white border-b border-stone-200/80">
         <div class="max-w-6xl mx-auto px-6 sm:px-8">
             
@@ -698,7 +606,7 @@
         </div>
     </section>
 
-    <!-- SECTION 5: QUALITY & CERTIFICATIONS (품질 인증) -->
+    <!-- SECTION 4: QUALITY & CERTIFICATIONS (품질 인증) -->
     <section id="quality" class="py-24 md:py-32 bg-stone-50 border-b border-stone-200/80">
         <div class="max-w-6xl mx-auto px-6 sm:px-8">
             
@@ -744,6 +652,98 @@
                         ✓ 고순도 흡수율 · ✓ 미량요소 킬레이트화 · ✓ 작물 스트레스 저감
                     </div>
                 </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 5: 에디토리얼 허브 : BVB 이야기들 (기술 자료 통합 & 멀티포맷 아카이브) -->
+    <section id="storyboard" class="py-24 md:py-32 bg-white border-b border-stone-200/80">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8">
+            
+            <!-- Section Header & Controls -->
+            <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-8 gap-6">
+                <div>
+                    <div class="tag-subtle mb-3">Knowledge &amp; Field Stories</div>
+                    <h2 class="font-editorial text-3xl sm:text-4xl font-black tracking-tight text-stone-900 leading-tight">
+                        에디토리얼 허브 : <span class="italic font-normal text-stone-600">BVB 이야기들</span>
+                    </h2>
+                    <p class="mt-2 text-sm sm:text-base text-stone-600 max-w-2xl">
+                        120년 BVB의 재배 과학과 대한민국 1등 농가들의 생생한 영농 지식, 현장의 결실을 함께 나눕니다.
+                    </p>
+                </div>
+
+                <!-- View Switcher & Admin Action -->
+                <div class="flex flex-wrap items-center gap-3">
+                    <!-- Grid / List View Mode Toggle -->
+                    <div class="flex bg-stone-100 p-1 rounded-full border border-stone-200">
+                        <button onclick="setViewMode('grid')" id="viewBtn-grid" class="px-4 py-1.5 rounded-full text-xs font-semibold bg-white text-stone-900 shadow-xs transition flex items-center">
+                            <svg class="w-3.5 h-3.5 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+                            카드형 (Grid)
+                        </button>
+                        <button onclick="setViewMode('list')" id="viewBtn-list" class="px-4 py-1.5 rounded-full text-xs font-semibold text-stone-600 hover:text-stone-900 transition flex items-center">
+                            <svg class="w-3.5 h-3.5 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                            목록형 (List)
+                        </button>
+                    </div>
+
+                    <!-- Admin Only Controls (Visible only when logged in) -->
+                    <div id="adminHubControls" class="hidden items-center gap-2">
+                        <span class="inline-flex items-center px-3 py-1 rounded-full text-[11px] font-bold bg-amber-100 text-amber-900 border border-amber-300">
+                            <span class="w-1.5 h-1.5 rounded-full bg-amber-600 mr-1.5 animate-pulse"></span>
+                            관리자 모드
+                        </span>
+                        <button onclick="openEditorModal()" class="flex items-center bg-stone-900 hover:bg-stone-800 text-white font-semibold px-4 py-2 rounded-full text-xs transition border border-stone-800 shadow-xs">
+                            <svg class="w-3.5 h-3.5 mr-1.5 text-stone-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+                            새 글 작성 &amp; 에디터
+                        </button>
+                        <button onclick="handleAdminLogout()" title="관리자 로그아웃" class="p-2 rounded-full bg-stone-100 hover:bg-stone-200 text-stone-600 text-xs transition">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"/></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Search Bar & Filters Bar -->
+            <div class="flex flex-col md:flex-row justify-between items-stretch md:items-center gap-4 mb-8 pb-4 border-b border-stone-100">
+                <!-- Format Filter Pills -->
+                <div class="flex flex-wrap gap-1.5">
+                    <button onclick="filterContent('all')" id="filter-all" class="px-4 py-1.5 rounded-full text-xs font-semibold bg-stone-900 text-stone-50 transition shadow-xs">
+                        전체 보기
+                    </button>
+                    <button onclick="filterContent('article')" id="filter-article" class="px-4 py-1.5 rounded-full text-xs font-semibold bg-stone-100 text-stone-600 hover:bg-stone-200 transition">
+                        📰 기사·인터뷰
+                    </button>
+                    <button onclick="filterContent('technical')" id="filter-technical" class="px-4 py-1.5 rounded-full text-xs font-semibold bg-stone-100 text-stone-600 hover:bg-stone-200 transition">
+                        🔬 기술 자료 (PDF)
+                    </button>
+                    <button onclick="filterContent('cardnews')" id="filter-cardnews" class="px-4 py-1.5 rounded-full text-xs font-semibold bg-stone-100 text-stone-600 hover:bg-stone-200 transition">
+                        🎴 카드뉴스
+                    </button>
+                    <button onclick="filterContent('monthly')" id="filter-monthly" class="px-4 py-1.5 rounded-full text-xs font-semibold bg-stone-100 text-stone-600 hover:bg-stone-200 transition">
+                        📅 월별 주요사항
+                    </button>
+                    <button onclick="filterContent('youtube')" id="filter-youtube" class="px-4 py-1.5 rounded-full text-xs font-semibold bg-stone-100 text-stone-600 hover:bg-stone-200 transition">
+                        🎬 현장 영상
+                    </button>
+                </div>
+
+                <!-- Real-Time Search Bar -->
+                <div class="relative w-full md:w-72">
+                    <input type="text" id="searchInput" oninput="handleSearch(this.value)" placeholder="제목, 키워드, 작성자 검색..." class="w-full pl-9 pr-4 py-2 rounded-full border border-stone-200 text-xs text-stone-900 focus:outline-none focus:border-stone-700 bg-stone-50/70">
+                    <svg class="w-4 h-4 text-stone-400 absolute left-3 top-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                </div>
+            </div>
+
+            <!-- Content Counter -->
+            <div class="flex justify-between items-center text-xs text-stone-400 mb-6">
+                <div>총 <span id="contentCount" class="font-bold text-stone-800">0</span>개의 이야기</div>
+                <div class="text-[11px]">BVB Korea 공식 영농 지식 아카이브</div>
+            </div>
+
+            <!-- Content Container (Rendered dynamically as Grid or List) -->
+            <div id="contentGrid">
+                <!-- Rendered dynamically by JS -->
             </div>
 
         </div>
