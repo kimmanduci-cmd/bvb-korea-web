@@ -307,8 +307,8 @@
         <div class="relative z-10 max-w-5xl mx-auto px-6 text-center">
             <div id="heroTextContainer" class="transition-all duration-400 ease-out transform">
                 <div id="heroOptionBadge" class="mb-4">
-                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] sm:text-xs bg-black/45 border border-amber-300/30 text-amber-200/95 font-serif tracking-[0.15em] backdrop-blur-md shadow-sm">
-                        <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>후보 1 : 모던 헤리티지 · 설화수 &amp; 킨포크 스타일
+                    <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-[11px] sm:text-xs bg-black/45 border border-amber-300/30 text-amber-200/95 font-serif tracking-[0.16em] uppercase backdrop-blur-md shadow-sm">
+                        <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>The Root · 보이지 않는 생명의 바탕
                     </span>
                 </div>
                 <h1 id="heroHeadline" class="font-heritage text-3xl sm:text-5xl lg:text-6xl text-white leading-[1.3] tracking-[-0.025em]">
@@ -322,19 +322,19 @@
 
         <!-- Bottom Row: Dynamic Slide Info, Direct Comparison Tabs, Scroll Indicator, Slider Controls -->
         <div class="relative z-10 max-w-7xl w-full mx-auto px-6 sm:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <!-- Font Option Quick Switcher Tabs (Direct Live Comparison) -->
+            <!-- Story Stage Navigator (Minimal & Elegant) -->
             <div class="flex items-center gap-1 bg-stone-950/70 backdrop-blur-md p-1 rounded-full border border-white/20 text-xs">
-                <button onclick="goToHeroSlide(0)" id="heroTab-0" class="hero-tab px-3 py-1 rounded-full font-medium transition text-white bg-white/20 shadow-sm">
-                    1번 설화수풍
+                <button onclick="goToHeroSlide(0)" id="heroTab-0" class="hero-tab px-3.5 py-1 rounded-full font-medium transition text-white bg-white/20 shadow-sm">
+                    01. 뿌리
                 </button>
-                <button onclick="goToHeroSlide(1)" id="heroTab-1" class="hero-tab px-3 py-1 rounded-full font-medium transition text-stone-400 hover:text-white">
-                    2번 탬버린즈풍
+                <button onclick="goToHeroSlide(1)" id="heroTab-1" class="hero-tab px-3.5 py-1 rounded-full font-medium transition text-stone-400 hover:text-white">
+                    02. 생육
                 </button>
-                <button onclick="goToHeroSlide(2)" id="heroTab-2" class="hero-tab px-3 py-1 rounded-full font-medium transition text-stone-400 hover:text-white">
-                    3번 오이시이풍
+                <button onclick="goToHeroSlide(2)" id="heroTab-2" class="hero-tab px-3.5 py-1 rounded-full font-medium transition text-stone-400 hover:text-white">
+                    03. 수확
                 </button>
-                <button onclick="goToHeroSlide(3)" id="heroTab-3" class="hero-tab px-3 py-1 rounded-full font-medium transition text-stone-400 hover:text-white">
-                    4번 농부
+                <button onclick="goToHeroSlide(3)" id="heroTab-3" class="hero-tab px-3.5 py-1 rounded-full font-medium transition text-stone-400 hover:text-white">
+                    04. 결실
                 </button>
             </div>
 
@@ -2033,28 +2033,28 @@
         const totalHeroSlides = 4;
         const heroSlideData = [
             {
-                badge: `<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] sm:text-xs bg-black/50 border border-amber-300/30 text-amber-200/95 font-serif tracking-[0.15em] backdrop-blur-md shadow-sm"><span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>후보 1 : 모던 헤리티지 · 설화수 &amp; 킨포크 스타일</span>`,
+                badge: `<span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-[11px] sm:text-xs bg-black/50 border border-amber-300/30 text-amber-200/95 font-serif tracking-[0.16em] uppercase backdrop-blur-md shadow-sm"><span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>The Root · 보이지 않는 생명의 바탕</span>`,
                 headline: "모든 붉은 순간은,<br class=\"hidden sm:inline\"> 보이지 않는 곳에서 시작됩니다",
                 headlineClass: "font-heritage text-3xl sm:text-5xl lg:text-6xl text-white leading-[1.3] tracking-[-0.025em]",
                 subcopy: "좋은 결실을 바란다면, 먼저 뿌리가 닿는 흙을 보아야 합니다.",
                 subcopyClass: "font-heritage mt-4 sm:mt-6 text-base sm:text-lg lg:text-xl text-stone-200/95 font-light leading-relaxed max-w-2xl mx-auto tracking-[-0.01em]"
             },
             {
-                badge: `<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] sm:text-xs bg-black/50 border border-emerald-400/30 text-emerald-300/95 font-sans tracking-[0.2em] uppercase backdrop-blur-md shadow-sm"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>후보 2 : 하이엔드 미니멀리스트 · 탬버린즈 &amp; 애플 스타일</span>`,
+                badge: `<span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-[11px] sm:text-xs bg-black/50 border border-amber-300/30 text-amber-200/95 font-serif tracking-[0.16em] uppercase backdrop-blur-md shadow-sm"><span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>Aeration &amp; Water · 지치지 않는 활착의 힘</span>`,
                 headline: "쉬지 않고 쏟아지는 결실,<br class=\"hidden sm:inline\"> 그 아래 숨 쉬는 뿌리가 있습니다",
-                headlineClass: "font-minimalist text-3xl sm:text-5xl lg:text-6xl text-white leading-[1.22] tracking-[-0.03em]",
+                headlineClass: "font-heritage text-3xl sm:text-5xl lg:text-6xl text-white leading-[1.3] tracking-[-0.025em]",
                 subcopy: "시즌 끝까지 지치지 않는 나무의 힘.",
-                subcopyClass: "font-minimalist mt-4 sm:mt-6 text-base sm:text-lg lg:text-xl text-stone-200/95 font-light leading-relaxed max-w-2xl mx-auto tracking-normal"
+                subcopyClass: "font-heritage mt-4 sm:mt-6 text-base sm:text-lg lg:text-xl text-stone-200/95 font-light leading-relaxed max-w-2xl mx-auto tracking-[-0.01em]"
             },
             {
-                badge: `<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] sm:text-xs bg-black/50 border border-rose-300/30 text-rose-200/95 font-serif italic tracking-[0.15em] backdrop-blur-md shadow-sm"><span class="w-1.5 h-1.5 rounded-full bg-rose-400"></span>후보 3 : 오가닉 아티잔 · 오이시이(Oishii) &amp; 이솝 스타일</span>`,
+                badge: `<span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-[11px] sm:text-xs bg-black/50 border border-amber-300/30 text-amber-200/95 font-serif tracking-[0.16em] uppercase backdrop-blur-md shadow-sm"><span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>Purity · 타협 없는 네덜란드 RHP 인증</span>`,
                 headline: "열매의 단단함은<br class=\"hidden sm:inline\"> 바탕의 순도를 닮습니다",
-                headlineClass: "font-artisan text-3xl sm:text-5xl lg:text-6xl text-white leading-[1.32] tracking-[-0.015em]",
+                headlineClass: "font-heritage text-3xl sm:text-5xl lg:text-6xl text-white leading-[1.3] tracking-[-0.025em]",
                 subcopy: "타협하지 않은 흙이 길러낸 가장 완벽한 한 알.",
-                subcopyClass: "font-artisan mt-4 sm:mt-6 text-base sm:text-lg lg:text-xl text-stone-200/95 font-normal leading-relaxed max-w-2xl mx-auto tracking-normal"
+                subcopyClass: "font-heritage mt-4 sm:mt-6 text-base sm:text-lg lg:text-xl text-stone-200/95 font-light leading-relaxed max-w-2xl mx-auto tracking-[-0.01em]"
             },
             {
-                badge: `<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] sm:text-xs bg-black/50 border border-white/30 text-white/95 font-serif tracking-[0.15em] backdrop-blur-md shadow-sm"><span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>대표 농부 비주얼 · 모던 헤리티지 &amp; 킨포크 무드</span>`,
+                badge: `<span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-[11px] sm:text-xs bg-black/50 border border-amber-300/30 text-amber-200/95 font-serif tracking-[0.16em] uppercase backdrop-blur-md shadow-sm"><span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>Craftsmanship · 120년 BVB의 진심과 동행</span>`,
                 headline: "농부의 환한 웃음,<br class=\"hidden sm:inline\"> 그것이 우리가 흙을 연구하는 이유입니다",
                 headlineClass: "font-heritage text-3xl sm:text-5xl lg:text-6xl text-white leading-[1.3] tracking-[-0.025em]",
                 subcopy: "120년의 고집, 농가의 가장 든든한 밑바탕이 되겠습니다.",
