@@ -6,11 +6,12 @@
     <title>BVB KOREA | ㈜BVB원예자재 - 농가의 성공을 함께 만드는 가장 든든한 동반자</title>
     <meta name="description" content="120년 전통 네덜란드 BVB Substrates(유럽 RHP 인증)와 스위스 SWISSGROW 비료. 대한민국 최고 수준의 딸기 재배 기술력으로 농가의 결실을 함께 만듭니다.">
     
-    <!-- Google Fonts (Noto Serif KR for Luxury Editorial + Pretendard for Clean Sans) -->
+    <!-- Web Fonts: Pretendard, SUIT, Google Fonts (Cormorant Garamond, Playfair Display, Montserrat, Gowun Batang, Noto Serif KR, Nanum Myeongjo) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Noto+Serif+KR:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Gowun+Batang:wght@400;700&family=Montserrat:wght@200;300;400;500&family=Nanum+Myeongjo:wght@400;700&family=Noto+Serif+KR:wght@200;300;400;600&family=Playfair+Display:ital,wght@0,400;1,400;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT/fonts/variable/woff2/SUIT-Variable.css" />
     
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -22,6 +23,9 @@
                         sans: ['Pretendard', '-apple-system', 'BlinkMacSystemFont', 'system-ui', 'sans-serif'],
                         serif: ['"Noto Serif KR"', '"Cormorant Garamond"', 'Georgia', 'serif'],
                         display: ['"Cormorant Garamond"', '"Noto Serif KR"', 'serif'],
+                        heritage: ['"Noto Serif KR"', '"Nanum Myeongjo"', '"Cormorant Garamond"', 'serif'],
+                        suit: ['"SUIT Variable"', '"SUIT"', 'Pretendard', 'sans-serif'],
+                        artisan: ['"Gowun Batang"', '"Playfair Display"', 'serif'],
                     },
                     colors: {
                         stone: {
@@ -62,6 +66,30 @@
         .font-editorial {
             font-family: 'Noto Serif KR', 'Cormorant Garamond', Georgia, serif;
             letter-spacing: -0.02em;
+        }
+
+        /* 폰트 후보 1: 모던 헤리티지 (설화수 · 킨포크 무드) */
+        .font-heritage {
+            font-family: 'Noto Serif KR', 'Nanum Myeongjo', 'Cormorant Garamond', serif;
+            font-weight: 300;
+            letter-spacing: -0.025em;
+            text-shadow: 0 4px 24px rgba(0, 0, 0, 0.45);
+        }
+
+        /* 폰트 후보 2: 하이엔드 미니멀리스트 (탬버린즈 · 애플 무드) */
+        .font-minimalist {
+            font-family: 'SUIT Variable', 'SUIT', 'Pretendard', sans-serif;
+            font-weight: 300;
+            letter-spacing: -0.025em;
+            text-shadow: 0 4px 24px rgba(0, 0, 0, 0.45);
+        }
+
+        /* 폰트 후보 3: 오가닉 아티잔 (오이시이 · 이솝 무드) */
+        .font-artisan {
+            font-family: 'Gowun Batang', 'Playfair Display', serif;
+            font-weight: 400;
+            letter-spacing: -0.015em;
+            text-shadow: 0 4px 24px rgba(0, 0, 0, 0.45);
         }
 
         /* Frosted White Glass Nav */
@@ -278,25 +306,40 @@
         <!-- Center Editorial Headline & Subcopy (Overlaid directly on visual) -->
         <div class="relative z-10 max-w-5xl mx-auto px-6 text-center">
             <div id="heroTextContainer" class="transition-all duration-400 ease-out transform">
-                <h1 id="heroHeadline" class="font-sans text-3xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.22] tracking-[-0.03em]">
+                <div id="heroOptionBadge" class="mb-4">
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] sm:text-xs bg-black/45 border border-amber-300/30 text-amber-200/95 font-serif tracking-[0.15em] backdrop-blur-md shadow-sm">
+                        <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>후보 1 : 모던 헤리티지 · 설화수 &amp; 킨포크 스타일
+                    </span>
+                </div>
+                <h1 id="heroHeadline" class="font-heritage text-3xl sm:text-5xl lg:text-6xl text-white leading-[1.3] tracking-[-0.025em]">
                     모든 붉은 순간은,<br class="hidden sm:inline"> 보이지 않는 곳에서 시작됩니다
                 </h1>
-                <p id="heroSubcopy" class="mt-4 sm:mt-6 text-base sm:text-lg lg:text-xl text-stone-200 font-normal leading-relaxed max-w-2xl mx-auto opacity-90 tracking-[-0.01em]">
+                <p id="heroSubcopy" class="font-heritage mt-4 sm:mt-6 text-base sm:text-lg lg:text-xl text-stone-200 font-light leading-relaxed max-w-2xl mx-auto tracking-[-0.01em]">
                     좋은 결실을 바란다면, 먼저 뿌리가 닿는 흙을 보아야 합니다.
                 </p>
             </div>
         </div>
 
-        <!-- Bottom Row: Dynamic Slide Info, Scroll Indicator, Slider Controls -->
-        <div class="relative z-10 max-w-7xl w-full mx-auto px-6 sm:px-8 flex flex-row items-center justify-between gap-4">
-            <!-- Subtle Brand Philosophy Tag (Minimal & Elegant) -->
-            <div class="hidden sm:flex items-center space-x-2 text-stone-300/80 text-xs font-medium tracking-wider">
-                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-                <span class="tracking-widest uppercase font-mono text-[11px]">BVB Substrates · The Root of Excellence</span>
+        <!-- Bottom Row: Dynamic Slide Info, Direct Comparison Tabs, Scroll Indicator, Slider Controls -->
+        <div class="relative z-10 max-w-7xl w-full mx-auto px-6 sm:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <!-- Font Option Quick Switcher Tabs (Direct Live Comparison) -->
+            <div class="flex items-center gap-1 bg-stone-950/70 backdrop-blur-md p-1 rounded-full border border-white/20 text-xs">
+                <button onclick="goToHeroSlide(0)" id="heroTab-0" class="hero-tab px-3 py-1 rounded-full font-medium transition text-white bg-white/20 shadow-sm">
+                    1번 설화수풍
+                </button>
+                <button onclick="goToHeroSlide(1)" id="heroTab-1" class="hero-tab px-3 py-1 rounded-full font-medium transition text-stone-400 hover:text-white">
+                    2번 탬버린즈풍
+                </button>
+                <button onclick="goToHeroSlide(2)" id="heroTab-2" class="hero-tab px-3 py-1 rounded-full font-medium transition text-stone-400 hover:text-white">
+                    3번 오이시이풍
+                </button>
+                <button onclick="goToHeroSlide(3)" id="heroTab-3" class="hero-tab px-3 py-1 rounded-full font-medium transition text-stone-400 hover:text-white">
+                    4번 농부
+                </button>
             </div>
 
             <!-- Scroll Indicator -->
-            <a href="#storyboard" class="flex flex-col items-center text-white/75 hover:text-white transition group text-[10px] tracking-widest uppercase">
+            <a href="#storyboard" class="hidden md:flex flex-col items-center text-white/75 hover:text-white transition group text-[10px] tracking-widest uppercase">
                 <span>Explore Stories</span>
                 <svg class="w-3.5 h-3.5 mt-1 animate-bounce text-white/90" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
             </a>
@@ -1990,20 +2033,32 @@
         const totalHeroSlides = 4;
         const heroSlideData = [
             {
+                badge: `<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] sm:text-xs bg-black/50 border border-amber-300/30 text-amber-200/95 font-serif tracking-[0.15em] backdrop-blur-md shadow-sm"><span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>후보 1 : 모던 헤리티지 · 설화수 &amp; 킨포크 스타일</span>`,
                 headline: "모든 붉은 순간은,<br class=\"hidden sm:inline\"> 보이지 않는 곳에서 시작됩니다",
-                subcopy: "좋은 결실을 바란다면, 먼저 뿌리가 닿는 흙을 보아야 합니다."
+                headlineClass: "font-heritage text-3xl sm:text-5xl lg:text-6xl text-white leading-[1.3] tracking-[-0.025em]",
+                subcopy: "좋은 결실을 바란다면, 먼저 뿌리가 닿는 흙을 보아야 합니다.",
+                subcopyClass: "font-heritage mt-4 sm:mt-6 text-base sm:text-lg lg:text-xl text-stone-200/95 font-light leading-relaxed max-w-2xl mx-auto tracking-[-0.01em]"
             },
             {
+                badge: `<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] sm:text-xs bg-black/50 border border-emerald-400/30 text-emerald-300/95 font-sans tracking-[0.2em] uppercase backdrop-blur-md shadow-sm"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>후보 2 : 하이엔드 미니멀리스트 · 탬버린즈 &amp; 애플 스타일</span>`,
                 headline: "쉬지 않고 쏟아지는 결실,<br class=\"hidden sm:inline\"> 그 아래 숨 쉬는 뿌리가 있습니다",
-                subcopy: "시즌 끝까지 지치지 않는 나무의 힘."
+                headlineClass: "font-minimalist text-3xl sm:text-5xl lg:text-6xl text-white leading-[1.22] tracking-[-0.03em]",
+                subcopy: "시즌 끝까지 지치지 않는 나무의 힘.",
+                subcopyClass: "font-minimalist mt-4 sm:mt-6 text-base sm:text-lg lg:text-xl text-stone-200/95 font-light leading-relaxed max-w-2xl mx-auto tracking-normal"
             },
             {
+                badge: `<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] sm:text-xs bg-black/50 border border-rose-300/30 text-rose-200/95 font-serif italic tracking-[0.15em] backdrop-blur-md shadow-sm"><span class="w-1.5 h-1.5 rounded-full bg-rose-400"></span>후보 3 : 오가닉 아티잔 · 오이시이(Oishii) &amp; 이솝 스타일</span>`,
                 headline: "열매의 단단함은<br class=\"hidden sm:inline\"> 바탕의 순도를 닮습니다",
-                subcopy: "타협하지 않은 흙이 길러낸 가장 완벽한 한 알."
+                headlineClass: "font-artisan text-3xl sm:text-5xl lg:text-6xl text-white leading-[1.32] tracking-[-0.015em]",
+                subcopy: "타협하지 않은 흙이 길러낸 가장 완벽한 한 알.",
+                subcopyClass: "font-artisan mt-4 sm:mt-6 text-base sm:text-lg lg:text-xl text-stone-200/95 font-normal leading-relaxed max-w-2xl mx-auto tracking-normal"
             },
             {
+                badge: `<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] sm:text-xs bg-black/50 border border-white/30 text-white/95 font-serif tracking-[0.15em] backdrop-blur-md shadow-sm"><span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>대표 농부 비주얼 · 모던 헤리티지 &amp; 킨포크 무드</span>`,
                 headline: "농부의 환한 웃음,<br class=\"hidden sm:inline\"> 그것이 우리가 흙을 연구하는 이유입니다",
-                subcopy: "120년의 고집, 농가의 가장 든든한 밑바탕이 되겠습니다."
+                headlineClass: "font-heritage text-3xl sm:text-5xl lg:text-6xl text-white leading-[1.3] tracking-[-0.025em]",
+                subcopy: "120년의 고집, 농가의 가장 든든한 밑바탕이 되겠습니다.",
+                subcopyClass: "font-heritage mt-4 sm:mt-6 text-base sm:text-lg lg:text-xl text-stone-200/95 font-light leading-relaxed max-w-2xl mx-auto tracking-[-0.01em]"
             }
         ];
 
@@ -2036,18 +2091,41 @@
                 counter.innerText = `0${currentHeroSlide + 1} / 0${totalHeroSlides}`;
             }
 
-            // Smooth cross-fade transition for center editorial copy
+            // Smooth cross-fade transition for center editorial copy & dynamic candidate typography
             const textContainer = document.getElementById('heroTextContainer');
+            const badgeEl = document.getElementById('heroOptionBadge');
             const headlineEl = document.getElementById('heroHeadline');
             const subcopyEl = document.getElementById('heroSubcopy');
-            if (textContainer && headlineEl && subcopyEl && heroSlideData[currentHeroSlide]) {
+            const currentData = heroSlideData[currentHeroSlide];
+
+            if (textContainer && headlineEl && subcopyEl && currentData) {
                 textContainer.classList.add('opacity-0', 'translate-y-2');
                 setTimeout(() => {
-                    headlineEl.innerHTML = heroSlideData[currentHeroSlide].headline;
-                    subcopyEl.innerHTML = heroSlideData[currentHeroSlide].subcopy;
+                    if (badgeEl) badgeEl.innerHTML = currentData.badge;
+                    headlineEl.innerHTML = currentData.headline;
+                    headlineEl.className = currentData.headlineClass;
+                    subcopyEl.innerHTML = currentData.subcopy;
+                    subcopyEl.className = currentData.subcopyClass;
                     textContainer.classList.remove('opacity-0', 'translate-y-2');
                 }, 280);
             }
+
+            // Update Tab Highlight
+            for (let i = 0; i < totalHeroSlides; i++) {
+                const tab = document.getElementById(`heroTab-${i}`);
+                if (tab) {
+                    if (i === currentHeroSlide) {
+                        tab.className = 'hero-tab px-3 py-1 rounded-full font-medium transition text-white bg-white/20 shadow-sm';
+                    } else {
+                        tab.className = 'hero-tab px-3 py-1 rounded-full font-medium transition text-stone-400 hover:text-white';
+                    }
+                }
+            }
+        }
+
+        function goToHeroSlide(index) {
+            showHeroSlide(index);
+            resetHeroSliderTimer();
         }
 
         function nextHeroSlide() {
