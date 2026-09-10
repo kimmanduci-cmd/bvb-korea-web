@@ -527,32 +527,37 @@
         <!-- CHAPTER 01: 회사 소개 (About Us)                              -->
         <!-- ============================================================= -->
         <section id="about" class="border-b border-stone-200/80 transition-colors">
-            <button onclick="toggleChapter('about')" class="w-full py-5 sm:py-7 px-6 sm:px-10 hover:bg-white transition-all duration-300 cursor-pointer group">
-                <div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
-                    <!-- Left: Number + Visual Teaser Thumbnail + Title & Subtitle -->
-                    <div class="flex items-center space-x-4 sm:space-x-7 text-left min-w-0">
-                        <span class="font-mono text-sm sm:text-base font-bold text-stone-400 group-hover:text-stone-900 transition-colors w-6 sm:w-8 shrink-0">01</span>
-                        
-                        <!-- Visual Teaser Thumbnail -->
-                        <div class="w-20 sm:w-28 md:w-32 aspect-[16/10] rounded-xl overflow-hidden bg-stone-200 shrink-0 border border-stone-200/90 relative shadow-2xs group-hover:shadow-md transition-all">
-                            <img src="assets/images/brand/bvb_building_illustration.jpg" alt="회사 소개" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out">
-                            <div class="absolute inset-0 bg-stone-900/5 group-hover:bg-transparent transition-colors"></div>
-                        </div>
-
-                        <!-- Title & Subcopy -->
+            <button onclick="toggleChapter('about')" class="w-full py-6 sm:py-8 px-6 sm:px-10 hover:bg-white/80 transition-all duration-300 cursor-pointer group text-left">
+                <div class="max-w-7xl mx-auto flex items-center justify-between gap-6 sm:gap-8">
+                    <!-- Left: Number + Category Pill + Title & Subtitle (Typographic Authority) -->
+                    <div class="flex items-baseline sm:items-center space-x-4 sm:space-x-8 min-w-0 pr-2">
+                        <span class="font-mono text-sm sm:text-base font-semibold tracking-wider text-stone-400 group-hover:text-stone-900 transition-colors w-10 sm:w-14 shrink-0">
+                            01 <span class="text-[11px] text-stone-300 font-normal">/ 05</span>
+                        </span>
                         <div class="min-w-0">
-                            <div class="flex items-center space-x-2.5">
-                                <span class="text-[10px] font-mono font-bold text-stone-500 bg-stone-200/70 px-2 py-0.5 rounded-full uppercase tracking-wider shrink-0">HERITAGE 120Y</span>
-                                <h2 class="font-editorial text-xl sm:text-2xl lg:text-[26px] font-bold text-stone-900 tracking-tight leading-snug truncate">
-                                    <span class="hover-underline-sweep">회사 소개</span>
-                                </h2>
+                            <div class="flex flex-wrap items-center gap-x-2.5 gap-y-1 mb-1.5">
+                                <span class="text-[10px] font-mono font-bold text-stone-500 bg-stone-200/70 border-stone-300/60 border px-2.5 py-0.5 rounded-full uppercase tracking-wider shrink-0">
+                                    HERITAGE 120Y
+                                </span>
                             </div>
-                            <p class="text-xs sm:text-sm text-stone-500 font-light mt-1 truncate">한국 딸기 농업 20년의 헌신 · 지난 120년간 유럽 딸기 산업을 지켜온 네덜란드 BVB</p>
+                            <h2 class="font-editorial text-2xl sm:text-3xl lg:text-[32px] font-bold text-stone-900 tracking-tight leading-snug group-hover:translate-x-1.5 transition-transform duration-300">
+                                <span class="hover-underline-sweep">회사 소개</span>
+                            </h2>
+                            <p class="text-xs sm:text-sm text-stone-500 font-light mt-1.5 line-clamp-1 max-w-2xl tracking-tight">
+                                한국 딸기 농업 20년의 헌신 · 지난 120년간 유럽 딸기 산업을 지켜온 네덜란드 BVB
+                            </p>
                         </div>
                     </div>
 
-                    <!-- Right: Circle Chevron Button -->
-                    <div class="shrink-0 ml-2">
+                    <!-- Right: Visual Teaser Artwork + Minimal Circle Chevron -->
+                    <div class="flex items-center space-x-4 sm:space-x-6 shrink-0">
+                        <!-- 16:10 Cinematic Teaser Vignette (Aligned Column on Desktop, clean fold on mobile) -->
+                        <div class="hidden sm:block w-28 md:w-36 lg:w-44 aspect-[16/10] rounded-xl overflow-hidden bg-stone-200 shrink-0 border border-stone-200/90 relative shadow-2xs group-hover:shadow-md transition-all duration-500">
+                            <img src="assets/images/brand/bvb_building_illustration.jpg" alt="회사 소개" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out">
+                            <div class="absolute inset-0 bg-stone-950/5 group-hover:bg-transparent transition-colors"></div>
+                        </div>
+
+                        <!-- Circle Chevron Indicator -->
                         <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-full border border-stone-300 flex items-center justify-center bg-white shadow-2xs group-hover:border-stone-800 group-hover:bg-stone-900 transition-all duration-300">
                             <svg id="icon-about" class="w-4 h-4 text-stone-700 group-hover:text-white transition-all duration-300 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                         </div>
@@ -626,32 +631,37 @@
         <!-- CHAPTER 02: BVB 프리미엄 상토 (Products)                     -->
         <!-- ============================================================= -->
         <section id="products" class="border-b border-stone-200/80 transition-colors">
-            <button onclick="toggleChapter('products')" class="w-full py-5 sm:py-7 px-6 sm:px-10 hover:bg-white transition-all duration-300 cursor-pointer group">
-                <div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
-                    <!-- Left: Number + Visual Teaser Thumbnail + Title & Subtitle -->
-                    <div class="flex items-center space-x-4 sm:space-x-7 text-left min-w-0">
-                        <span class="font-mono text-sm sm:text-base font-bold text-stone-400 group-hover:text-stone-900 transition-colors w-6 sm:w-8 shrink-0">02</span>
-                        
-                        <!-- Visual Teaser Thumbnail -->
-                        <div class="w-20 sm:w-28 md:w-32 aspect-[16/10] rounded-xl overflow-hidden bg-stone-200 shrink-0 border border-stone-200/90 relative shadow-2xs group-hover:shadow-md transition-all">
-                            <img src="assets/images/pristine_root_system.jpg" alt="BVB 프리미엄 상토" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out">
-                            <div class="absolute inset-0 bg-stone-900/5 group-hover:bg-transparent transition-colors"></div>
-                        </div>
-
-                        <!-- Title & Subcopy -->
+            <button onclick="toggleChapter('products')" class="w-full py-6 sm:py-8 px-6 sm:px-10 hover:bg-white/80 transition-all duration-300 cursor-pointer group text-left">
+                <div class="max-w-7xl mx-auto flex items-center justify-between gap-6 sm:gap-8">
+                    <!-- Left: Number + Category Pill + Title & Subtitle (Typographic Authority) -->
+                    <div class="flex items-baseline sm:items-center space-x-4 sm:space-x-8 min-w-0 pr-2">
+                        <span class="font-mono text-sm sm:text-base font-semibold tracking-wider text-stone-400 group-hover:text-stone-900 transition-colors w-10 sm:w-14 shrink-0">
+                            02 <span class="text-[11px] text-stone-300 font-normal">/ 05</span>
+                        </span>
                         <div class="min-w-0">
-                            <div class="flex items-center space-x-2.5">
-                                <span class="text-[10px] font-mono font-bold text-stone-500 bg-stone-200/70 px-2 py-0.5 rounded-full uppercase tracking-wider shrink-0">CORE 3 SUBSTRATES</span>
-                                <h2 class="font-editorial text-xl sm:text-2xl lg:text-[26px] font-bold text-stone-900 tracking-tight leading-snug truncate">
-                                    <span class="hover-underline-sweep">BVB 프리미엄 상토</span>
-                                </h2>
+                            <div class="flex flex-wrap items-center gap-x-2.5 gap-y-1 mb-1.5">
+                                <span class="text-[10px] font-mono font-bold text-stone-500 bg-stone-200/70 border-stone-300/60 border px-2.5 py-0.5 rounded-full uppercase tracking-wider shrink-0">
+                                    CORE 3 SUBSTRATES
+                                </span>
                             </div>
-                            <p class="text-xs sm:text-sm text-stone-500 font-light mt-1 truncate">BC2 (재배용) · BT (육묘용) · 코코골드 (코코피트) — 딸기 맞춤형 핵심 3종</p>
+                            <h2 class="font-editorial text-2xl sm:text-3xl lg:text-[32px] font-bold text-stone-900 tracking-tight leading-snug group-hover:translate-x-1.5 transition-transform duration-300">
+                                <span class="hover-underline-sweep">BVB 프리미엄 상토</span>
+                            </h2>
+                            <p class="text-xs sm:text-sm text-stone-500 font-light mt-1.5 line-clamp-1 max-w-2xl tracking-tight">
+                                BC2 (재배용) · BT (육묘용) · 코코골드 (코코피트) — 딸기 맞춤형 핵심 3종
+                            </p>
                         </div>
                     </div>
 
-                    <!-- Right: Circle Chevron Button -->
-                    <div class="shrink-0 ml-2">
+                    <!-- Right: Visual Teaser Artwork + Minimal Circle Chevron -->
+                    <div class="flex items-center space-x-4 sm:space-x-6 shrink-0">
+                        <!-- 16:10 Cinematic Teaser Vignette (Aligned Column on Desktop, clean fold on mobile) -->
+                        <div class="hidden sm:block w-28 md:w-36 lg:w-44 aspect-[16/10] rounded-xl overflow-hidden bg-stone-200 shrink-0 border border-stone-200/90 relative shadow-2xs group-hover:shadow-md transition-all duration-500">
+                            <img src="assets/images/pristine_root_system.jpg" alt="BVB 프리미엄 상토" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out">
+                            <div class="absolute inset-0 bg-stone-950/5 group-hover:bg-transparent transition-colors"></div>
+                        </div>
+
+                        <!-- Circle Chevron Indicator -->
                         <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-full border border-stone-300 flex items-center justify-center bg-white shadow-2xs group-hover:border-stone-800 group-hover:bg-stone-900 transition-all duration-300">
                             <svg id="icon-products" class="w-4 h-4 text-stone-700 group-hover:text-white transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                         </div>
@@ -743,32 +753,37 @@
         <!-- CHAPTER 03: SwissGrow 영양제 (Nutrition)                      -->
         <!-- ============================================================= -->
         <section id="nutrition" class="border-b border-stone-200/80 transition-colors">
-            <button onclick="toggleChapter('nutrition')" class="w-full py-5 sm:py-7 px-6 sm:px-10 hover:bg-white transition-all duration-300 cursor-pointer group">
-                <div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
-                    <!-- Left: Number + Visual Teaser Thumbnail + Title & Subtitle -->
-                    <div class="flex items-center space-x-4 sm:space-x-7 text-left min-w-0">
-                        <span class="font-mono text-sm sm:text-base font-bold text-stone-400 group-hover:text-stone-900 transition-colors w-6 sm:w-8 shrink-0">03</span>
-                        
-                        <!-- Visual Teaser Thumbnail -->
-                        <div class="w-20 sm:w-28 md:w-32 aspect-[16/10] rounded-xl overflow-hidden bg-stone-200 shrink-0 border border-stone-200/90 relative shadow-2xs group-hover:shadow-md transition-all">
-                            <img src="assets/images/strawberry_greenhouse.jpg" alt="SwissGrow 영양제" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out">
-                            <div class="absolute inset-0 bg-stone-900/5 group-hover:bg-transparent transition-colors"></div>
-                        </div>
-
-                        <!-- Title & Subcopy -->
+            <button onclick="toggleChapter('nutrition')" class="w-full py-6 sm:py-8 px-6 sm:px-10 hover:bg-white/80 transition-all duration-300 cursor-pointer group text-left">
+                <div class="max-w-7xl mx-auto flex items-center justify-between gap-6 sm:gap-8">
+                    <!-- Left: Number + Category Pill + Title & Subtitle (Typographic Authority) -->
+                    <div class="flex items-baseline sm:items-center space-x-4 sm:space-x-8 min-w-0 pr-2">
+                        <span class="font-mono text-sm sm:text-base font-semibold tracking-wider text-stone-400 group-hover:text-stone-900 transition-colors w-10 sm:w-14 shrink-0">
+                            03 <span class="text-[11px] text-stone-300 font-normal">/ 05</span>
+                        </span>
                         <div class="min-w-0">
-                            <div class="flex items-center space-x-2.5">
-                                <span class="text-[10px] font-mono font-bold text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded-full uppercase tracking-wider shrink-0">24 FORMULATIONS</span>
-                                <h2 class="font-editorial text-xl sm:text-2xl lg:text-[26px] font-bold text-stone-900 tracking-tight leading-snug truncate">
-                                    <span class="hover-underline-sweep">SwissGrow 영양제</span>
-                                </h2>
+                            <div class="flex flex-wrap items-center gap-x-2.5 gap-y-1 mb-1.5">
+                                <span class="text-[10px] font-mono font-bold text-emerald-800 bg-emerald-100 border-emerald-200/80 border px-2.5 py-0.5 rounded-full uppercase tracking-wider shrink-0">
+                                    24 FORMULATIONS
+                                </span>
                             </div>
-                            <p class="text-xs sm:text-sm text-stone-500 font-light mt-1 truncate">스위스 정밀 농업 과학 · BVB 상토와 시너지를 내는 24종 맞춤 처방 솔루션</p>
+                            <h2 class="font-editorial text-2xl sm:text-3xl lg:text-[32px] font-bold text-stone-900 tracking-tight leading-snug group-hover:translate-x-1.5 transition-transform duration-300">
+                                <span class="hover-underline-sweep">SwissGrow 영양제</span>
+                            </h2>
+                            <p class="text-xs sm:text-sm text-stone-500 font-light mt-1.5 line-clamp-1 max-w-2xl tracking-tight">
+                                스위스 정밀 농업 과학 · BVB 상토와 시너지를 내는 24종 맞춤 처방 솔루션
+                            </p>
                         </div>
                     </div>
 
-                    <!-- Right: Circle Chevron Button -->
-                    <div class="shrink-0 ml-2">
+                    <!-- Right: Visual Teaser Artwork + Minimal Circle Chevron -->
+                    <div class="flex items-center space-x-4 sm:space-x-6 shrink-0">
+                        <!-- 16:10 Cinematic Teaser Vignette (Aligned Column on Desktop, clean fold on mobile) -->
+                        <div class="hidden sm:block w-28 md:w-36 lg:w-44 aspect-[16/10] rounded-xl overflow-hidden bg-stone-200 shrink-0 border border-stone-200/90 relative shadow-2xs group-hover:shadow-md transition-all duration-500">
+                            <img src="assets/images/strawberry_greenhouse.jpg" alt="SwissGrow 영양제" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out">
+                            <div class="absolute inset-0 bg-stone-950/5 group-hover:bg-transparent transition-colors"></div>
+                        </div>
+
+                        <!-- Circle Chevron Indicator -->
                         <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-full border border-stone-300 flex items-center justify-center bg-white shadow-2xs group-hover:border-stone-800 group-hover:bg-stone-900 transition-all duration-300">
                             <svg id="icon-nutrition" class="w-4 h-4 text-stone-700 group-hover:text-white transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                         </div>
@@ -851,32 +866,37 @@
         <!-- CHAPTER 04: 품질과 원물 관리 (Quality)                        -->
         <!-- ============================================================= -->
         <section id="quality" class="border-b border-stone-200/80 transition-colors">
-            <button onclick="toggleChapter('quality')" class="w-full py-5 sm:py-7 px-6 sm:px-10 hover:bg-white transition-all duration-300 cursor-pointer group">
-                <div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
-                    <!-- Left: Number + Visual Teaser Thumbnail + Title & Subtitle -->
-                    <div class="flex items-center space-x-4 sm:space-x-7 text-left min-w-0">
-                        <span class="font-mono text-sm sm:text-base font-bold text-stone-400 group-hover:text-stone-900 transition-colors w-6 sm:w-8 shrink-0">04</span>
-                        
-                        <!-- Visual Teaser Thumbnail -->
-                        <div class="w-20 sm:w-28 md:w-32 aspect-[16/10] rounded-xl overflow-hidden bg-stone-200 shrink-0 border border-stone-200/90 relative shadow-2xs group-hover:shadow-md transition-all">
-                            <img src="assets/images/bvb_root_ball.jpg" alt="품질과 원물 관리" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out">
-                            <div class="absolute inset-0 bg-stone-900/5 group-hover:bg-transparent transition-colors"></div>
-                        </div>
-
-                        <!-- Title & Subcopy -->
+            <button onclick="toggleChapter('quality')" class="w-full py-6 sm:py-8 px-6 sm:px-10 hover:bg-white/80 transition-all duration-300 cursor-pointer group text-left">
+                <div class="max-w-7xl mx-auto flex items-center justify-between gap-6 sm:gap-8">
+                    <!-- Left: Number + Category Pill + Title & Subtitle (Typographic Authority) -->
+                    <div class="flex items-baseline sm:items-center space-x-4 sm:space-x-8 min-w-0 pr-2">
+                        <span class="font-mono text-sm sm:text-base font-semibold tracking-wider text-stone-400 group-hover:text-stone-900 transition-colors w-10 sm:w-14 shrink-0">
+                            04 <span class="text-[11px] text-stone-300 font-normal">/ 05</span>
+                        </span>
                         <div class="min-w-0">
-                            <div class="flex items-center space-x-2.5">
-                                <span class="text-[10px] font-mono font-bold text-stone-500 bg-stone-200/70 px-2 py-0.5 rounded-full uppercase tracking-wider shrink-0">RAW MATERIAL STANDARDS</span>
-                                <h2 class="font-editorial text-xl sm:text-2xl lg:text-[26px] font-bold text-stone-900 tracking-tight leading-snug truncate">
-                                    <span class="hover-underline-sweep">품질과 원물 관리</span>
-                                </h2>
+                            <div class="flex flex-wrap items-center gap-x-2.5 gap-y-1 mb-1.5">
+                                <span class="text-[10px] font-mono font-bold text-stone-500 bg-stone-200/70 border-stone-300/60 border px-2.5 py-0.5 rounded-full uppercase tracking-wider shrink-0">
+                                    RAW MATERIAL STANDARDS
+                                </span>
                             </div>
-                            <p class="text-xs sm:text-sm text-stone-500 font-light mt-1 truncate">소드피트 수직 채취 공법 · 코코골드 45% 전량 폐기 선별 · 유럽 RHP 무균 인증</p>
+                            <h2 class="font-editorial text-2xl sm:text-3xl lg:text-[32px] font-bold text-stone-900 tracking-tight leading-snug group-hover:translate-x-1.5 transition-transform duration-300">
+                                <span class="hover-underline-sweep">품질과 원물 관리</span>
+                            </h2>
+                            <p class="text-xs sm:text-sm text-stone-500 font-light mt-1.5 line-clamp-1 max-w-2xl tracking-tight">
+                                소드피트 수직 채취 공법 · 코코골드 45% 전량 폐기 선별 · 유럽 RHP 무균 인증
+                            </p>
                         </div>
                     </div>
 
-                    <!-- Right: Circle Chevron Button -->
-                    <div class="shrink-0 ml-2">
+                    <!-- Right: Visual Teaser Artwork + Minimal Circle Chevron -->
+                    <div class="flex items-center space-x-4 sm:space-x-6 shrink-0">
+                        <!-- 16:10 Cinematic Teaser Vignette (Aligned Column on Desktop, clean fold on mobile) -->
+                        <div class="hidden sm:block w-28 md:w-36 lg:w-44 aspect-[16/10] rounded-xl overflow-hidden bg-stone-200 shrink-0 border border-stone-200/90 relative shadow-2xs group-hover:shadow-md transition-all duration-500">
+                            <img src="assets/images/bvb_root_ball.jpg" alt="품질과 원물 관리" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out">
+                            <div class="absolute inset-0 bg-stone-950/5 group-hover:bg-transparent transition-colors"></div>
+                        </div>
+
+                        <!-- Circle Chevron Indicator -->
                         <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-full border border-stone-300 flex items-center justify-center bg-white shadow-2xs group-hover:border-stone-800 group-hover:bg-stone-900 transition-all duration-300">
                             <svg id="icon-quality" class="w-4 h-4 text-stone-700 group-hover:text-white transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                         </div>
@@ -952,32 +972,37 @@
         <!-- CHAPTER 05: 고객 상담 안내 (Contact)                         -->
         <!-- ============================================================= -->
         <section id="contact" class="transition-colors">
-            <button onclick="toggleChapter('contact')" class="w-full py-5 sm:py-7 px-6 sm:px-10 hover:bg-white transition-all duration-300 cursor-pointer group">
-                <div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
-                    <!-- Left: Number + Visual Teaser Thumbnail + Title & Subtitle -->
-                    <div class="flex items-center space-x-4 sm:space-x-7 text-left min-w-0">
-                        <span class="font-mono text-sm sm:text-base font-bold text-stone-400 group-hover:text-stone-900 transition-colors w-6 sm:w-8 shrink-0">05</span>
-                        
-                        <!-- Visual Teaser Thumbnail -->
-                        <div class="w-20 sm:w-28 md:w-32 aspect-[16/10] rounded-xl overflow-hidden bg-stone-200 shrink-0 border border-stone-200/90 relative shadow-2xs group-hover:shadow-md transition-all">
-                            <img src="assets/images/story/04_farmer.jpg" alt="상담 안내" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out">
-                            <div class="absolute inset-0 bg-stone-900/5 group-hover:bg-transparent transition-colors"></div>
-                        </div>
-
-                        <!-- Title & Subcopy -->
+            <button onclick="toggleChapter('contact')" class="w-full py-6 sm:py-8 px-6 sm:px-10 hover:bg-white/80 transition-all duration-300 cursor-pointer group text-left">
+                <div class="max-w-7xl mx-auto flex items-center justify-between gap-6 sm:gap-8">
+                    <!-- Left: Number + Category Pill + Title & Subtitle (Typographic Authority) -->
+                    <div class="flex items-baseline sm:items-center space-x-4 sm:space-x-8 min-w-0 pr-2">
+                        <span class="font-mono text-sm sm:text-base font-semibold tracking-wider text-stone-400 group-hover:text-stone-900 transition-colors w-10 sm:w-14 shrink-0">
+                            05 <span class="text-[11px] text-stone-300 font-normal">/ 05</span>
+                        </span>
                         <div class="min-w-0">
-                            <div class="flex items-center space-x-2.5">
-                                <span class="text-[10px] font-mono font-bold text-stone-500 bg-stone-200/70 px-2 py-0.5 rounded-full uppercase tracking-wider shrink-0">GROWER CONSULTING</span>
-                                <h2 class="font-editorial text-xl sm:text-2xl lg:text-[26px] font-bold text-stone-900 tracking-tight leading-snug truncate">
-                                    <span class="hover-underline-sweep">상담 안내</span>
-                                </h2>
+                            <div class="flex flex-wrap items-center gap-x-2.5 gap-y-1 mb-1.5">
+                                <span class="text-[10px] font-mono font-bold text-stone-500 bg-stone-200/70 border-stone-300/60 border px-2.5 py-0.5 rounded-full uppercase tracking-wider shrink-0">
+                                    GROWER CONSULTING
+                                </span>
                             </div>
-                            <p class="text-xs sm:text-sm text-stone-500 font-light mt-1 truncate">1660-2301 전화상담 연결 · 농가 맞춤형 상토 및 영양 처방 신청서</p>
+                            <h2 class="font-editorial text-2xl sm:text-3xl lg:text-[32px] font-bold text-stone-900 tracking-tight leading-snug group-hover:translate-x-1.5 transition-transform duration-300">
+                                <span class="hover-underline-sweep">상담 안내</span>
+                            </h2>
+                            <p class="text-xs sm:text-sm text-stone-500 font-light mt-1.5 line-clamp-1 max-w-2xl tracking-tight">
+                                1660-2301 전화상담 연결 · 농가 맞춤형 상토 및 영양 처방 신청서
+                            </p>
                         </div>
                     </div>
 
-                    <!-- Right: Circle Chevron Button -->
-                    <div class="shrink-0 ml-2">
+                    <!-- Right: Visual Teaser Artwork + Minimal Circle Chevron -->
+                    <div class="flex items-center space-x-4 sm:space-x-6 shrink-0">
+                        <!-- 16:10 Cinematic Teaser Vignette (Aligned Column on Desktop, clean fold on mobile) -->
+                        <div class="hidden sm:block w-28 md:w-36 lg:w-44 aspect-[16/10] rounded-xl overflow-hidden bg-stone-200 shrink-0 border border-stone-200/90 relative shadow-2xs group-hover:shadow-md transition-all duration-500">
+                            <img src="assets/images/story/04_farmer.jpg" alt="상담 안내" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out">
+                            <div class="absolute inset-0 bg-stone-950/5 group-hover:bg-transparent transition-colors"></div>
+                        </div>
+
+                        <!-- Circle Chevron Indicator -->
                         <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-full border border-stone-300 flex items-center justify-center bg-white shadow-2xs group-hover:border-stone-800 group-hover:bg-stone-900 transition-all duration-300">
                             <svg id="icon-contact" class="w-4 h-4 text-stone-700 group-hover:text-white transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                         </div>
