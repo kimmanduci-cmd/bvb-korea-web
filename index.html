@@ -419,7 +419,7 @@
     <!-- ================================================================= -->
     <!-- SECTION: 에디토리얼 허브 : BVB 이야기들 (힙한 매거진 에디토리얼 저널) -->
     <!-- ================================================================= -->
-    <section id="storyboard" class="pt-10 sm:pt-14 pb-20 sm:pb-28 bg-white border-b border-stone-200/80 text-stone-900">
+    <section id="storyboard" class="pt-10 sm:pt-14 pb-20 sm:pb-28 bg-[#FAF8F5] border-b border-stone-200/80 text-stone-900">
         <div class="max-w-7xl mx-auto px-6 sm:px-10">
             
             <!-- Section Header & Controls -->
@@ -1630,7 +1630,7 @@
                                 <span class="hover-underline-sweep">${cover.title}</span>
                             </h3>
                             ${cover.quote ? `
-                                <div class="my-2 pl-3 border-l-2 border-stone-800 text-xs text-stone-700 font-medium leading-relaxed line-clamp-2">
+                                <div class="my-2 p-3 bg-stone-50 rounded-xl border-l-2 border-stone-800 text-xs text-stone-700 font-medium leading-relaxed line-clamp-2">
                                     ${cover.quote}
                                 </div>
                             ` : ''}
@@ -1651,7 +1651,7 @@
             `;
         }
 
-        // Render Content (Wide Magazine Grid on PC / Unified Touch-Swipe Rail on Mobile)
+        // Render Content (Rich Broadsheet on PC / Unified Touch-Swipe Rail on Mobile)
         function renderContent() {
             const container = document.getElementById('contentGrid');
             const counter = document.getElementById('contentCount');
@@ -1675,7 +1675,7 @@
             if (currentViewMode === 'grid') {
                 if (filtered.length === 0) {
                     container.className = "w-full";
-                    container.innerHTML = `<div class="w-full py-20 text-center text-xs text-stone-400 bg-stone-50 rounded-3xl border border-stone-200">검색 결과에 해당하는 이야기가 없습니다.</div>`;
+                    container.innerHTML = `<div class="w-full py-20 text-center text-xs text-stone-400 bg-white rounded-3xl border border-stone-200">검색 결과에 해당하는 이야기가 없습니다.</div>`;
                     return;
                 }
 
@@ -1685,11 +1685,11 @@
                     const standardItems = filtered.slice(1);
                     const coverMeta = getArticleMeta(cover);
 
-                    // 1. DESKTOP VIEW: Wide Asymmetric 7:5 Spread + 2-Column Grid
+                    // 1. DESKTOP VIEW: Rich Broadsheet Spread + Perfectly Balanced 3-Column Grid
                     const desktopHtml = `
                         <div class="hidden md:block">
-                            <!-- Desktop Cover Story Spread (Wide Broadsheet Layout) -->
-                            <div onclick="openContentModal(${cover.id})" class="mb-10 lg:mb-12 magazine-card rounded-3xl overflow-hidden p-6 lg:p-9 cursor-pointer group flex flex-row gap-8 lg:gap-12 items-center justify-between border border-stone-200/90">
+                            <!-- Desktop Cover Story Spread (Rich Broadsheet Layout with Data Highlights) -->
+                            <div onclick="openContentModal(${cover.id})" class="mb-10 lg:mb-12 magazine-card rounded-3xl overflow-hidden p-6 lg:p-8 cursor-pointer group flex flex-row gap-8 lg:gap-10 items-center justify-between border border-stone-200/90 bg-white">
                                 <!-- Left: Large Cinematic Cover Image (16:10 Wide Aspect) -->
                                 <div class="w-7/12 aspect-[16/10] bg-stone-100 rounded-2xl overflow-hidden relative shrink-0">
                                     <img src="${cover.coverImage}" alt="${cover.title}" class="w-full h-full object-cover object-center magazine-zoom">
@@ -1712,32 +1712,51 @@
                                     </div>
                                 </div>
 
-                                <!-- Right: Editorial Typography & Pullquote -->
-                                <div class="w-5/12 flex flex-col justify-between self-stretch py-2">
+                                <!-- Right: Rich Editorial Content & Structured AgTech Metrics -->
+                                <div class="w-5/12 flex flex-col justify-between self-stretch py-1">
                                     <div>
-                                        <div class="flex items-center space-x-2 text-xs font-mono text-stone-400 mb-3">
+                                        <div class="flex items-center space-x-2 text-xs font-mono text-stone-400 mb-2.5">
                                             <span class="text-stone-900 font-bold tracking-wider">VOL. 26 NO. 09</span>
                                             <span>·</span>
-                                            <span>${cover.category}</span>
+                                            <span class="text-stone-700 font-semibold">${cover.category}</span>
                                             <span>·</span>
                                             <span>${cover.date}</span>
                                         </div>
-                                        <h3 class="font-editorial text-2xl lg:text-3xl font-bold text-stone-900 leading-snug mb-4">
+                                        <h3 class="font-editorial text-2xl lg:text-[26px] font-bold text-stone-900 leading-snug mb-3">
                                             <span class="hover-underline-sweep">${cover.title}</span>
                                         </h3>
+                                        
+                                        <!-- Authentic Farmer Quote Callout Box -->
                                         ${cover.quote ? `
-                                            <div class="my-3.5 pl-4 border-l-2 border-stone-800 text-sm text-stone-700 font-medium leading-relaxed">
+                                            <div class="my-3 p-3.5 bg-stone-50 rounded-2xl border-l-3 border-stone-800 text-xs sm:text-sm text-stone-700 font-medium leading-relaxed">
                                                 ${cover.quote}
                                             </div>
                                         ` : ''}
-                                        <p class="text-sm text-stone-500 font-light leading-relaxed line-clamp-3 mt-2">
+
+                                        <!-- Key Farm Data Highlights Grid -->
+                                        <div class="grid grid-cols-3 gap-2 my-3 text-center">
+                                            <div class="bg-stone-50 border border-stone-200/80 rounded-xl p-2">
+                                                <span class="text-[10px] text-stone-400 block font-mono">1등급 특과율</span>
+                                                <span class="text-xs font-bold text-stone-900 font-mono">92% 달성</span>
+                                            </div>
+                                            <div class="bg-stone-50 border border-stone-200/80 rounded-xl p-2">
+                                                <span class="text-[10px] text-stone-400 block font-mono">배지 기상률</span>
+                                                <span class="text-xs font-bold text-stone-900 font-mono">30% 유지</span>
+                                            </div>
+                                            <div class="bg-stone-50 border border-stone-200/80 rounded-xl p-2">
+                                                <span class="text-[10px] text-stone-400 block font-mono">연속 출뢰</span>
+                                                <span class="text-xs font-bold text-stone-900 font-mono">4화방 완주</span>
+                                            </div>
+                                        </div>
+
+                                        <p class="text-xs text-stone-500 font-light leading-relaxed line-clamp-2 mt-2">
                                             ${cover.summary}
                                         </p>
                                     </div>
 
-                                    <div class="pt-6 mt-6 border-t border-stone-100 flex items-center justify-between">
+                                    <div class="pt-4 mt-3 border-t border-stone-100 flex items-center justify-between">
                                         <div class="text-xs text-stone-500">
-                                            <span class="text-stone-400 block text-[10px] font-mono tracking-wider uppercase">CURATED BY</span>
+                                            <span class="text-stone-400 block text-[10px] font-mono tracking-wider uppercase">FARM STORY</span>
                                             <span class="font-medium text-stone-800">${cover.author}</span>
                                         </div>
                                         <div class="inline-flex items-center space-x-2 text-xs font-bold text-stone-900 group-hover:text-stone-700 transition">
@@ -1748,8 +1767,8 @@
                                 </div>
                             </div>
 
-                            <!-- Desktop Standard Cards in Relaxed 2-Column Grid -->
-                            <div class="grid grid-cols-2 gap-8 lg:gap-10">
+                            <!-- Desktop Standard Cards in a Rich 3-Column Grid (380px Cards) -->
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
                                 ${standardItems.map(item => renderStandardCard(item)).join('')}
                             </div>
                         </div>
@@ -1764,7 +1783,7 @@
                                     <span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
                                     <span>BVB 이야기 (총 ${filtered.length}편)</span>
                                 </div>
-                                <span class="text-[10px] font-mono text-stone-500 flex items-center bg-stone-100 px-2.5 py-0.5 rounded-full border border-stone-200/60">
+                                <span class="text-[10px] font-mono text-stone-500 flex items-center bg-white px-2.5 py-0.5 rounded-full border border-stone-200/80 shadow-2xs">
                                     커버스토리부터 스와이프 ↔
                                 </span>
                             </div>
@@ -1777,7 +1796,7 @@
 
                             <!-- Mobile Quick Action: Switch to list view -->
                             <div class="flex justify-center items-center mt-3 pt-1">
-                                <button onclick="setViewMode('list')" class="px-5 py-2 rounded-full bg-stone-100 hover:bg-stone-200 text-stone-700 transition text-xs font-semibold flex items-center space-x-1.5 shadow-2xs">
+                                <button onclick="setViewMode('list')" class="px-5 py-2 rounded-full bg-white hover:bg-stone-50 text-stone-700 transition text-xs font-semibold flex items-center space-x-1.5 shadow-xs border border-stone-200/80">
                                     <svg class="w-3.5 h-3.5 text-stone-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
                                     <span>전체 이야기 목록으로 보기 (${filtered.length}편) &rarr;</span>
                                 </button>
@@ -1788,11 +1807,11 @@
                     container.className = "w-full";
                     container.innerHTML = desktopHtml + mobileHtml;
                 } else {
-                    // Filtered or Search Mode: 2-column grid on desktop, touch-swipe rail on mobile
+                    // Filtered or Search Mode: 3-column grid on desktop, touch-swipe rail on mobile
                     container.className = "w-full";
                     container.innerHTML = `
-                        <!-- Desktop Grid -->
-                        <div class="hidden md:grid md:grid-cols-2 gap-8 lg:gap-10">
+                        <!-- Desktop 3-Column Grid -->
+                        <div class="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
                             ${filtered.map(item => renderStandardCard(item)).join('')}
                         </div>
 
@@ -1801,7 +1820,7 @@
                             ${filtered.length > 1 ? `
                                 <div class="flex items-center justify-between text-xs text-stone-400 mb-3 px-1">
                                     <span class="font-mono text-[11px] font-bold text-stone-800">검색·필터 결과 (${filtered.length}편)</span>
-                                    <span class="text-[10px] font-mono text-stone-500 bg-stone-100 px-2.5 py-0.5 rounded-full border border-stone-200/60">좌우 스와이프 ↔</span>
+                                    <span class="text-[10px] font-mono text-stone-500 bg-white px-2.5 py-0.5 rounded-full border border-stone-200/80 shadow-2xs">좌우 스와이프 ↔</span>
                                 </div>
                             ` : ''}
                             <div class="flex overflow-x-auto snap-x snap-mandatory gap-4.5 -mx-6 px-6 pb-4 no-scrollbar">
@@ -1861,20 +1880,20 @@
             }
         }
 
-        // Helper: Render Standard Magazine Card (Refined 2-Column Size & Relaxed Whitespace)
+        // Helper: Render Standard Magazine Card (Optimized 380px Density with Essential Chips)
         function renderStandardCard(item) {
             const meta = getArticleMeta(item);
             const isDeck = item.type === 'cardnews' ? 'cardnews-deck' : '';
 
             return `
-                <div onclick="openContentModal(${item.id})" class="magazine-card ${isDeck} rounded-3xl overflow-hidden cursor-pointer flex flex-col justify-between group relative w-[85vw] max-w-[340px] md:w-auto shrink-0 snap-center md:shrink md:snap-align-none">
+                <div onclick="openContentModal(${item.id})" class="magazine-card ${isDeck} rounded-3xl overflow-hidden cursor-pointer flex flex-col justify-between group relative w-[85vw] max-w-[340px] md:w-auto shrink-0 snap-center md:shrink md:snap-align-none bg-white">
                     <div>
                         <!-- Image Container with Refined, Quiet Badges -->
                         <div class="aspect-[16/10] bg-stone-100 overflow-hidden relative">
                             <img src="${item.coverImage}" alt="${item.title}" class="w-full h-full object-cover object-center magazine-zoom">
                             
                             <!-- Single Clean Pill: Icon + Tag + Reading Time -->
-                            <div class="absolute top-3.5 left-3.5 flex items-center space-x-1.5">
+                            <div class="absolute top-3 left-3 sm:top-3.5 sm:left-3.5 flex items-center space-x-1.5">
                                 <span class="text-[10px] font-mono font-bold px-3 py-1 rounded-full ${meta.badgeClass} shadow-xs flex items-center">
                                     <span class="mr-1">${meta.icon}</span> ${item.tag}
                                 </span>
@@ -1900,25 +1919,32 @@
                             ` : ''}
                         </div>
 
-                        <!-- Card Body: Relaxed Whitespace & Balanced Typography -->
-                        <div class="p-6 sm:p-7">
-                            <div class="flex items-center space-x-2 text-[10px] font-mono text-stone-400 mb-2.5">
+                        <!-- Card Body: Balanced Editorial Density -->
+                        <div class="p-6">
+                            <div class="flex items-center space-x-2 text-[10px] font-mono text-stone-400 mb-2">
                                 <span class="text-stone-700 font-semibold uppercase">${item.category}</span>
                                 <span>·</span>
                                 <span>${item.date}</span>
                             </div>
-                            <h3 class="font-editorial text-base sm:text-lg font-bold text-stone-900 mb-2.5 leading-snug">
+                            <h3 class="font-editorial text-base font-bold text-stone-900 mb-2 leading-snug">
                                 <span class="hover-underline-sweep">${item.title}</span>
                             </h3>
-                            <p class="text-xs sm:text-sm text-stone-600 font-light leading-relaxed line-clamp-2 sm:line-clamp-3">
+                            <p class="text-xs text-stone-600 font-light leading-relaxed line-clamp-2">
                                 ${item.summary}
                             </p>
+
+                            <!-- Subtle Value Chips (Fills the visual void elegantly) -->
+                            <div class="flex flex-wrap gap-1.5 mt-3 pt-1">
+                                ${meta.chips.map(chip => `
+                                    <span class="text-[9px] font-mono text-stone-600 bg-stone-100 px-2 py-0.5 rounded border border-stone-200/60">${chip}</span>
+                                `).join('')}
+                            </div>
                         </div>
                     </div>
 
                     <!-- Card Footer -->
-                    <div class="px-6 sm:px-7 pb-6 pt-3 border-t border-stone-100 text-xs font-semibold text-stone-700 flex justify-between items-center">
-                        <span class="text-stone-400 font-normal truncate max-w-[150px] text-[11px] font-mono">${item.author}</span>
+                    <div class="px-6 pb-5 pt-3 border-t border-stone-100 text-xs font-semibold text-stone-700 flex justify-between items-center bg-stone-50/40">
+                        <span class="text-stone-400 font-normal truncate max-w-[140px] text-[11px] font-mono">${item.author}</span>
                         <span class="text-stone-900 group-hover:text-stone-700 transition flex items-center font-bold text-xs group-hover:translate-x-1 transition-transform">
                             이야기 열람 &rarr;
                         </span>
