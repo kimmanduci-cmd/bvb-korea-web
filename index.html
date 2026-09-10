@@ -419,11 +419,11 @@
     <!-- ================================================================= -->
     <!-- SECTION: 에디토리얼 허브 : BVB 이야기들 (힙한 매거진 에디토리얼 저널) -->
     <!-- ================================================================= -->
-    <section id="storyboard" class="pt-10 sm:pt-14 pb-20 sm:pb-28 bg-[#FAF8F5] border-b border-stone-200/80 text-stone-900">
+    <section id="storyboard" class="pt-6 sm:pt-8 pb-14 sm:pb-18 bg-[#FAF8F5] border-b border-stone-200/80 text-stone-900">
         <div class="max-w-7xl mx-auto px-6 sm:px-10">
             
             <!-- Section Header & Controls -->
-            <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-10 gap-6">
+            <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-5 gap-4">
                 <div>
                     <div class="flex items-center space-x-2.5 mb-3">
                         <span class="text-[10px] font-mono font-bold tracking-widest text-stone-900 bg-stone-100 border border-stone-200/90 px-3 py-1 rounded-full uppercase">VOL. 26 · ISSUE 09</span>
@@ -471,7 +471,7 @@
             </div>
 
             <!-- Search Bar & Category Filter Pills -->
-            <div class="flex flex-col md:flex-row justify-between items-stretch md:items-center gap-4 mb-8 pb-4 border-b border-stone-100">
+            <div class="flex flex-col md:flex-row justify-between items-stretch md:items-center gap-4 mb-4 pb-3 border-b border-stone-200/60">
                 <div class="flex flex-wrap gap-1.5">
                     <button onclick="filterContent('all')" id="filter-all" class="px-4 py-1.5 rounded-full text-xs font-semibold bg-stone-900 text-stone-50 transition shadow-xs cursor-pointer">
                         ALL · 전체
@@ -501,7 +501,7 @@
             </div>
 
             <!-- Content Counter -->
-            <div class="flex justify-between items-center text-xs text-stone-400 mb-6">
+            <div class="flex justify-between items-center text-xs text-stone-400 mb-3.5">
                 <div class="flex items-center space-x-2">
                     <span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
                     <span>아카이브 기사 <span id="contentCount" class="font-bold text-stone-900">0</span>편 수록</span>
@@ -1591,67 +1591,64 @@
         function renderMobileCoverCard(cover) {
             const meta = getArticleMeta(cover);
             return `
-                <div onclick="openContentModal(${cover.id})" class="magazine-card rounded-3xl overflow-hidden cursor-pointer flex flex-col justify-between group relative w-[85vw] max-w-[340px] shrink-0 snap-center border-2 border-stone-800/15 bg-white shadow-sm">
+                <div onclick="openContentModal(${cover.id})" class="magazine-card rounded-2xl overflow-hidden cursor-pointer flex flex-col justify-between group relative w-[85vw] max-w-[320px] shrink-0 snap-center border-2 border-stone-800/15 bg-white shadow-sm">
                     <div>
                         <!-- Image Container with Cover Story Badges -->
                         <div class="aspect-[16/10] bg-stone-100 overflow-hidden relative">
                             <img src="${cover.coverImage}" alt="${cover.title}" class="w-full h-full object-cover object-center magazine-zoom">
                             
                             <!-- Cover Story Badge (Top Left) -->
-                            <div class="absolute top-3 left-3 flex items-center space-x-1.5">
-                                <span class="text-[10px] font-mono font-bold tracking-wider px-2.5 py-1 rounded-full bg-stone-950/85 text-stone-100 backdrop-blur-xs border border-white/15 uppercase flex items-center">
-                                    <span class="w-1.5 h-1.5 rounded-full bg-amber-400 mr-1.5 animate-pulse"></span>
-                                    이달의 커버 스토리
+                            <div class="absolute top-2.5 left-2.5 flex items-center space-x-1.5">
+                                <span class="text-[9px] font-mono font-bold tracking-wider px-2 py-0.5 rounded-full bg-stone-950/85 text-stone-100 backdrop-blur-xs border border-white/15 uppercase flex items-center">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-amber-400 mr-1 animate-pulse"></span>
+                                    커버 스토리
                                 </span>
-                                <span class="text-[10px] font-mono font-semibold px-2 py-0.5 rounded-full bg-white/95 text-stone-800 backdrop-blur-xs shadow-2xs">
+                                <span class="text-[9px] font-mono font-semibold px-2 py-0.5 rounded-full bg-white/95 text-stone-800 backdrop-blur-xs shadow-2xs">
                                     ${meta.readTime}
                                 </span>
                             </div>
 
                             <!-- Bottom Right Specs -->
-                            <div class="absolute bottom-2.5 right-2.5 flex items-center space-x-1">
+                            <div class="absolute bottom-2 right-2 flex items-center space-x-1">
                                 <span class="text-[9px] font-mono font-bold px-2 py-0.5 rounded bg-stone-950/85 text-emerald-300 border border-emerald-500/30 backdrop-blur-xs">
                                     특과율 92%
-                                </span>
-                                <span class="text-[9px] font-mono font-bold px-2 py-0.5 rounded bg-stone-900/80 text-stone-200 border border-white/10 backdrop-blur-xs">
-                                    BVB BC2
                                 </span>
                             </div>
                         </div>
 
                         <!-- Card Body -->
-                        <div class="p-5">
-                            <div class="flex items-center space-x-2 text-[10px] font-mono text-stone-400 mb-2">
-                                <span class="text-stone-900 font-bold">VOL. 26 NO. 09</span>
+                        <div class="p-4">
+                            <div class="flex items-center space-x-2 text-[10px] font-mono text-stone-400 mb-1">
+                                <span class="text-stone-900 font-bold">VOL. 26</span>
                                 <span>·</span>
                                 <span class="text-stone-700 font-semibold">${cover.category}</span>
                             </div>
-                            <h3 class="font-editorial text-base font-bold text-stone-900 mb-2 leading-snug">
+                            <h3 class="font-editorial text-sm font-bold text-stone-900 mb-1.5 leading-snug line-clamp-2">
                                 <span class="hover-underline-sweep">${cover.title}</span>
                             </h3>
                             ${cover.quote ? `
-                                <div class="my-2 p-3 bg-stone-50 rounded-xl border-l-2 border-stone-800 text-xs text-stone-700 font-medium leading-relaxed line-clamp-2">
+                                <div class="my-1.5 p-2.5 bg-stone-50 rounded-xl border-l-2 border-stone-800 text-xs text-stone-700 font-medium leading-relaxed line-clamp-2">
                                     ${cover.quote}
                                 </div>
                             ` : ''}
-                            <p class="text-xs text-stone-500 font-light leading-relaxed line-clamp-2 mt-1">
+                            <p class="text-[11px] text-stone-500 font-light leading-relaxed line-clamp-2 mt-1">
                                 ${cover.summary}
                             </p>
                         </div>
                     </div>
 
                     <!-- Card Footer -->
-                    <div class="px-5 pb-5 pt-3 border-t border-stone-100 text-xs font-semibold text-stone-700 flex justify-between items-center bg-stone-50/60">
-                        <span class="text-stone-500 font-normal truncate max-w-[140px] text-[11px] font-mono">${cover.author}</span>
+                    <div class="px-4 py-2.5 border-t border-stone-100 text-[11px] font-semibold text-stone-700 flex justify-between items-center bg-stone-50/60">
+                        <span class="text-stone-500 font-normal truncate max-w-[120px] text-[10px] font-mono">${cover.author}</span>
                         <span class="text-stone-900 group-hover:text-stone-700 transition flex items-center font-bold text-xs group-hover:translate-x-1 transition-transform">
-                            커버 스토리 읽기 &rarr;
+                            읽기 &rarr;
                         </span>
                     </div>
                 </div>
             `;
         }
 
-        // Render Content (Rich Broadsheet on PC / Unified Touch-Swipe Rail on Mobile)
+        // Render Content (Desktop Cover Story + 4-Column Compact Cards / Mobile Touch-Swipe Rail)
         function renderContent() {
             const container = document.getElementById('contentGrid');
             const counter = document.getElementById('contentCount');
@@ -1675,7 +1672,7 @@
             if (currentViewMode === 'grid') {
                 if (filtered.length === 0) {
                     container.className = "w-full";
-                    container.innerHTML = `<div class="w-full py-20 text-center text-xs text-stone-400 bg-white rounded-3xl border border-stone-200">검색 결과에 해당하는 이야기가 없습니다.</div>`;
+                    container.innerHTML = `<div class="w-full py-16 text-center text-xs text-stone-400 bg-white rounded-2xl border border-stone-200">검색 결과에 해당하는 이야기가 없습니다.</div>`;
                     return;
                 }
 
@@ -1685,117 +1682,117 @@
                     const standardItems = filtered.slice(1);
                     const coverMeta = getArticleMeta(cover);
 
-                    // 1. DESKTOP VIEW: Rich Broadsheet Spread + Perfectly Balanced 3-Column Grid
+                    // 1. DESKTOP VIEW: Cover Story Spread + 4-Column Compact Grid (Height 60~70%)
                     const desktopHtml = `
                         <div class="hidden md:block">
-                            <!-- Desktop Cover Story Spread (Rich Broadsheet Layout with Data Highlights) -->
-                            <div onclick="openContentModal(${cover.id})" class="mb-10 lg:mb-12 magazine-card rounded-3xl overflow-hidden p-6 lg:p-8 cursor-pointer group flex flex-row gap-8 lg:gap-10 items-center justify-between border border-stone-200/90 bg-white">
+                            <!-- Desktop Cover Story Spread -->
+                            <div onclick="openContentModal(${cover.id})" class="mb-6 lg:mb-8 magazine-card rounded-2xl overflow-hidden p-5 lg:p-7 cursor-pointer group flex flex-row gap-7 lg:gap-9 items-center justify-between border border-stone-200/90 bg-white">
                                 <!-- Left: Large Cinematic Cover Image (16:10 Wide Aspect) -->
-                                <div class="w-7/12 aspect-[16/10] bg-stone-100 rounded-2xl overflow-hidden relative shrink-0">
+                                <div class="w-7/12 aspect-[16/10] bg-stone-100 rounded-xl overflow-hidden relative shrink-0">
                                     <img src="${cover.coverImage}" alt="${cover.title}" class="w-full h-full object-cover object-center magazine-zoom">
-                                    <div class="absolute top-4 left-4 flex items-center space-x-2">
-                                        <span class="text-[10px] font-mono font-bold tracking-wider px-3.5 py-1 rounded-full bg-stone-950/85 text-stone-100 backdrop-blur-xs border border-white/15 uppercase flex items-center">
+                                    <div class="absolute top-3.5 left-3.5 flex items-center space-x-2">
+                                        <span class="text-[9px] font-mono font-bold tracking-wider px-3 py-1 rounded-full bg-stone-950/85 text-stone-100 backdrop-blur-xs border border-white/15 uppercase flex items-center">
                                             <span class="w-1.5 h-1.5 rounded-full bg-amber-400 mr-1.5 animate-pulse"></span>
                                             이달의 커버 스토리
                                         </span>
-                                        <span class="text-[10px] font-mono font-semibold px-2.5 py-0.5 rounded-full bg-white/95 text-stone-800 backdrop-blur-xs shadow-2xs">
+                                        <span class="text-[9px] font-mono font-semibold px-2.5 py-0.5 rounded-full bg-white/95 text-stone-800 backdrop-blur-xs shadow-2xs">
                                             ${coverMeta.readTime}
                                         </span>
                                     </div>
-                                    <div class="absolute bottom-3.5 right-3.5 flex items-center space-x-1.5">
-                                        <span class="text-[10px] font-mono font-bold px-2.5 py-1 rounded-lg bg-stone-950/85 text-emerald-300 border border-emerald-500/30 backdrop-blur-xs">
+                                    <div class="absolute bottom-3 right-3 flex items-center space-x-1.5">
+                                        <span class="text-[9px] font-mono font-bold px-2.5 py-1 rounded-lg bg-stone-950/85 text-emerald-300 border border-emerald-500/30 backdrop-blur-xs">
                                             특과율 92%
                                         </span>
-                                        <span class="text-[10px] font-mono font-bold px-2.5 py-1 rounded-lg bg-stone-900/80 text-stone-200 border border-white/10 backdrop-blur-xs">
+                                        <span class="text-[9px] font-mono font-bold px-2.5 py-1 rounded-lg bg-stone-900/80 text-stone-200 border border-white/10 backdrop-blur-xs">
                                             BVB BC2 상토
                                         </span>
                                     </div>
                                 </div>
 
                                 <!-- Right: Rich Editorial Content & Structured AgTech Metrics -->
-                                <div class="w-5/12 flex flex-col justify-between self-stretch py-1">
+                                <div class="w-5/12 flex flex-col justify-between self-stretch py-0.5">
                                     <div>
-                                        <div class="flex items-center space-x-2 text-xs font-mono text-stone-400 mb-2.5">
+                                        <div class="flex items-center space-x-2 text-xs font-mono text-stone-400 mb-2">
                                             <span class="text-stone-900 font-bold tracking-wider">VOL. 26 NO. 09</span>
                                             <span>·</span>
                                             <span class="text-stone-700 font-semibold">${cover.category}</span>
                                             <span>·</span>
                                             <span>${cover.date}</span>
                                         </div>
-                                        <h3 class="font-editorial text-2xl lg:text-[26px] font-bold text-stone-900 leading-snug mb-3">
+                                        <h3 class="font-editorial text-xl lg:text-2xl font-bold text-stone-900 leading-snug mb-2.5">
                                             <span class="hover-underline-sweep">${cover.title}</span>
                                         </h3>
                                         
                                         <!-- Authentic Farmer Quote Callout Box -->
                                         ${cover.quote ? `
-                                            <div class="my-3 p-3.5 bg-stone-50 rounded-2xl border-l-3 border-stone-800 text-xs sm:text-sm text-stone-700 font-medium leading-relaxed">
+                                            <div class="my-2.5 p-3 bg-stone-50 rounded-xl border-l-3 border-stone-800 text-xs sm:text-sm text-stone-700 font-medium leading-relaxed">
                                                 ${cover.quote}
                                             </div>
                                         ` : ''}
 
                                         <!-- Key Farm Data Highlights Grid -->
-                                        <div class="grid grid-cols-3 gap-2 my-3 text-center">
-                                            <div class="bg-stone-50 border border-stone-200/80 rounded-xl p-2">
-                                                <span class="text-[10px] text-stone-400 block font-mono">1등급 특과율</span>
+                                        <div class="grid grid-cols-3 gap-2 my-2.5 text-center">
+                                            <div class="bg-stone-50 border border-stone-200/80 rounded-lg p-1.5">
+                                                <span class="text-[9px] text-stone-400 block font-mono">1등급 특과율</span>
                                                 <span class="text-xs font-bold text-stone-900 font-mono">92% 달성</span>
                                             </div>
-                                            <div class="bg-stone-50 border border-stone-200/80 rounded-xl p-2">
-                                                <span class="text-[10px] text-stone-400 block font-mono">배지 기상률</span>
+                                            <div class="bg-stone-50 border border-stone-200/80 rounded-lg p-1.5">
+                                                <span class="text-[9px] text-stone-400 block font-mono">배지 기상률</span>
                                                 <span class="text-xs font-bold text-stone-900 font-mono">30% 유지</span>
                                             </div>
-                                            <div class="bg-stone-50 border border-stone-200/80 rounded-xl p-2">
-                                                <span class="text-[10px] text-stone-400 block font-mono">연속 출뢰</span>
+                                            <div class="bg-stone-50 border border-stone-200/80 rounded-lg p-1.5">
+                                                <span class="text-[9px] text-stone-400 block font-mono">연속 출뢰</span>
                                                 <span class="text-xs font-bold text-stone-900 font-mono">4화방 완주</span>
                                             </div>
                                         </div>
 
-                                        <p class="text-xs text-stone-500 font-light leading-relaxed line-clamp-2 mt-2">
+                                        <p class="text-xs text-stone-500 font-light leading-relaxed line-clamp-2 mt-1.5">
                                             ${cover.summary}
                                         </p>
                                     </div>
 
-                                    <div class="pt-4 mt-3 border-t border-stone-100 flex items-center justify-between">
+                                    <div class="pt-3.5 mt-2.5 border-t border-stone-100 flex items-center justify-between">
                                         <div class="text-xs text-stone-500">
-                                            <span class="text-stone-400 block text-[10px] font-mono tracking-wider uppercase">FARM STORY</span>
+                                            <span class="text-stone-400 block text-[9px] font-mono tracking-wider uppercase">FARM STORY</span>
                                             <span class="font-medium text-stone-800">${cover.author}</span>
                                         </div>
                                         <div class="inline-flex items-center space-x-2 text-xs font-bold text-stone-900 group-hover:text-stone-700 transition">
                                             <span>커버 스토리 읽기</span>
-                                            <span class="w-8 h-8 rounded-full bg-stone-900 text-white flex items-center justify-center group-hover:translate-x-1.5 transition-transform text-xs">&rarr;</span>
+                                            <span class="w-7 h-7 rounded-full bg-stone-900 text-white flex items-center justify-center group-hover:translate-x-1 transition-transform text-xs">&rarr;</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <!-- Desktop Standard Cards in a Rich 3-Column Grid (380px Cards) -->
-                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                            <!-- Desktop Standard Cards in a 4-Column Compact Grid (Height 60~70%) -->
+                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5">
                                 ${standardItems.map(item => renderStandardCard(item)).join('')}
                             </div>
                         </div>
                     `;
 
-                    // 2. MOBILE VIEW: Unified Single Touch-Swipe Rail (Cover Story is Card #1, followed by stories to the right)
+                    // 2. MOBILE VIEW: Unified Single Touch-Swipe Rail
                     const mobileHtml = `
                         <div class="block md:hidden">
                             <!-- Mobile Hint Bar -->
-                            <div class="flex items-center justify-between text-xs text-stone-400 mb-3 px-1">
+                            <div class="flex items-center justify-between text-xs text-stone-400 mb-2.5 px-1">
                                 <div class="flex items-center space-x-1.5 font-mono text-[11px] font-bold text-stone-800">
                                     <span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
                                     <span>BVB 이야기 (총 ${filtered.length}편)</span>
                                 </div>
-                                <span class="text-[10px] font-mono text-stone-500 flex items-center bg-white px-2.5 py-0.5 rounded-full border border-stone-200/80 shadow-2xs">
+                                <span class="text-[10px] font-mono text-stone-500 flex items-center bg-white px-2 py-0.5 rounded-full border border-stone-200/80 shadow-2xs">
                                     커버스토리부터 스와이프 ↔
                                 </span>
                             </div>
 
                             <!-- Unified Touch-Swipe Rail: Cover Story -> Next Stories -->
-                            <div class="flex overflow-x-auto snap-x snap-mandatory gap-4.5 -mx-6 px-6 pb-4 no-scrollbar">
+                            <div class="flex overflow-x-auto snap-x snap-mandatory gap-4 -mx-6 px-6 pb-3 no-scrollbar">
                                 ${renderMobileCoverCard(cover)}
                                 ${standardItems.map(item => renderStandardCard(item)).join('')}
                             </div>
 
                             <!-- Mobile Quick Action: Switch to list view -->
-                            <div class="flex justify-center items-center mt-3 pt-1">
+                            <div class="flex justify-center items-center mt-2.5 pt-1">
                                 <button onclick="setViewMode('list')" class="px-5 py-2 rounded-full bg-white hover:bg-stone-50 text-stone-700 transition text-xs font-semibold flex items-center space-x-1.5 shadow-xs border border-stone-200/80">
                                     <svg class="w-3.5 h-3.5 text-stone-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
                                     <span>전체 이야기 목록으로 보기 (${filtered.length}편) &rarr;</span>
@@ -1807,23 +1804,23 @@
                     container.className = "w-full";
                     container.innerHTML = desktopHtml + mobileHtml;
                 } else {
-                    // Filtered or Search Mode: 3-column grid on desktop, touch-swipe rail on mobile
+                    // Filtered or Search Mode: 4-column compact grid on desktop, touch-swipe rail on mobile
                     container.className = "w-full";
                     container.innerHTML = `
-                        <!-- Desktop 3-Column Grid -->
-                        <div class="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                        <!-- Desktop 4-Column Compact Grid -->
+                        <div class="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5">
                             ${filtered.map(item => renderStandardCard(item)).join('')}
                         </div>
 
                         <!-- Mobile Touch-Swipe Rail -->
                         <div class="block md:hidden">
                             ${filtered.length > 1 ? `
-                                <div class="flex items-center justify-between text-xs text-stone-400 mb-3 px-1">
+                                <div class="flex items-center justify-between text-xs text-stone-400 mb-2.5 px-1">
                                     <span class="font-mono text-[11px] font-bold text-stone-800">검색·필터 결과 (${filtered.length}편)</span>
-                                    <span class="text-[10px] font-mono text-stone-500 bg-white px-2.5 py-0.5 rounded-full border border-stone-200/80 shadow-2xs">좌우 스와이프 ↔</span>
+                                    <span class="text-[10px] font-mono text-stone-500 bg-white px-2 py-0.5 rounded-full border border-stone-200/80 shadow-2xs">좌우 스와이프 ↔</span>
                                 </div>
                             ` : ''}
-                            <div class="flex overflow-x-auto snap-x snap-mandatory gap-4.5 -mx-6 px-6 pb-4 no-scrollbar">
+                            <div class="flex overflow-x-auto snap-x snap-mandatory gap-4 -mx-6 px-6 pb-3 no-scrollbar">
                                 ${filtered.map(item => renderStandardCard(item)).join('')}
                             </div>
                         </div>
@@ -1831,7 +1828,7 @@
                 }
             } else {
                 // LIST VIEW (High-End Index Directory Style)
-                container.className = "w-full border border-stone-200/90 rounded-3xl bg-white overflow-hidden shadow-xs divide-y divide-stone-100";
+                container.className = "w-full border border-stone-200/90 rounded-2xl bg-white overflow-hidden shadow-xs divide-y divide-stone-100";
                 
                 if (filtered.length === 0) {
                     container.innerHTML = `<div class="p-12 text-center text-xs text-stone-400">검색 결과에 해당하는 이야기가 없습니다.</div>`;
@@ -1841,14 +1838,14 @@
                 container.innerHTML = filtered.map((item, idx) => {
                     const meta = getArticleMeta(item);
                     return `
-                        <div onclick="openContentModal(${item.id})" class="p-5 sm:p-6 flex flex-col sm:flex-row sm:items-center justify-between hover:bg-stone-50/90 cursor-pointer group transition gap-4">
-                            <div class="flex items-start sm:items-center space-x-4">
-                                <span class="text-xs font-mono text-stone-300 hidden md:inline-block w-7 font-bold">#${String(idx + 1).padStart(2, '0')}</span>
+                        <div onclick="openContentModal(${item.id})" class="p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between hover:bg-stone-50/90 cursor-pointer group transition gap-3">
+                            <div class="flex items-start sm:items-center space-x-3 sm:space-x-4">
+                                <span class="text-xs font-mono text-stone-300 hidden md:inline-block w-6 font-bold">#${String(idx + 1).padStart(2, '0')}</span>
                                 <div class="flex items-center space-x-1.5 shrink-0">
-                                    <span class="text-[11px] font-bold px-3 py-1 rounded-full ${meta.badgeClass} flex items-center">
+                                    <span class="text-[10px] font-bold px-2.5 py-0.5 rounded-full ${meta.badgeClass} flex items-center">
                                         <span class="mr-1">${meta.icon}</span> ${item.tag}
                                     </span>
-                                    <span class="text-[10px] font-mono text-stone-400 hidden sm:inline-block bg-stone-100 px-2 py-0.5 rounded-md">
+                                    <span class="text-[9px] font-mono text-stone-400 hidden sm:inline-block bg-stone-100 px-2 py-0.5 rounded-md">
                                         ${meta.readTime}
                                     </span>
                                 </div>
@@ -1861,16 +1858,16 @@
                                         <span>${item.date}</span>
                                         ${item.attachmentName ? `<span class="text-blue-700 font-bold bg-blue-50 px-1.5 rounded">📄 PDF</span>` : ''}
                                     </div>
-                                    <h3 class="font-editorial text-base font-bold text-stone-900 group-hover:text-stone-700 transition leading-snug">
+                                    <h3 class="font-editorial text-sm sm:text-base font-bold text-stone-900 group-hover:text-stone-700 transition leading-snug">
                                         <span class="hover-underline-sweep">${item.title}</span>
                                     </h3>
                                     <p class="text-xs text-stone-500 line-clamp-1 mt-0.5 sm:hidden">${item.summary}</p>
                                 </div>
                             </div>
                             
-                            <div class="flex items-center justify-between sm:justify-end space-x-6 text-xs text-stone-500 shrink-0 border-t sm:border-t-0 border-stone-100 pt-2 sm:pt-0">
-                                <span class="text-stone-400 text-[11px] font-mono">${item.author}</span>
-                                <span class="text-stone-900 font-semibold group-hover:translate-x-1.5 transition-transform flex items-center">
+                            <div class="flex items-center justify-between sm:justify-end space-x-5 text-xs text-stone-500 shrink-0 border-t sm:border-t-0 border-stone-100 pt-2 sm:pt-0">
+                                <span class="text-stone-400 text-[10px] font-mono">${item.author}</span>
+                                <span class="text-stone-900 font-semibold group-hover:translate-x-1.5 transition-transform flex items-center text-xs">
                                     상세보기 &rarr;
                                 </span>
                             </div>
@@ -1880,24 +1877,24 @@
             }
         }
 
-        // Helper: Render Standard Magazine Card (Optimized 380px Density with Essential Chips)
+        // Helper: Render Standard Magazine Card (Compact 4-Column Layout, 60~70% Height)
         function renderStandardCard(item) {
             const meta = getArticleMeta(item);
             const isDeck = item.type === 'cardnews' ? 'cardnews-deck' : '';
 
             return `
-                <div onclick="openContentModal(${item.id})" class="magazine-card ${isDeck} rounded-3xl overflow-hidden cursor-pointer flex flex-col justify-between group relative w-[85vw] max-w-[340px] md:w-auto shrink-0 snap-center md:shrink md:snap-align-none bg-white">
+                <div onclick="openContentModal(${item.id})" class="magazine-card ${isDeck} rounded-2xl overflow-hidden cursor-pointer flex flex-col justify-between group relative w-[80vw] max-w-[300px] md:w-auto shrink-0 snap-center md:shrink md:snap-align-none bg-white border border-stone-200/90 shadow-2xs hover:shadow-md transition-all">
                     <div>
-                        <!-- Image Container with Refined, Quiet Badges -->
+                        <!-- Image Container with Compact Badges -->
                         <div class="aspect-[16/10] bg-stone-100 overflow-hidden relative">
                             <img src="${item.coverImage}" alt="${item.title}" class="w-full h-full object-cover object-center magazine-zoom">
                             
-                            <!-- Single Clean Pill: Icon + Tag + Reading Time -->
-                            <div class="absolute top-3 left-3 sm:top-3.5 sm:left-3.5 flex items-center space-x-1.5">
-                                <span class="text-[10px] font-mono font-bold px-3 py-1 rounded-full ${meta.badgeClass} shadow-xs flex items-center">
+                            <!-- Clean Pill: Icon + Tag + Reading Time -->
+                            <div class="absolute top-2.5 left-2.5 flex items-center space-x-1">
+                                <span class="text-[9px] font-mono font-bold px-2 py-0.5 rounded-full ${meta.badgeClass} shadow-xs flex items-center">
                                     <span class="mr-1">${meta.icon}</span> ${item.tag}
                                 </span>
-                                <span class="text-[10px] font-mono font-semibold px-2 py-0.5 rounded-full bg-stone-950/75 text-stone-200 backdrop-blur-xs">
+                                <span class="text-[9px] font-mono font-semibold px-1.5 py-0.5 rounded-full bg-stone-950/75 text-stone-200 backdrop-blur-xs">
                                     ${meta.readTime}
                                 </span>
                             </div>
@@ -1905,48 +1902,40 @@
                             <!-- Video Play Overlay -->
                             ${item.type === 'youtube' ? `
                                 <div class="absolute inset-0 flex items-center justify-center bg-black/25 group-hover:bg-black/35 transition">
-                                    <div class="w-12 h-12 rounded-full bg-white/95 text-stone-900 flex items-center justify-center shadow-lg pl-0.5 group-hover:scale-110 transition-transform">
-                                        <svg class="w-5 h-5 text-rose-800" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                    <div class="w-9 h-9 rounded-full bg-white/95 text-stone-900 flex items-center justify-center shadow-md pl-0.5 group-hover:scale-110 transition-transform">
+                                        <svg class="w-4 h-4 text-rose-800" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
                                     </div>
                                 </div>
                             ` : ''}
 
                             <!-- PDF Attachment Badge -->
                             ${item.attachmentName ? `
-                                <span class="absolute bottom-3 right-3 text-[9px] font-mono font-bold px-2.5 py-1 rounded-md bg-stone-950/80 text-blue-200 border border-blue-400/20 backdrop-blur-xs flex items-center">
-                                    📄 PDF 백서 첨부
+                                <span class="absolute bottom-2 right-2 text-[8px] font-mono font-bold px-2 py-0.5 rounded bg-stone-950/80 text-blue-200 border border-blue-400/20 backdrop-blur-xs flex items-center">
+                                    📄 PDF
                                 </span>
                             ` : ''}
                         </div>
 
-                        <!-- Card Body: Balanced Editorial Density -->
-                        <div class="p-6">
-                            <div class="flex items-center space-x-2 text-[10px] font-mono text-stone-400 mb-2">
-                                <span class="text-stone-700 font-semibold uppercase">${item.category}</span>
-                                <span>·</span>
+                        <!-- Card Body: Compact & Concise (Height 60~70%) -->
+                        <div class="p-3.5 sm:p-4">
+                            <div class="flex items-center justify-between text-[9px] font-mono text-stone-400 mb-1">
+                                <span class="text-stone-700 font-semibold uppercase truncate max-w-[130px]">${item.category}</span>
                                 <span>${item.date}</span>
                             </div>
-                            <h3 class="font-editorial text-base font-bold text-stone-900 mb-2 leading-snug">
+                            <h3 class="font-editorial text-sm font-bold text-stone-900 mb-1 leading-snug line-clamp-2 group-hover:text-stone-700 transition">
                                 <span class="hover-underline-sweep">${item.title}</span>
                             </h3>
-                            <p class="text-xs text-stone-600 font-light leading-relaxed line-clamp-2">
+                            <p class="text-[11px] text-stone-500 font-light leading-relaxed line-clamp-2">
                                 ${item.summary}
                             </p>
-
-                            <!-- Subtle Value Chips (Fills the visual void elegantly) -->
-                            <div class="flex flex-wrap gap-1.5 mt-3 pt-1">
-                                ${meta.chips.map(chip => `
-                                    <span class="text-[9px] font-mono text-stone-600 bg-stone-100 px-2 py-0.5 rounded border border-stone-200/60">${chip}</span>
-                                `).join('')}
-                            </div>
                         </div>
                     </div>
 
-                    <!-- Card Footer -->
-                    <div class="px-6 pb-5 pt-3 border-t border-stone-100 text-xs font-semibold text-stone-700 flex justify-between items-center bg-stone-50/40">
-                        <span class="text-stone-400 font-normal truncate max-w-[140px] text-[11px] font-mono">${item.author}</span>
-                        <span class="text-stone-900 group-hover:text-stone-700 transition flex items-center font-bold text-xs group-hover:translate-x-1 transition-transform">
-                            이야기 열람 &rarr;
+                    <!-- Card Footer: Slim & Clean -->
+                    <div class="px-3.5 sm:px-4 py-2 border-t border-stone-100 text-[10px] font-semibold text-stone-700 flex justify-between items-center bg-stone-50/40">
+                        <span class="text-stone-400 font-normal truncate max-w-[100px] text-[10px] font-mono">${item.author}</span>
+                        <span class="text-stone-900 group-hover:text-stone-700 transition flex items-center font-bold text-[10px] group-hover:translate-x-1 transition-transform">
+                            열람 &rarr;
                         </span>
                     </div>
                 </div>
