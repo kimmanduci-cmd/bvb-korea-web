@@ -3,10 +3,29 @@ __pycache__/
 *.pyc
 *.pyo
 
-# Temp build scripts
-gen.py
-gen_site.py
-make_site.py
-build_site.py
-write_files.py
-test.txt
+# Temp & Scratch scripts
+*.py
+!server.py
+
+# Backups and intermediate HTML drafts
+*.backup
+*.backup.html
+*.backup_*.html
+*.bak*
+*.backup.json
+*.user_backup.json
+scratch_*.html
+test_debug_*.html
+original_draft_*.html
+debug_c4.html
+draft_nutrients.html
+temp_script_*.js
+
+
+# Test captures and logs
+test_*.png
+*.txt
+!README.md
+debug_pkg/
+scratch/
+
