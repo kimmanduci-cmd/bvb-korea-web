@@ -55,7 +55,6 @@
         }
     </script>
     <style>
-        html { scroll-behavior: smooth; }
         body { 
             font-family: 'Pretendard', sans-serif; 
             background-color: #FFFFFF; 
@@ -450,7 +449,7 @@
 
                 <!-- Core Navigation Menus (Concise, Elegant, Pure Single Line: whitespace-nowrap) -->
                 <nav class="hidden lg:flex items-center space-x-3.5 xl:space-x-6 text-[13.5px] xl:text-[14.5px] font-semibold tracking-[-0.02em]">
-                    <a href="#storyboard" class="nav-link transition py-2 hover:opacity-100 text-stone-900 font-bold whitespace-nowrap">에디토리얼 허브</a>
+                    <a href="#storyboard" onclick="openChapterAndScroll('storyboard', event)" class="nav-link transition py-2 hover:opacity-100 text-stone-900 font-bold whitespace-nowrap">에디토리얼 허브</a>
                     <a href="#about" onclick="openChapterAndScroll('about', event)" class="nav-link transition py-2 hover:opacity-100 whitespace-nowrap">회사 소개</a>
                     <a href="#products" onclick="openChapterAndScroll('products', event)" class="nav-link transition py-2 hover:opacity-100 whitespace-nowrap">BVB 상토</a>
                     <a href="#nutrition" onclick="openChapterAndScroll('nutrition', event)" class="nav-link transition py-2 hover:opacity-100 whitespace-nowrap">SwissGrow 영양제</a>
@@ -476,7 +475,7 @@
 
         <!-- Mobile Drawer Menu -->
         <div id="mobileMenu" class="hidden md:hidden bg-stone-900/95 backdrop-blur-xl text-white border-b border-white/10 px-6 py-6 space-y-4">
-            <a href="#storyboard" onclick="toggleMobileMenu()" class="block text-base font-bold text-white">에디토리얼 허브 : BVB 이야기들</a>
+            <a href="#storyboard" onclick="openChapterAndScroll('storyboard', event); toggleMobileMenu();" class="block text-base font-bold text-white">에디토리얼 허브 : BVB 이야기들</a>
             <a href="#about" onclick="openChapterAndScroll('about', event); toggleMobileMenu();" class="block text-base font-semibold text-white/90">01. 회사 소개</a>
             <a href="#products" onclick="openChapterAndScroll('products', event); toggleMobileMenu();" class="block text-base font-semibold text-white/90">02. BVB 프리미엄 상토</a>
             <a href="#nutrition" onclick="openChapterAndScroll('nutrition', event); toggleMobileMenu();" class="block text-base font-semibold text-white/90">03. SwissGrow 영양제</a>
@@ -6532,8 +6531,9 @@
         }
 
         function openChapterAndScroll(id, event) {
-            if (event) event.preventDefault();
+            if (event && event.preventDefault) event.preventDefault();
             const chapterMap = {
+                'storyboard': 'storyboard',
                 'about': 'chapter-01',
                 'products': 'chapter-02',
                 'nutrition': 'chapter-03',
@@ -6555,9 +6555,32 @@
             }
 
             if (targetSection) {
-                const headerOffset = 80;
-                const elementPosition = targetSection.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                // For sticky cards, standard getBoundingClientRect().top or offsetTop shifts while stuck.
+                // An in-flow 0-height anchor preceding the sticky card provides the true, invariant document top coordinate.
+                let anchor = document.getElementById('anchor-' + resolvedId) || document.getElementById('anchor-' + id);
+                if (!anchor && targetSection.classList.contains('stacking-card')) {
+                    anchor = document.createElement('div');
+                    anchor.id = 'anchor-' + (targetSection.id || resolvedId);
+                    anchor.className = 'w-full h-0 pointer-events-none -mt-px';
+                    targetSection.parentNode.insertBefore(anchor, targetSection);
+                }
+
+                const measureEl = anchor || targetSection;
+                const elementDocTop = measureEl.getBoundingClientRect().top + window.pageYOffset;
+
+                // Header & sticky card offsets:
+                // Desktop (>=1024px): stacking-cards stick at top-24 (96px). Non-stacking sections stick below header (80px).
+                // Mobile/Tablet (<1024px): stacking-cards are not sticky (normal static flow), header is ~70-80px.
+                const isDesktop = window.innerWidth >= 1024;
+                const isStackingCard = targetSection.classList.contains('stacking-card');
+                let targetOffset = 80;
+                if (isDesktop && isStackingCard) {
+                    targetOffset = 96;
+                } else if (!isDesktop) {
+                    targetOffset = window.innerWidth < 640 ? 70 : 80;
+                }
+
+                const offsetPosition = Math.max(0, Math.round(elementDocTop - targetOffset));
                 window.scrollTo({
                     top: offsetPosition,
                     behavior: 'smooth'
