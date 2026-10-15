@@ -474,7 +474,7 @@
         </div>
 
         <!-- Mobile Drawer Menu -->
-        <div id="mobileMenu" class="hidden md:hidden bg-stone-900/95 backdrop-blur-xl text-white border-b border-white/10 px-6 py-6 space-y-4">
+        <div id="mobileMenu" class="hidden lg:hidden bg-stone-900/95 backdrop-blur-xl text-white border-b border-white/10 px-6 py-6 space-y-4">
             <a href="#storyboard" onclick="openChapterAndScroll('storyboard', event); toggleMobileMenu();" class="block text-base font-bold text-white">에디토리얼 허브 : BVB 이야기들</a>
             <a href="#about" onclick="openChapterAndScroll('about', event); toggleMobileMenu();" class="block text-base font-semibold text-white/90">01. 회사 소개</a>
             <a href="#products" onclick="openChapterAndScroll('products', event); toggleMobileMenu();" class="block text-base font-semibold text-white/90">02. BVB 프리미엄 상토</a>
@@ -881,17 +881,17 @@
                                             딸기 전용 상토
                                         </div>
                                         <p class="text-xs text-stone-500 mt-2 font-normal leading-relaxed break-keep">
-                                            작기 단계와 재배 방식에 맞춘 BVB 3대 표준 배지
+                                            작기 단계와 재배 방식에 맞춘 BVB 4대 표준 배지
                                         </p>
                                     </div>
 
-                                    <!-- Right: 3 Direct Products Top-Bottom 2-Tier List -->
+                                    <!-- Right: 4 Direct Products Top-Bottom 2-Tier List -->
                                     <div class="sm:w-[74%] lg:w-[76%] flex-1 divide-y divide-stone-200/80 border-t sm:border-t-0 border-b border-stone-200/80">
                                         
                                         <!-- Item 1: BC2 -->
                                         <div onclick="openProductDrawer('bc2')" class="py-3.5 sm:py-4 px-3 -mx-3 group cursor-pointer hover:bg-stone-50/90 rounded-xl transition duration-200">
                                             <div class="flex items-center justify-between mb-1">
-                                                <span class="text-base sm:text-[17px] font-bold text-stone-900 group-hover:text-black transition">BC2</span>
+                                                <span class="text-base sm:text-[17px] font-bold text-stone-900 group-hover:text-black transition">BC2 <span class="text-xs text-stone-500 font-normal">(100L 비압축)</span></span>
                                                 <div class="flex items-center space-x-1 text-xs font-semibold text-stone-500 group-hover:text-stone-900 transition-colors shrink-0">
                                                     <span>상세보기</span>
                                                     <span class="group-hover:translate-x-1 transition-transform text-sm font-bold">&rarr;</span>
@@ -902,24 +902,38 @@
                                             </p>
                                         </div>
 
-                                        <!-- Item 2: 코코골드 (CocoGold) -->
-                                        <div onclick="openProductDrawer('cocogold')" class="py-3.5 sm:py-4 px-3 -mx-3 group cursor-pointer hover:bg-stone-50/90 rounded-xl transition duration-200">
+                                        <!-- Item 2: BC (70L) -->
+                                        <div onclick="openProductDrawer('bc')" class="py-3.5 sm:py-4 px-3 -mx-3 group cursor-pointer hover:bg-stone-50/90 rounded-xl transition duration-200">
                                             <div class="flex items-center justify-between mb-1">
-                                                <span class="text-base sm:text-[17px] font-bold text-stone-900 group-hover:text-black transition">코코골드 <span class="text-xs text-stone-500 font-normal">(CocoGold)</span></span>
+                                                <span class="text-base sm:text-[17px] font-bold text-stone-900 group-hover:text-black transition">BC <span class="text-xs text-stone-500 font-normal">(70L 포대)</span></span>
                                                 <div class="flex items-center space-x-1 text-xs font-semibold text-stone-500 group-hover:text-stone-900 transition-colors shrink-0">
                                                     <span>상세보기</span>
                                                     <span class="group-hover:translate-x-1 transition-transform text-sm font-bold">&rarr;</span>
                                                 </div>
                                             </div>
                                             <p class="text-xs sm:text-[13.5px] text-stone-600 font-normal leading-relaxed break-keep">
-                                                완전 수세 코코피트 · 3단계 염분 세척 &amp; 버퍼링 처리 완료로 염류 집적 제로
+                                                본포 정식용 포대 · 소드피트 70% + 코코피트 30% 황금 배합으로 안정적 보수·통기성 (1팔레트 45포)
                                             </p>
                                         </div>
 
-                                        <!-- Item 3: BT -->
+                                        <!-- Item 3: 코코골드 (CocoGold) -->
+                                        <div onclick="openProductDrawer('cocogold')" class="py-3.5 sm:py-4 px-3 -mx-3 group cursor-pointer hover:bg-stone-50/90 rounded-xl transition duration-200">
+                                            <div class="flex items-center justify-between mb-1">
+                                                <span class="text-base sm:text-[17px] font-bold text-stone-900 group-hover:text-black transition">코코골드 <span class="text-xs text-stone-500 font-normal">(CocoGold 네이키드 플랭크)</span></span>
+                                                <div class="flex items-center space-x-1 text-xs font-semibold text-stone-500 group-hover:text-stone-900 transition-colors shrink-0">
+                                                    <span>상세보기</span>
+                                                    <span class="group-hover:translate-x-1 transition-transform text-sm font-bold">&rarr;</span>
+                                                </div>
+                                            </div>
+                                            <p class="text-xs sm:text-[13.5px] text-stone-600 font-normal leading-relaxed break-keep">
+                                                완전 수세 코코피트 · 8단계 정밀 수세 &amp; 질산칼슘 버퍼링 처리 완료로 초기 염류장해 원천 예방
+                                            </p>
+                                        </div>
+
+                                        <!-- Item 4: BT -->
                                         <div onclick="openProductDrawer('bt')" class="py-3.5 sm:py-4 px-3 -mx-3 group cursor-pointer hover:bg-stone-50/90 rounded-xl transition duration-200">
                                             <div class="flex items-center justify-between mb-1">
-                                                <span class="text-base sm:text-[17px] font-bold text-stone-900 group-hover:text-black transition">BT</span>
+                                                <span class="text-base sm:text-[17px] font-bold text-stone-900 group-hover:text-black transition">BT <span class="text-xs text-stone-500 font-normal">(70L 압축)</span></span>
                                                 <div class="flex items-center space-x-1 text-xs font-semibold text-stone-500 group-hover:text-stone-900 transition-colors shrink-0">
                                                     <span>상세보기</span>
                                                     <span class="group-hover:translate-x-1 transition-transform text-sm font-bold">&rarr;</span>
@@ -1217,6 +1231,9 @@
                                     </p>
                                     <p>
                                         BVB는 전 세계 배지 업계에서 가장 <strong class="text-stone-900 font-semibold">엄격한 유럽 기준(RHP)</strong>을 고수합니다. 대표 상토인 BC2는 원형 조직과 통기성이 보존된 <strong class="text-stone-900 font-semibold">유럽산 최상급 소드피트(Sod Peat)</strong>만을 고집하며, 코코피트 또한 천연 코코넛 야자 중 조직이 치밀하고 염분·타닌이 없는 <strong class="text-stone-900 font-semibold">최상위 45% 핵심 부위</strong>만을 엄선합니다. 저가형 배지가 원가 절감을 위해 섞어 쓰는 하위 55% 미성숙 부산물과 미세 분진을 전량 배제하는 타협 없는 원칙이 뿌리의 탁월한 생명력을 완성합니다.
+                                    </p>
+                                    <p class="pt-0.5 text-stone-700">
+                                        특히 BVB의 스리랑카 현지 R&D 기지인 <strong class="text-stone-900 font-semibold">'Sivanthi 연구소(Sivanthi Laboratory)'</strong>에서는 채취된 모든 코코피트 원료에 대해 <strong>8단계 정밀 수세 및 질산칼슘 화학 버퍼링</strong>을 직접 통제하며, EC, pH, 탄닌 및 병원균 잔류 검사를 전수 수행하여 초기 염류장해 없는 안전한 완제품만을 한국 농가에 공급합니다.
                                     </p>
                                 </div>
                             </div>
@@ -1524,6 +1541,23 @@
                                 </div>
                             </div>
 
+                            <!-- Bottom Action Bar: Direct Consultation & Vector Optics Spec Modal -->
+                            <div class="pt-5 mt-2 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
+                                <div class="flex items-center space-x-2 text-stone-500 text-xs sm:text-[13px]">
+                                    <span class="w-2 h-2 rounded-full bg-emerald-600"></span>
+                                    <span>하우스 맞춤 폭·길이 주문 제작 및 시공 규격 상담</span>
+                                </div>
+                                <div class="flex items-center space-x-2.5">
+                                    <button type="button" onclick="openShadingModal('specs')" class="px-4 py-2.5 rounded-full border border-stone-300 text-stone-700 text-xs sm:text-[13px] font-semibold hover:border-stone-800 hover:text-stone-900 transition cursor-pointer">
+                                        광학 원리 &middot; 상세 스펙 &rarr;
+                                    </button>
+                                    <a href="tel:1660-2301" class="px-5 py-2.5 rounded-full bg-stone-900 hover:bg-stone-800 text-white text-xs sm:text-[13px] font-bold transition flex items-center justify-center space-x-1.5 shadow-sm">
+                                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                                        <span>상담 1660-2301</span>
+                                    </a>
+                                </div>
+                            </div>
+
                         </div>
 
                     </div>
@@ -1630,7 +1664,7 @@
                                 <div>
                                     <label for="formProduct" class="block text-xs font-semibold text-stone-800 mb-1.5">관심 제품군</label>
                                     <select id="formProduct" class="w-full bg-stone-50 border border-stone-200 text-stone-900 rounded-lg px-3.5 py-2.5 text-xs sm:text-sm focus:outline-none focus:border-stone-500 focus:bg-white transition">
-                                        <option value="substrate">프리미엄 딸기 배지 (BC2 / 코코골드 / BT)</option>
+                                        <option value="substrate">프리미엄 딸기 배지 (BC2 / BC 70L / 코코골드 / BT)</option>
                                         <option value="nutrition">스위스그로우 전문 비료·영양제 (24종)</option>
                                         <option value="shading">슈퍼쿨 차열차광망</option>
                                         <option value="both">상토 + 영양제</option>
@@ -1643,7 +1677,7 @@
                                     <textarea id="formMessage" rows="3" placeholder="재배 면적, 현재 상황이나 궁금하신 점을 편하게 적어주세요." class="w-full bg-stone-50 border border-stone-200 text-stone-900 rounded-lg px-3.5 py-2.5 text-xs sm:text-sm focus:outline-none focus:border-stone-500 focus:bg-white transition placeholder-stone-400"></textarea>
                                 </div>
 
-                                <button type="submit" id="inquirySubmitBtn" class="w-full py-3.5 bg-stone-300 hover:bg-stone-400 text-stone-900 border border-stone-400 font-bold rounded-lg text-xs sm:text-sm transition shadow-2xs flex items-center justify-center space-x-1.5 hover:border-stone-500 cursor-pointer">
+                                <button type="submit" id="inquirySubmitBtn" class="w-full py-3.5 bg-stone-900 hover:bg-stone-800 text-white font-bold rounded-lg text-xs sm:text-sm transition shadow-sm flex items-center justify-center space-x-1.5 cursor-pointer">
                                     <span id="inquirySubmitBtnText">문의 내용 남기기</span>
                                     <span id="inquirySubmitBtnIcon">&rarr;</span>
                                 </button>
@@ -1689,20 +1723,22 @@
                         // overlap distance goes from 0 to full card height perfectly.
                         const overlapDistance = cardRect.bottom - nextRect.top;
                         const cardHeight = cardRect.height || viewportHeight * 0.7;
+                        // Avoid early dimming: only begin scaling/dimming when next card actually begins covering (overlap > 35%)
+                        const startThreshold = cardHeight * 0.35;
 
-                        if (overlapDistance > 0) {
-                            const progress = Math.min(1, Math.max(0, overlapDistance / cardHeight));
+                        if (overlapDistance > startThreshold) {
+                            const progress = Math.min(1, Math.max(0, (overlapDistance - startThreshold) / (cardHeight - startThreshold)));
                             
-                            // Scale down smoothly into the background: 1.0 -> 0.94
-                            const scale = 1 - (progress * 0.06);
-                            // Deep ambient darkening as card gets covered: 1.0 -> 0.85
-                            const brightness = 1 - (progress * 0.15);
+                            // Scale down smoothly into the background: 1.0 -> 0.95
+                            const scale = 1 - (progress * 0.05);
+                            // Ambient darkening as card gets covered: 1.0 -> 0.88
+                            const brightness = 1 - (progress * 0.12);
                             // Push it slightly upward as it shrinks
-                            const translateY = -(progress * 20);
+                            const translateY = -(progress * 15);
 
                             card.style.transform = `scale(${scale.toFixed(4)}) translateY(${translateY.toFixed(1)}px)`;
                             card.style.filter = `brightness(${brightness.toFixed(3)})`;
-                            card.style.opacity = (1 - (progress * 0.3)).toFixed(3);
+                            card.style.opacity = (1 - (progress * 0.2)).toFixed(3);
                         } else {
                             card.style.transform = 'scale(1) translateY(0px)';
                             card.style.filter = 'brightness(1)';
@@ -1767,7 +1803,7 @@
     <!-- ========================================== -->
     <!-- UNIFIED CONTENT MODAL (Reader / Viewer)     -->
     <!-- ========================================== -->
-    <div id="contentModal" class="fixed inset-0 z-[80] hidden overflow-y-auto bg-stone-950/80 backdrop-blur-md flex items-center justify-center p-3 sm:p-6 transition-all duration-300">
+    <div id="contentModal" class="fixed inset-0 z-[100] hidden overflow-y-auto bg-stone-950/80 backdrop-blur-md flex items-center justify-center p-3 sm:p-6 transition-all duration-300">
         <div class="bg-white w-full max-w-4xl rounded-3xl overflow-hidden shadow-2xl border border-stone-200 max-h-[92vh] flex flex-col animate-in fade-in zoom-in duration-200">
             
             <!-- Sticky Modal Header -->
@@ -1820,7 +1856,7 @@
     <!-- ========================================== -->
     <!-- RICH CONTENT EDITOR & CMS MODAL            -->
     <!-- ========================================== -->
-    <div id="editorModal" class="fixed inset-0 z-50 hidden overflow-y-auto bg-stone-950/80 backdrop-blur-md flex items-center justify-center p-3 sm:p-6">
+    <div id="editorModal" class="fixed inset-0 z-[100] hidden overflow-y-auto bg-stone-950/80 backdrop-blur-md flex items-center justify-center p-3 sm:p-6">
         <div class="bg-white w-full max-w-4xl rounded-3xl overflow-hidden shadow-2xl border border-stone-200 max-h-[92vh] flex flex-col">
             
             <!-- Modal Header with Tab Navigation -->
@@ -2294,7 +2330,7 @@
     <!-- ========================================== -->
     <!-- GROUP MANAGEMENT & DELETION MODAL          -->
     <!-- ========================================== -->
-    <div id="categoryManageModal" class="fixed inset-0 z-[60] hidden overflow-y-auto bg-stone-950/80 backdrop-blur-md flex items-center justify-center p-4">
+    <div id="categoryManageModal" class="fixed inset-0 z-[100] hidden overflow-y-auto bg-stone-950/80 backdrop-blur-md flex items-center justify-center p-4">
         <div class="bg-white w-full max-w-md rounded-3xl overflow-hidden shadow-2xl border border-stone-200 animate-in fade-in zoom-in duration-200">
             <!-- Header -->
             <div class="px-6 py-4.5 border-b border-stone-100 flex justify-between items-center bg-stone-50">
@@ -2348,7 +2384,7 @@
     <!-- ========================================== -->
     <!-- ADMIN QUICK ACTION MENU MODAL              -->
     <!-- ========================================== -->
-    <div id="adminMenuModal" class="fixed inset-0 z-[60] hidden overflow-y-auto bg-stone-950/80 backdrop-blur-md flex items-center justify-center p-4">
+    <div id="adminMenuModal" class="fixed inset-0 z-[100] hidden overflow-y-auto bg-stone-950/80 backdrop-blur-md flex items-center justify-center p-4">
         <div class="bg-white w-full max-w-sm rounded-3xl overflow-hidden shadow-2xl border border-stone-200 p-6 sm:p-7 text-center animate-in fade-in zoom-in duration-200">
             <!-- Header with Close Button -->
             <div class="flex justify-between items-center mb-3">
@@ -2409,7 +2445,7 @@
     <!-- ========================================== -->
     <!-- ADMIN AUTH LOGIN MODAL                     -->
     <!-- ========================================== -->
-    <div id="adminLoginModal" class="fixed inset-0 z-50 hidden overflow-y-auto bg-stone-950/80 backdrop-blur-md flex items-center justify-center p-4">
+    <div id="adminLoginModal" class="fixed inset-0 z-[100] hidden overflow-y-auto bg-stone-950/80 backdrop-blur-md flex items-center justify-center p-4">
         <div class="bg-white w-full max-w-sm rounded-3xl overflow-hidden shadow-2xl border border-stone-200 p-6 sm:p-8 text-center animate-in fade-in zoom-in duration-200">
             <div class="w-12 h-12 rounded-2xl bg-stone-100 border border-stone-200 flex items-center justify-center text-xl mx-auto mb-4 shadow-2xs">
                 🔒
@@ -2536,17 +2572,14 @@
                         let modified = false;
                         // Automatic repair for posts: ensure YouTube IDs are clean and detected
                         data.forEach(item => {
-                            // 1. Auto-repair for "딸기는 타이밍"
-                            if (item.title && item.title.includes('딸기는 타이밍')) {
-                                if (!item.youtubeId || item.youtubeId !== 'n7W3Ds6-ksU') {
-                                    item.youtubeId = 'n7W3Ds6-ksU';
-                                    item.youtubeUrl = 'https://www.youtube.com/watch?v=n7W3Ds6-ksU';
-                                    modified = true;
-                                }
+                            // 1. Fallback for legacy default post if completely missing YouTube link
+                            if (item.title && item.title.includes('딸기는 타이밍') && !item.youtubeId && !item.youtubeUrl) {
+                                item.youtubeId = 'n7W3Ds6-ksU';
+                                item.youtubeUrl = 'https://www.youtube.com/watch?v=n7W3Ds6-ksU';
                                 if (!item.coverImage || item.coverImage === 'assets/images/strawberry_greenhouse.jpg') {
                                     item.coverImage = 'https://img.youtube.com/vi/n7W3Ds6-ksU/hqdefault.jpg';
-                                    modified = true;
                                 }
+                                modified = true;
                             }
                             // 2. Auto-repair for any item that has a YouTube URL in summary, contentHtml, checklist, notes
                             if (!item.youtubeId) {
@@ -2637,10 +2670,9 @@
                     .then(serverPosts => {
                         if (Array.isArray(serverPosts) && serverPosts.length > 0) {
                             const local = getEditorialData();
-                            let needUpdate = serverPosts.length !== local.length || !localStorage.getItem(STORAGE_KEY);
-                            if (!needUpdate && local.some(p => p.summary && p.summary.includes('장의 카드뉴스로 구성된 시각 자료입니다'))) {
-                                needUpdate = true;
-                            }
+                            let needUpdate = !localStorage.getItem(STORAGE_KEY) || 
+                                             JSON.stringify(serverPosts) !== JSON.stringify(local) ||
+                                             local.some(p => (p.title && p.title.includes('김비브이비')) || (p.contentHtml && p.contentHtml.includes('역시 BC2')));
                             if (needUpdate) {
                                 window._runtimeEditorialData = serverPosts;
                                 try { localStorage.setItem(STORAGE_KEY, JSON.stringify(serverPosts)); } catch(e) {}
@@ -4303,18 +4335,24 @@
             const stage = document.getElementById('cardNewsSlideStage');
             if (stage) {
                 let touchStartX = 0;
+                let touchStartY = 0;
                 let touchEndX = 0;
+                let touchEndY = 0;
                 stage.ontouchstart = function(e) {
                     if (e.changedTouches && e.changedTouches[0]) {
                         touchStartX = e.changedTouches[0].screenX;
+                        touchStartY = e.changedTouches[0].screenY;
                     }
                 };
                 stage.ontouchend = function(e) {
                     if (e.changedTouches && e.changedTouches[0]) {
                         touchEndX = e.changedTouches[0].screenX;
-                        const diff = touchEndX - touchStartX;
-                        if (Math.abs(diff) > 40) {
-                            if (diff < 0) nextCardNewsSlide();
+                        touchEndY = e.changedTouches[0].screenY;
+                        const diffX = touchEndX - touchStartX;
+                        const diffY = touchEndY - touchStartY;
+                        // Only trigger horizontal slide swipe when horizontal movement dominates vertical scroll
+                        if (Math.abs(diffX) > 45 && Math.abs(diffX) > Math.abs(diffY) * 1.5) {
+                            if (diffX < 0) nextCardNewsSlide();
                             else prevCardNewsSlide();
                         }
                     }
@@ -6592,7 +6630,7 @@
     <!-- ================================================================= -->
     <!-- SUPER COOL SHADING NET MODAL (차열차광망 슈퍼쿨 상세 규격 & 성능 뷰어)   -->
     <!-- ================================================================= -->
-    <div id="shadingModalBackdrop" onclick="closeShadingModal()" class="fixed inset-0 z-[80] bg-stone-950/75 backdrop-blur-sm hidden transition-opacity duration-300 opacity-0 flex items-center justify-center p-3 sm:p-6 overflow-y-auto">
+    <div id="shadingModalBackdrop" onclick="closeShadingModal()" class="fixed inset-0 z-[100] bg-stone-950/75 backdrop-blur-sm hidden transition-opacity duration-300 opacity-0 flex items-center justify-center p-3 sm:p-6 overflow-y-auto">
         <div id="shadingModal" onclick="event.stopPropagation()" class="bg-white w-full max-w-4xl lg:max-w-5xl rounded-2xl sm:rounded-3xl shadow-2xl border border-stone-200/90 overflow-hidden transform scale-95 opacity-0 transition-all duration-300 ease-out flex flex-col max-h-[92vh] relative">
             
             <!-- Clean Header with Underline Navigation (Apple/Swiss Minimalist Style) -->
@@ -6631,7 +6669,7 @@
     <!-- ================================================================= -->
     <!-- OFFICIAL LAB REPORT & CERTIFICATE MODAL (공인 시험 성적서 원본 뷰어) -->
     <!-- ================================================================= -->
-    <div id="certificateModalBackdrop" onclick="closeCertificateModal()" class="fixed inset-0 z-[80] bg-stone-950/75 backdrop-blur-sm hidden transition-opacity duration-300 opacity-0 flex items-center justify-center p-3 sm:p-6 overflow-y-auto">
+    <div id="certificateModalBackdrop" onclick="closeCertificateModal()" class="fixed inset-0 z-[100] bg-stone-950/75 backdrop-blur-sm hidden transition-opacity duration-300 opacity-0 flex items-center justify-center p-3 sm:p-6 overflow-y-auto">
         <div id="certificateModal" onclick="event.stopPropagation()" class="bg-white w-full max-w-4xl lg:max-w-5xl rounded-2xl sm:rounded-3xl shadow-2xl border border-stone-200/90 overflow-hidden transform scale-95 opacity-0 transition-all duration-300 ease-out flex flex-col max-h-[92vh] relative">
             
             <!-- Clean Header with Underline Category Navigation & Close Button (No Outer Box, No Black, No Redundant Subtitle) -->
@@ -6673,7 +6711,7 @@
 
     <!-- CENTERED PRODUCT DETAIL MODAL (현재 화면 중앙에 바로 뜨는 팝업 모달)  -->
     <!-- ================================================================= -->
-    <div id="productDrawerBackdrop" onclick="closeProductDrawer()" class="fixed inset-0 z-[80] bg-stone-950/70 backdrop-blur-sm hidden transition-opacity duration-300 opacity-0 flex items-center justify-center p-3 sm:p-6 overflow-y-auto">
+    <div id="productDrawerBackdrop" onclick="closeProductDrawer()" class="fixed inset-0 z-[100] bg-stone-950/70 backdrop-blur-sm hidden transition-opacity duration-300 opacity-0 flex items-center justify-center p-3 sm:p-6 overflow-y-auto">
         <div id="productDrawer" onclick="event.stopPropagation()" class="bg-white w-full max-w-4xl lg:max-w-5xl rounded-2xl sm:rounded-3xl shadow-2xl border border-stone-200/90 overflow-hidden transform scale-95 opacity-0 transition-all duration-300 ease-out flex flex-col max-h-[90vh] relative">
             <!-- Floating Clean Close Button (Header Bar Deleted per User Request) -->
             <button onclick="closeProductDrawer()" title="닫기 (ESC)" class="absolute top-4 right-4 sm:top-6 sm:right-6 z-30 p-2 text-stone-400 hover:text-stone-800 rounded-full hover:bg-stone-100/80 transition cursor-pointer">
@@ -6701,7 +6739,7 @@
     <!-- ================================================================= -->
     <!-- SWISSGROW 24 PRODUCTS SMART CATALOG MODAL (2-STAGE MASTER DETAIL) -->
     <!-- ================================================================= -->
-    <div id="nutritionCatalogModal" onclick="if (event.target === this) closeNutritionCatalogModal()" class="fixed inset-0 z-50 hidden overflow-y-auto bg-stone-950/80 backdrop-blur-md flex items-center justify-center p-2 sm:p-4 md:p-6 transition-all duration-300">
+    <div id="nutritionCatalogModal" onclick="if (event.target === this) closeNutritionCatalogModal()" class="fixed inset-0 z-[100] hidden overflow-y-auto bg-stone-950/80 backdrop-blur-md flex items-center justify-center p-2 sm:p-4 md:p-6 transition-all duration-300">
         <div class="bg-white w-full max-w-7xl lg:max-w-[1380px] rounded-2xl shadow-2xl border border-stone-200/80 max-h-[95vh] h-[95vh] flex flex-col overflow-hidden">
             
             <!-- Modal Header (Editorial Typography, Clean Categories, Minimal Search, Direct Inquiry) -->
@@ -6776,6 +6814,29 @@
             // ─────────────────────────────────────────────────────────────
             // SUBSTRATES (상토 3종: BC2 · 코코골드 · BT)
             // ─────────────────────────────────────────────────────────────
+                        'bc': {
+                id: 'bc',
+                type: 'substrate',
+                badge: '딸기 본포 재배용 배지 (포대형)',
+                name: 'BC (70L)',
+                nameEn: 'BC Cultivation Substrate 70L',
+                summary: '유럽산 최고급 소드피트 70%와 엄선 코코피트 30%를 황금 비율로 정밀 배합하여, 탁월한 보수력과 이상적인 통기성을 겸비한 70L 포대형 딸기 본포 전용 배지입니다.',
+                specs: [
+                    { label: '주요 원료', val: '유럽산 1등급 소드피트 70% + 완벽 버퍼링 코코피트 30%' },
+                    { label: '물리 특성', val: '고른 공극률 확보로 근권부 산소 공급 및 안정적 수분 유지' },
+                    { label: '공급 규격', val: '70리터 포대 포장 (1팔레트 45포)' },
+                    { label: '생육 안정성', val: '뿌리 뻗음이 균일하고 정식 후 빠른 활착 보장' },
+                    { label: '품질 인증', val: '유럽 최고 권위 RHP 품질 기준 충족' }
+                ],
+                usageGuide: {
+                    prep: '베드 충진 후 1~2회 충분히 관수하여 배지 내 수분을 고르게 안정화',
+                    planting: '묘를 너무 깊지 않게 관부(Crown)를 노출시켜 식재',
+                    waterControl: '초기 뿌리 활착기에는 1회 관수량을 조절하여 산소 호흡 유도',
+                    caution: '정식 초기 과습 환경을 피하고 배액 흐름을 점검'
+                },
+                synergy: '킹루트(발근촉진제) 및 스위스 칼맥과 함께 시비 시 조기 미세근 폭발적 발근',
+                origin: '네덜란드 BVB Substrates 공식 완제품'
+            },
             'bc2': {
                 id: 'bc2',
                 type: 'substrate',
@@ -8327,9 +8388,10 @@
             } else if (product.type === 'substrate') {
                 // Substrate Product View (BC2 · 코코골드 · BT) - 100% UNIFIED FRAME & ZERO-JITTER COMPOSITION
                 const substrateTabs = [
-                    { id: 'bc2', label: 'BC2 (본포용)' },
+                    { id: 'bc2', label: 'BC2 (본포용 100L)' },
+                    { id: 'bc', label: 'BC (본포용 70L)' },
                     { id: 'cocogold', label: '코코골드 (정식용)' },
-                    { id: 'bt', label: 'BT (육묘용)' }
+                    { id: 'bt', label: 'BT (육묘용 70L)' }
                 ];
 
                 // Sticky Tab Bar (Pinned firmly at top - never moves during tab clicks or scroll)
@@ -8356,6 +8418,70 @@
 
                 // Structured Substrate Data with Identical 5-Stage Frame Properties
                 const SUBSTRATE_CONFIG = {
+                                        bc: {
+                        categoryTag: 'BVB SUBSTRATES · STRAWBERRY SPECIALIZED',
+                        title: 'BC (70L)',
+                        summary: '유럽산 최고급 소드피트 70%와 엄선 코코피트 30%를 황금 비율로 정밀 배합하여, 탁월한 보수력과 이상적인 통기성을 겸비한 70L 포대형 딸기 본포 전용 배지입니다.',
+                        bullets: [
+                            '소드피트 70% : 코코피트 30% 황금 비율 배합',
+                            '포대형 포장으로 운반 및 충진 작업이 매우 용이 (70L 규격 · 1팔렛 45포)',
+                            '뛰어난 보수력과 배수성의 균형으로 뿌리 썩음 예방',
+                            '120년 BVB 연구소의 생육단계별 맞춤 시비 가이드 제공 (상토사용 농가)'
+                        ],
+                        palletImg: 'assets/images/bt/bt_product_pallet_clean.png',
+                        palletAlt: 'BC 공식 제품 사진 (70L 포대 및 45포 팔레트)',
+                        palletCaption: 'BC 정품 70L 포대 & 45포 팔레트 (클릭 시 확대)',
+                        sec1Badge: '01 · BALANCED FORMULATION & PROCESS',
+                        sec1Title: '소드피트와 코코피트의 이상적인 결합',
+                        sec1Desc: '유럽산 1등급 소드피트의 풍부한 공기층과 정밀 세척된 코코피트의 안정적인 수분 보유력이 완벽한 조화를 이룹니다.',
+                        sec1Photos: [
+                            {
+                                img: 'assets/images/bc2/bc2_proc_01_drying_sharp.png',
+                                alt: '원자재 선별 및 건조',
+                                title: '① 원자재 엄선',
+                                caption: '북유럽 소드피트 선별'
+                            },
+                            {
+                                img: 'assets/images/bc2/bc2_proc_02_crushing_sharp.png',
+                                alt: '정밀 혼합 및 배합',
+                                title: '② 황금 비율 배합',
+                                caption: '소드피트 70% + 코코피트 30%'
+                            },
+                            {
+                                img: 'assets/images/bc2/bc2_proc_03_factory_sharp.png',
+                                alt: '포대 충진 및 품질 검사',
+                                title: '③ 70L 포대 포장',
+                                caption: '네덜란드 BVB 최첨단 자동 설비'
+                            }
+                        ],
+                        sec2Badge: '02 · OPTIMAL POROSITY & GROWER USABILITY',
+                        sec2Title: '취급이 용이한 70L 포대와 우수한 뿌리 활착력',
+                        sec2Desc: '하우스 베드 투입이 간편한 70L 규격으로 공급되어 농가 작업성이 뛰어나며, 고른 입도로 초기 미세근 발생을 촉진합니다.',
+                        sec2Card1: `
+                            <div class="flex items-baseline justify-between pb-3 border-b border-stone-200/80">
+                                <div>
+                                    <div class="text-xs font-mono font-semibold tracking-wider text-stone-500 uppercase">GOLDEN RATIO BLEND</div>
+                                    <div class="text-[17px] sm:text-[18px] font-bold text-stone-900 mt-1">소드피트 70% + 코코 30% 황금 배합</div>
+                                </div>
+                                <span class="text-xs font-mono text-stone-400 font-medium">PEAT 70%</span>
+                            </div>
+                            <p class="text-[14px] text-stone-600 leading-relaxed break-keep pt-1">
+                                보수력이 우수한 코코피트와 통기성을 책임지는 화이트 소드피트를 과학적으로 배합하여, 관수 주기가 불규칙한 환경에서도 뿌리 스트레스를 최소화합니다.
+                            </p>
+                        `,
+                        sec2Card2: `
+                            <div class="flex items-baseline justify-between pb-3 border-b border-stone-200/80">
+                                <div>
+                                    <div class="text-xs font-mono font-semibold tracking-wider text-stone-500 uppercase">FIELD WORKABILITY</div>
+                                    <div class="text-[17px] sm:text-[18px] font-bold text-stone-900 mt-1">포대형 70L 편리한 시공성</div>
+                                </div>
+                                <span class="text-xs font-mono text-stone-400 font-medium">45 BAGS / PALLET</span>
+                            </div>
+                            <p class="text-[14px] text-stone-600 leading-relaxed break-keep pt-1">
+                                1팔레트 45포(70L)로 적재 및 하우스 내 이동이 편리하며, 별도의 부풀림 작업 없이 개봉 즉시 베드에 충진하여 신속하게 정식할 수 있습니다.
+                            </p>
+                        `
+                    },
                     bc2: {
                         categoryTag: 'BVB SUBSTRATES · STRAWBERRY SPECIALIZED',
                         title: 'BC2',
@@ -9409,6 +9535,27 @@
             }
         };
 
+        
+        window.updateUsageCalc = function(liters, prodId, btn) {
+            const parent = btn.parentElement;
+            parent.querySelectorAll('.usage-calc-btn').forEach(b => {
+                b.className = 'usage-calc-btn px-3 py-1.5 rounded-full text-xs font-medium text-stone-600 bg-stone-100 hover:bg-stone-200 transition cursor-pointer';
+            });
+            btn.className = 'usage-calc-btn px-3 py-1.5 rounded-full text-xs font-bold bg-[#2F5443] text-white transition cursor-pointer shadow-xs';
+            
+            const resEl = document.getElementById('usageCalcResult_' + prodId);
+            if (!resEl) return;
+            
+            let dose = (liters * 1000 / 1000); // 1,000x default
+            if (prodId === 'dtpa_iron') dose = liters * 1000 / 2000;
+            
+            let doseStr = dose >= 1000 ? (dose / 1000).toFixed(1).replace('.0', '') + 'L (' + Math.round(dose).toLocaleString() + '㎖)' : Math.round(dose).toLocaleString() + '㎖';
+            if (prodId === 'combifert') doseStr = (dose >= 1000 ? (dose/1000).toFixed(1) + 'kg' : Math.round(dose) + 'g');
+            let subStr = liters === 20 ? '(물 20L 1말 기준)' : (liters === 500 ? '(약통 500L 25말 기준)' : '(대형통 1,000L 50말 기준)');
+
+            resEl.innerHTML = '<span class="font-bold text-[#2F5443]">권장 투입량:</span> <span class="font-bold text-stone-900 font-mono text-sm sm:text-base">' + doseStr + '</span> <span class="text-stone-500 text-xs">' + subStr + '</span>';
+        };
+
         function renderStandardUsageSection(curr) {
             const item = BVB_STANDARD_USAGE[curr.id] || {
                 hasDilution: true,
@@ -9428,17 +9575,38 @@
 
                     <div class="space-y-3.5 divide-y divide-stone-100">
                         ${item.hasDilution && item.dilutionRatio ? `
-                        <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-4 pb-1">
-                            <span class="text-[13.5px] font-semibold text-stone-400 shrink-0 sm:w-28">희석 배수</span>
-                            <div class="flex items-baseline flex-wrap gap-x-2.5">
-                                <span class="text-[20px] sm:text-[22px] font-bold text-[#2F5443] tracking-tight leading-none">
-                                    ${item.dilutionRatio}
-                                </span>
-                                ${item.dilutionSub ? `
-                                    <span class="text-[14px] sm:text-[14.5px] text-stone-600 font-medium">
-                                        (${item.dilutionSub})
+                        <div class="flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-4 pb-2">
+                            <span class="text-[13.5px] font-semibold text-stone-400 shrink-0 sm:w-28 pt-1">희석 배수</span>
+                            <div class="flex-1 space-y-2">
+                                <div class="flex items-baseline flex-wrap gap-x-2.5">
+                                    <span class="text-[20px] sm:text-[22px] font-bold text-[#2F5443] tracking-tight leading-none">
+                                        ${item.dilutionRatio}
                                     </span>
-                                ` : ''}
+                                    ${item.dilutionSub ? `
+                                        <span class="text-[14px] sm:text-[14.5px] text-stone-600 font-medium">
+                                            (${item.dilutionSub})
+                                        </span>
+                                    ` : ''}
+                                </div>
+                                <!-- Interactive Farmer Dilution Quick Selector -->
+                                <div class="pt-1">
+                                    <div class="flex flex-wrap items-center gap-1.5">
+                                        <button type="button" onclick="updateUsageCalc(20, '${curr.id}', this)" class="usage-calc-btn px-2.5 py-1 rounded-full text-xs font-bold bg-[#2F5443] text-white transition cursor-pointer shadow-xs">
+                                            1말 (20L)
+                                        </button>
+                                        <button type="button" onclick="updateUsageCalc(500, '${curr.id}', this)" class="usage-calc-btn px-2.5 py-1 rounded-full text-xs font-medium text-stone-600 bg-stone-100 hover:bg-stone-200 transition cursor-pointer">
+                                            25말 (500L 약통)
+                                        </button>
+                                        <button type="button" onclick="updateUsageCalc(1000, '${curr.id}', this)" class="usage-calc-btn px-2.5 py-1 rounded-full text-xs font-medium text-stone-600 bg-stone-100 hover:bg-stone-200 transition cursor-pointer">
+                                            50말 (1,000L 대형통)
+                                        </button>
+                                    </div>
+                                    <div id="usageCalcResult_${curr.id}" class="mt-2 text-xs sm:text-[13px] text-stone-700 flex items-center space-x-2 bg-stone-50 px-3 py-1.5 rounded-lg border border-stone-200/60">
+                                        <span class="font-bold text-[#2F5443]">권장 투입량:</span>
+                                        <span class="font-bold text-stone-900 font-mono text-sm">20㎖</span>
+                                        <span class="text-stone-500 text-xs">(물 20L 1말 기준)</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         ` : ''}
