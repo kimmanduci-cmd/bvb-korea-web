@@ -881,11 +881,11 @@
                                             딸기 전용 상토
                                         </div>
                                         <p class="text-xs text-stone-500 mt-2 font-normal leading-relaxed break-keep">
-                                            작기 단계와 재배 방식에 맞춘 BVB 4대 표준 배지
+                                            작기 단계와 재배 방식에 맞춘 BVB 3대 표준 배지
                                         </p>
                                     </div>
 
-                                    <!-- Right: 4 Direct Products Top-Bottom 2-Tier List -->
+                                    <!-- Right: 3 Direct Products Top-Bottom 2-Tier List -->
                                     <div class="sm:w-[74%] lg:w-[76%] flex-1 divide-y divide-stone-200/80 border-t sm:border-t-0 border-b border-stone-200/80">
                                         
                                         <!-- Item 1: BC2 -->
@@ -902,21 +902,7 @@
                                             </p>
                                         </div>
 
-                                        <!-- Item 2: BC (70L) -->
-                                        <div onclick="openProductDrawer('bc')" class="py-3.5 sm:py-4 px-3 -mx-3 group cursor-pointer hover:bg-stone-50/90 rounded-xl transition duration-200">
-                                            <div class="flex items-center justify-between mb-1">
-                                                <span class="text-base sm:text-[17px] font-bold text-stone-900 group-hover:text-black transition">BC <span class="text-xs text-stone-500 font-normal">(70L 포대)</span></span>
-                                                <div class="flex items-center space-x-1 text-xs font-semibold text-stone-500 group-hover:text-stone-900 transition-colors shrink-0">
-                                                    <span>상세보기</span>
-                                                    <span class="group-hover:translate-x-1 transition-transform text-sm font-bold">&rarr;</span>
-                                                </div>
-                                            </div>
-                                            <p class="text-xs sm:text-[13.5px] text-stone-600 font-normal leading-relaxed break-keep">
-                                                본포 정식용 포대 · 소드피트 70% + 코코피트 30% 황금 배합으로 안정적 보수·통기성 (1팔레트 45포)
-                                            </p>
-                                        </div>
-
-                                        <!-- Item 3: 코코골드 (CocoGold) -->
+                                        <!-- Item 2: 코코골드 (CocoGold) -->
                                         <div onclick="openProductDrawer('cocogold')" class="py-3.5 sm:py-4 px-3 -mx-3 group cursor-pointer hover:bg-stone-50/90 rounded-xl transition duration-200">
                                             <div class="flex items-center justify-between mb-1">
                                                 <span class="text-base sm:text-[17px] font-bold text-stone-900 group-hover:text-black transition">코코골드 <span class="text-xs text-stone-500 font-normal">(CocoGold 네이키드 플랭크)</span></span>
@@ -930,7 +916,7 @@
                                             </p>
                                         </div>
 
-                                        <!-- Item 4: BT -->
+                                        <!-- Item 3: BT -->
                                         <div onclick="openProductDrawer('bt')" class="py-3.5 sm:py-4 px-3 -mx-3 group cursor-pointer hover:bg-stone-50/90 rounded-xl transition duration-200">
                                             <div class="flex items-center justify-between mb-1">
                                                 <span class="text-base sm:text-[17px] font-bold text-stone-900 group-hover:text-black transition">BT <span class="text-xs text-stone-500 font-normal">(70L 압축)</span></span>
@@ -1664,7 +1650,7 @@
                                 <div>
                                     <label for="formProduct" class="block text-xs font-semibold text-stone-800 mb-1.5">관심 제품군</label>
                                     <select id="formProduct" class="w-full bg-stone-50 border border-stone-200 text-stone-900 rounded-lg px-3.5 py-2.5 text-xs sm:text-sm focus:outline-none focus:border-stone-500 focus:bg-white transition">
-                                        <option value="substrate">프리미엄 딸기 배지 (BC2 / BC 70L / 코코골드 / BT)</option>
+                                        <option value="substrate">프리미엄 딸기 배지 (BC2 / 코코골드 / BT)</option>
                                         <option value="nutrition">스위스그로우 전문 비료·영양제 (24종)</option>
                                         <option value="shading">슈퍼쿨 차열차광망</option>
                                         <option value="both">상토 + 영양제</option>
@@ -6814,29 +6800,6 @@
             // ─────────────────────────────────────────────────────────────
             // SUBSTRATES (상토 3종: BC2 · 코코골드 · BT)
             // ─────────────────────────────────────────────────────────────
-                        'bc': {
-                id: 'bc',
-                type: 'substrate',
-                badge: '딸기 본포 재배용 배지 (포대형)',
-                name: 'BC (70L)',
-                nameEn: 'BC Cultivation Substrate 70L',
-                summary: '유럽산 최고급 소드피트 70%와 엄선 코코피트 30%를 황금 비율로 정밀 배합하여, 탁월한 보수력과 이상적인 통기성을 겸비한 70L 포대형 딸기 본포 전용 배지입니다.',
-                specs: [
-                    { label: '주요 원료', val: '유럽산 1등급 소드피트 70% + 완벽 버퍼링 코코피트 30%' },
-                    { label: '물리 특성', val: '고른 공극률 확보로 근권부 산소 공급 및 안정적 수분 유지' },
-                    { label: '공급 규격', val: '70리터 포대 포장 (1팔레트 45포)' },
-                    { label: '생육 안정성', val: '뿌리 뻗음이 균일하고 정식 후 빠른 활착 보장' },
-                    { label: '품질 인증', val: '유럽 최고 권위 RHP 품질 기준 충족' }
-                ],
-                usageGuide: {
-                    prep: '베드 충진 후 1~2회 충분히 관수하여 배지 내 수분을 고르게 안정화',
-                    planting: '묘를 너무 깊지 않게 관부(Crown)를 노출시켜 식재',
-                    waterControl: '초기 뿌리 활착기에는 1회 관수량을 조절하여 산소 호흡 유도',
-                    caution: '정식 초기 과습 환경을 피하고 배액 흐름을 점검'
-                },
-                synergy: '킹루트(발근촉진제) 및 스위스 칼맥과 함께 시비 시 조기 미세근 폭발적 발근',
-                origin: '네덜란드 BVB Substrates 공식 완제품'
-            },
             'bc2': {
                 id: 'bc2',
                 type: 'substrate',
@@ -8389,7 +8352,6 @@
                 // Substrate Product View (BC2 · 코코골드 · BT) - 100% UNIFIED FRAME & ZERO-JITTER COMPOSITION
                 const substrateTabs = [
                     { id: 'bc2', label: 'BC2 (본포용 100L)' },
-                    { id: 'bc', label: 'BC (본포용 70L)' },
                     { id: 'cocogold', label: '코코골드 (정식용)' },
                     { id: 'bt', label: 'BT (육묘용 70L)' }
                 ];
@@ -8418,70 +8380,6 @@
 
                 // Structured Substrate Data with Identical 5-Stage Frame Properties
                 const SUBSTRATE_CONFIG = {
-                                        bc: {
-                        categoryTag: 'BVB SUBSTRATES · STRAWBERRY SPECIALIZED',
-                        title: 'BC (70L)',
-                        summary: '유럽산 최고급 소드피트 70%와 엄선 코코피트 30%를 황금 비율로 정밀 배합하여, 탁월한 보수력과 이상적인 통기성을 겸비한 70L 포대형 딸기 본포 전용 배지입니다.',
-                        bullets: [
-                            '소드피트 70% : 코코피트 30% 황금 비율 배합',
-                            '포대형 포장으로 운반 및 충진 작업이 매우 용이 (70L 규격 · 1팔렛 45포)',
-                            '뛰어난 보수력과 배수성의 균형으로 뿌리 썩음 예방',
-                            '120년 BVB 연구소의 생육단계별 맞춤 시비 가이드 제공 (상토사용 농가)'
-                        ],
-                        palletImg: 'assets/images/bt/bt_product_pallet_clean.png',
-                        palletAlt: 'BC 공식 제품 사진 (70L 포대 및 45포 팔레트)',
-                        palletCaption: 'BC 정품 70L 포대 & 45포 팔레트 (클릭 시 확대)',
-                        sec1Badge: '01 · BALANCED FORMULATION & PROCESS',
-                        sec1Title: '소드피트와 코코피트의 이상적인 결합',
-                        sec1Desc: '유럽산 1등급 소드피트의 풍부한 공기층과 정밀 세척된 코코피트의 안정적인 수분 보유력이 완벽한 조화를 이룹니다.',
-                        sec1Photos: [
-                            {
-                                img: 'assets/images/bc2/bc2_proc_01_drying_sharp.png',
-                                alt: '원자재 선별 및 건조',
-                                title: '① 원자재 엄선',
-                                caption: '북유럽 소드피트 선별'
-                            },
-                            {
-                                img: 'assets/images/bc2/bc2_proc_02_crushing_sharp.png',
-                                alt: '정밀 혼합 및 배합',
-                                title: '② 황금 비율 배합',
-                                caption: '소드피트 70% + 코코피트 30%'
-                            },
-                            {
-                                img: 'assets/images/bc2/bc2_proc_03_factory_sharp.png',
-                                alt: '포대 충진 및 품질 검사',
-                                title: '③ 70L 포대 포장',
-                                caption: '네덜란드 BVB 최첨단 자동 설비'
-                            }
-                        ],
-                        sec2Badge: '02 · OPTIMAL POROSITY & GROWER USABILITY',
-                        sec2Title: '취급이 용이한 70L 포대와 우수한 뿌리 활착력',
-                        sec2Desc: '하우스 베드 투입이 간편한 70L 규격으로 공급되어 농가 작업성이 뛰어나며, 고른 입도로 초기 미세근 발생을 촉진합니다.',
-                        sec2Card1: `
-                            <div class="flex items-baseline justify-between pb-3 border-b border-stone-200/80">
-                                <div>
-                                    <div class="text-xs font-mono font-semibold tracking-wider text-stone-500 uppercase">GOLDEN RATIO BLEND</div>
-                                    <div class="text-[17px] sm:text-[18px] font-bold text-stone-900 mt-1">소드피트 70% + 코코 30% 황금 배합</div>
-                                </div>
-                                <span class="text-xs font-mono text-stone-400 font-medium">PEAT 70%</span>
-                            </div>
-                            <p class="text-[14px] text-stone-600 leading-relaxed break-keep pt-1">
-                                보수력이 우수한 코코피트와 통기성을 책임지는 화이트 소드피트를 과학적으로 배합하여, 관수 주기가 불규칙한 환경에서도 뿌리 스트레스를 최소화합니다.
-                            </p>
-                        `,
-                        sec2Card2: `
-                            <div class="flex items-baseline justify-between pb-3 border-b border-stone-200/80">
-                                <div>
-                                    <div class="text-xs font-mono font-semibold tracking-wider text-stone-500 uppercase">FIELD WORKABILITY</div>
-                                    <div class="text-[17px] sm:text-[18px] font-bold text-stone-900 mt-1">포대형 70L 편리한 시공성</div>
-                                </div>
-                                <span class="text-xs font-mono text-stone-400 font-medium">45 BAGS / PALLET</span>
-                            </div>
-                            <p class="text-[14px] text-stone-600 leading-relaxed break-keep pt-1">
-                                1팔레트 45포(70L)로 적재 및 하우스 내 이동이 편리하며, 별도의 부풀림 작업 없이 개봉 즉시 베드에 충진하여 신속하게 정식할 수 있습니다.
-                            </p>
-                        `
-                    },
                     bc2: {
                         categoryTag: 'BVB SUBSTRATES · STRAWBERRY SPECIALIZED',
                         title: 'BC2',

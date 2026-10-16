@@ -55,28 +55,34 @@ class NoCacheHandler(SimpleHTTPRequestHandler):
                 return
         self.send_error(404, "Not Found")
 
+import time
+
 class CustomThreadingServer(ThreadingHTTPServer):
     allow_reuse_address = True
+    daemon_threads = True
+
+    def handle_error(self, request, client_address):
+        exc_type, exc_value, exc_traceback = sys.exc_info()
+        if exc_type in (ConnectionResetError, BrokenPipeError, ConnectionAbortedError):
+            return
+        super().handle_error(request, client_address)
 
 def serve_on_port(port):
-    try:
-        server_address = ('', port)
-        httpd = CustomThreadingServer(server_address, NoCacheHandler)
-        print(f"BVB Server running on port {port} (http://localhost:{port}/)", flush=True)
-        httpd.serve_forever()
-    except Exception as e:
-        print(f"Port {port} error: {e}", flush=True)
+    while True:
+        try:
+            server_address = ('', port)
+            httpd = CustomThreadingServer(server_address, NoCacheHandler)
+            print(f"BVB Server running on port {port} (http://localhost:{port}/)", flush=True)
+            httpd.serve_forever()
+        except (KeyboardInterrupt, SystemExit):
+            print(f"Port {port} stopped.", flush=True)
+            break
+        except Exception as e:
+            print(f"Port {port} error: {e}. Re-binding in 1 second...", flush=True)
+            time.sleep(1)
 
 if __name__ == '__main__':
-    threads = []
-    for port in [8080, 8088]:
-        t = threading.Thread(target=serve_on_port, args=(port,), daemon=True)
-        t.start()
-        threads.append(t)
-    
-    print("BVB Server successfully running. Ready for browser connections!", flush=True)
-    try:
-        while True:
-            threading.Event().wait(3600)
-    except (KeyboardInterrupt, SystemExit):
-        print("Server stopped.", flush=True)
+    print("BVB Server initializing...", flush=True)
+    t = threading.Thread(target=serve_on_port, args=(8088,), daemon=False)
+    t.start()
+    serve_on_port(8080)
