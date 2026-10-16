@@ -16,6 +16,16 @@ class NoCacheHandler(SimpleHTTPRequestHandler):
         self.send_header('Access-Control-Allow-Origin', '*')
         super().end_headers()
 
+    def log_message(self, format, *args):
+        try:
+            sys.stderr.write("%s - - [%s] %s\n" %
+                             (self.address_string(),
+                              self.log_date_time_string(),
+                              format % args))
+            sys.stderr.flush()
+        except Exception:
+            pass
+
     def do_POST(self):
         if self.path == '/api/save_editorial':
             try:
@@ -57,6 +67,13 @@ class NoCacheHandler(SimpleHTTPRequestHandler):
 
 import time
 
+def log_safe(msg):
+    try:
+        sys.stderr.write(str(msg) + '\n')
+        sys.stderr.flush()
+    except Exception:
+        pass
+
 class CustomThreadingServer(ThreadingHTTPServer):
     allow_reuse_address = True
     daemon_threads = True
@@ -65,24 +82,27 @@ class CustomThreadingServer(ThreadingHTTPServer):
         exc_type, exc_value, exc_traceback = sys.exc_info()
         if exc_type in (ConnectionResetError, BrokenPipeError, ConnectionAbortedError):
             return
-        super().handle_error(request, client_address)
+        try:
+            super().handle_error(request, client_address)
+        except Exception:
+            pass
 
 def serve_on_port(port):
     while True:
         try:
             server_address = ('', port)
             httpd = CustomThreadingServer(server_address, NoCacheHandler)
-            print(f"BVB Server running on port {port} (http://localhost:{port}/)", flush=True)
+            log_safe(f"BVB Server running on port {port} (http://localhost:{port}/)")
             httpd.serve_forever()
         except (KeyboardInterrupt, SystemExit):
-            print(f"Port {port} stopped.", flush=True)
+            log_safe(f"Port {port} stopped.")
             break
         except Exception as e:
-            print(f"Port {port} error: {e}. Re-binding in 1 second...", flush=True)
+            log_safe(f"Port {port} error: {e}. Re-binding in 1 second...")
             time.sleep(1)
 
 if __name__ == '__main__':
-    print("BVB Server initializing...", flush=True)
+    log_safe("BVB Server initializing...")
     t = threading.Thread(target=serve_on_port, args=(8088,), daemon=False)
     t.start()
     serve_on_port(8080)
